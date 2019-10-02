@@ -41,26 +41,30 @@ environment env (
 );
 
 integer i;
+integer pkt_no = 0;
 
 always @( negedge read_0 or read_1 or read_2 or read_3 )
-	for ( i=0; i<env.size_of_payload+3; i=i+1 )
+begin
+	for ( i=0; i<env.gen.len+4; i=i+1 )
 	begin
 		if ( env.sent_ports[i] != env.recv_ports[i] )
 			begin
 				-> env.error;
-				$display("*** ERROR! *** SENT PORT [%0d] DOESN'T MATCH RECEIVED PORT [%0d] AT PACKET BYTE # %0d **** :(", env.sent_ports[i], env.recv_ports[i], i);
+				$display("*** ERROR! *** [PKT %0d]: SENT PORT [%0d] DOESN'T MATCH RECEIVED PORT [%0d] AT PACKET BYTE # %0d **** :(", pkt_no, env.sent_ports[i], env.recv_ports[i], i);
 			end
 		else
-			$display("Success! Sent port [%0d] matches received port [%0d] at packet byte # %0d :)", env.sent_ports[i], env.recv_ports[i], i);
+			$display("Success! [PKT %0d]: Sent port [%0d] matches received port [%0d] at packet byte # %0d :)", pkt_no, env.sent_ports[i], env.recv_ports[i], i);
 
 		if ( env.sent_pkts[i] != env.recv_pkts[i] )
 			begin
 				-> env.error;
-				$display("*** ERROR! *** SENT DATA [%b] DOESN'T MATCH RECEIVED DATA [%b] AT PACKET BYTE # %0d **** :(", env.sent_pkts[i], env.recv_pkts[i], i);
+				$display("*** ERROR! *** [PKT %0d]: SENT DATA [%b] DOESN'T MATCH RECEIVED DATA [%b] AT PACKET BYTE # %0d **** :(", pkt_no, env.sent_pkts[i], env.recv_pkts[i], i);
 			end
 		else
-			$display("Success! Sent data [%b] matches received data [%b] at packet byte # %0d :)", env.sent_pkts[i], env.recv_pkts[i], i);
+			$display("Success! [PKT %0d]: Sent data [%b] matches received data [%b] at packet byte # %0d :)", pkt_no, env.sent_pkts[i], env.recv_pkts[i], i);
 	end
+	pkt_no = pkt_no + 1;
+end
 
 initial
 begin

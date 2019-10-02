@@ -144,10 +144,8 @@ integer error_count = 0;
 event error;
 
 always @( error )
-begin
-	#0 error_count = error_count + 1;
-	$display(" ERROR RECEIVED");
-end
+	error_count = error_count + 1;
+
 
 // display the test results
 task finish();

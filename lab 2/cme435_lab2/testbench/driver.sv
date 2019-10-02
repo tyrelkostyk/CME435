@@ -47,7 +47,7 @@ task drive_packet();
 
 				// sb.sent_pkt[i] = gen.pkt[i]	// record generated (sent) packet in scoreboard
 
-				// send received data / port to environment for verification
+				// send sent data / port to environment for verification
 				$root.tbench_top.test.env.sent_pkts[i] = gen.pkt[i];
 				$root.tbench_top.test.env.sent_ports[i] = gen.rand_port;
 			end

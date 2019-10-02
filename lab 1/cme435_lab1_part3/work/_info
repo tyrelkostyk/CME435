@@ -1,0 +1,86 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/tck290/engr-ece/CME435/lab 1/cme435_lab1_part3
+vtbench_top
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z2 !s110 1568759026
+!i10b 1
+!s100 _Lg0U?YkCICL]z1Q?j8X10
+IQCVJ:19IfXFSWalnX:DM80
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+!s105 tbench_top_sv_unit
+S1
+R0
+w1568743143
+8tbench_top.sv
+Ftbench_top.sv
+L0 4
+Z4 OE;L;10.3a;59
+r1
+!s85 0
+31
+Z5 !s108 1568759026.730769
+Z6 !s107 up_down_counter.sv|testbench.sv|tbench_top.sv|
+Z7 !s90 -reportprogress|300|tbench_top.sv|testbench.sv|up_down_counter.sv|
+!i113 0
+Z8 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Ttbench_top_opt
+R2
+V8VTZK>TIZDDNd=k<GISEm3
+04 10 4 work tbench_top fast 0
+o+acc
+ntbench_top_opt
+OE;O;10.3a;59
+vtestbench
+R1
+R2
+!i10b 1
+!s100 R]K24[I@Lh?A89H5S[h<Y2
+ImhHiO<Y7=LFmN;_E=bCE03
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1568756101
+8testbench.sv
+Ftestbench.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+vup_down_counter
+R1
+R2
+!i10b 1
+!s100 `:OWU>1:LW[3`@TL]Uh=n3
+IS^iL?[BV;Oi7K_h`A3ckJ1
+R3
+!s105 up_down_counter_sv_unit
+S1
+R0
+w1568328037
+8up_down_counter.sv
+Fup_down_counter.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8

@@ -1,0 +1,272 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/tck290/engr-ece/CME435/lab 2/cme435_lab2
+vdriver
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z2 !s110 1570034514
+!i10b 1
+!s100 [Q38n5?41]^b2M_]H2:0^3
+IoAJ<7>10BOci3EW6j]T^j1
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+!s105 driver_sv_unit
+S1
+R0
+w1569969126
+8testbench/driver.sv
+Ftestbench/driver.sv
+L0 1
+Z4 OE;L;10.3a;59
+r1
+!s85 0
+31
+Z5 !s108 1570034514.058996
+Z6 !s107 testbench/testbench.sv|testbench/tbench_top.sv|testbench/scoreboard.sv|testbench/receiver.sv|testbench/monitor.sv|testbench/generator.sv|testbench/environment.sv|testbench/driver.sv|
+Z7 !s90 -reportprogress|300|testbench/driver.sv|testbench/environment.sv|testbench/generator.sv|testbench/monitor.sv|testbench/receiver.sv|testbench/scoreboard.sv|testbench/tbench_top.sv|testbench/testbench.sv|
+!i113 0
+Z8 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+venvironment
+R1
+R2
+!i10b 1
+!s100 e1JfhaQO?He9n_al;8aUU2
+IM]mfYjbV>io7cgN^g5HVJ1
+R3
+!s105 environment_sv_unit
+S1
+R0
+w1570034137
+8testbench/environment.sv
+Ftestbench/environment.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+vfifo
+R1
+R2
+!i10b 1
+!s100 kORj66=l30=z6cbRkeNgm2
+IK[c37CYL^5>VjJYY7n>A?1
+R3
+Z9 !s105 switch_sv_unit
+S1
+R0
+Z10 w1537850776
+Ffifo.v
+Z11 8dut/switch.sv
+Z12 Fdut/switch.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z13 !s108 1570034513.966145
+Z14 !s107 port_fsm.v|fifo.v|dut/switch.sv|
+Z15 !s90 -reportprogress|300|dut/switch.sv|
+!i113 0
+R8
+vgenerator
+R1
+R2
+!i10b 1
+!s100 E?SDJ<l__GC`_6]L6Qg[Q2
+IL<0bSdk@b_8>akSS0<]=a0
+R3
+!s105 generator_sv_unit
+S1
+R0
+w1570033453
+8testbench/generator.sv
+Ftestbench/generator.sv
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+vmonitor
+R1
+R2
+!i10b 1
+!s100 9A6<fgPd_=bANjJJ84Yj`3
+IV9Az2zfPU^c1bz_bSKeab3
+R3
+!s105 monitor_sv_unit
+S1
+R0
+w1569966691
+8testbench/monitor.sv
+Ftestbench/monitor.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+vport_fsm
+R1
+R2
+!i10b 1
+!s100 PNV:5:Db@OMKFE52nn;GX3
+IeYf9OgH2:CS=KFFW1z8e40
+R3
+R9
+S1
+R0
+R10
+Fport_fsm.v
+R11
+R12
+L0 1
+R4
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R8
+vreceiver
+R1
+R2
+!i10b 1
+!s100 D^^HUm[X3eE?W?5LZ5U]T1
+Iz7UCWP[V8O6f<MTK^WLb83
+R3
+!s105 receiver_sv_unit
+S1
+R0
+w1569966586
+8testbench/receiver.sv
+Ftestbench/receiver.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+vscoreboard
+R1
+R2
+!i10b 1
+!s100 ^IJ<^JG4K]OLb>KJf2W2T3
+IceIgj^c>N`0Cz^BPLWV;c0
+R3
+!s105 scoreboard_sv_unit
+S1
+R0
+w1570033443
+8testbench/scoreboard.sv
+Ftestbench/scoreboard.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+vswitch
+R1
+R2
+!i10b 1
+!s100 Q2PimoBHEJ]UfdWFSgVJl2
+Ie9O1>^RXfXTRU]AZaDF_02
+R3
+R9
+S1
+R0
+R10
+R11
+R12
+L0 4
+R4
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R8
+vtbench_top
+R1
+R2
+!i10b 1
+!s100 FD4XjjXDI8XO9i=fJQDLb1
+IYnefLdHomYhkdkCYlc>kd3
+R3
+!s105 tbench_top_sv_unit
+S1
+R0
+w1569962587
+8testbench/tbench_top.sv
+Ftestbench/tbench_top.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+Ttbench_top_opt
+R2
+VzPIS<CF3G:1jmDE9XS@8K3
+04 10 4 work tbench_top fast 0
+o+acc
+ntbench_top_opt
+OE;O;10.3a;59
+vtestbench
+R1
+R2
+!i10b 1
+!s100 0bf;7d?L^9XzWSc0_baAi3
+I[9b?WWDh]m5>Z]0V`_KCL2
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1570034375
+8testbench/testbench.sv
+Ftestbench/testbench.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8

@@ -1,0 +1,57 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/tck290/engr-ece/CME435/lab 1/cme435_lab1
+vcounter
+Z1 !s110 1568742585
+!i10b 1
+!s100 7<JkQAk8X6`=5YCOTNL_41
+ID_WFN0oIO>kSVEiL8i5:Q0
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1568061688
+8counter.v
+Fcounter.v
+L0 10
+Z3 OE;L;10.3a;59
+r1
+!s85 0
+31
+Z4 !s108 1568742585.769053
+Z5 !s107 test_counter.v|counter.v|
+Z6 !s90 -reportprogress|300|counter.v|test_counter.v|
+!i113 0
+Z7 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vtest_counter
+R1
+!i10b 1
+!s100 ojD1TWLO`QVG0:cOzI;cZ1
+I_T61loPK0X736:hVQ;<jg0
+R2
+R0
+w1568061682
+8test_counter.v
+Ftest_counter.v
+L0 11
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+Ttest_counter_opt
+!s110 1568742586
+VlJ;fRS_]Y>c3OmB37l2U73
+04 12 4 work test_counter fast 0
+o+acc
+ntest_counter_opt
+OE;O;10.3a;59

@@ -51,9 +51,6 @@ monitor mon (
 scoreboard sb ();
 
 
-integer no_of_pkts = 5;					// how many packets
-integer size_of_payload = 5;		// size of payload in bytes (used if not randomized)
-
 reg [7:0] sent_pkts [0:258];
 reg [7:0] recv_pkts [0:258];
 reg [7:0] sent_ports [0:258];
@@ -130,7 +127,7 @@ task run();
 	cfg_dut();
 
 	#10;
-	dr.gen_and_drive( no_of_pkts );
+	dr.gen_and_drive( $root.tbench_top.test.no_of_pkts );
 	#10;
 
 	#1000;
@@ -141,11 +138,13 @@ endtask : run
 
 // Error checking / counting
 integer error_count = 0;
-event error;
+event error, error_recorded;
 
 always @( error )
+begin
 	error_count = error_count + 1;
-
+	#0 -> error_recorded;
+end
 
 // display the test results
 task finish();

@@ -21,7 +21,11 @@ task gen_and_drive( input integer no_of_pkts );
 				repeat (delay)
 					@( negedge clock );
 
-				gen.randomize();			// randomize the packet
+				// create the packet
+				if ( $root.tbench_top.test.randomize_payload_size == 1 )
+					gen.randomize();			// randomize the packet
+				else
+					gen.gen_pkt();
 				gen.packing(); 				// pack the packet
 				drive_packet();				// call the drive_packet task
 			end

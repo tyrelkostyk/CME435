@@ -11,13 +11,15 @@ reg read;
 wire [7:0] port;
 
 reg [0:7] mem [0:259];		// local memory for storing input (DUT output) data
-
 integer j, delay;
 
 // start collecting packet
 always @( posedge ready )
 begin
-	delay = {$random}%5+1;
+	if ( $root.tbench_top.test.oversized_delay == 1)
+		delay = {$random}%30+1;
+	else
+		delay = {$random}%5+1;
 
 	repeat( delay )
 		@( negedge clk );
@@ -33,7 +35,7 @@ begin
 			mem[j] = data;	// this is received data
 
 			// send received data / port to environment for verification
-			$root.tbench_top.test.env.recv_pkts[j] = mem[j];
+			$root.tbench_top.test.env.recv_pkts[j] = data;
 			$root.tbench_top.test.env.recv_ports[j] = port;
 
 			j = j+1;

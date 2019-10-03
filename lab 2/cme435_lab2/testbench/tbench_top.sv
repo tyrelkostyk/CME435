@@ -16,8 +16,32 @@ reg [1:0] mem_add;
 reg [7:0] mem[3:0];
 
 
+// // instantiate testbench module
+// testbench_sanity_check test (
+// 	clock,
+// 	packet_valid,
+// 	data,
+// 	data_0, data_1, data_2, data_3,
+// 	ready_0, ready_1, ready_2, ready_3,
+// 	read_0, read_1, read_2, read_3,
+// 	mem_en, mem_rd_wr, mem_add, mem_data
+// );
+
+
+// // instantiate testbench module
+// testbench_payload_endpoint test (
+// 	clock,
+// 	packet_valid,
+// 	data,
+// 	data_0, data_1, data_2, data_3,
+// 	ready_0, ready_1, ready_2, ready_3,
+// 	read_0, read_1, read_2, read_3,
+// 	mem_en, mem_rd_wr, mem_add, mem_data
+// );
+
+
 // instantiate testbench module
-testbench test (
+testbench_buffer_overflow test (
 	clock,
 	packet_valid,
 	data,
@@ -53,6 +77,7 @@ event reset_trigger;
 event reset_finished;
 
 task wait_for_reset();
+	// TODO move task to env
 	@( reset_trigger );
 
 	$display("%0d : Environment : start of wait_for_reset() task", $time);

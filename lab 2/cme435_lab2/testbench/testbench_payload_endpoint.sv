@@ -1,4 +1,4 @@
-module testbench(
+module testbench_payload_endpoint(
 	clock,
   packet_valid,
 	data,
@@ -28,6 +28,11 @@ reg [7:0] mem[3:0];
 
 // 0 for fixed, 1 for random
 integer randomize_payload_size = 0;
+integer no_of_pkts = 10;					// how many packets
+integer size_of_payload = 255;		// size of payload in bytes (used if not randomized)
+integer randomize_DA = 1;							// 0 for fixed, 1 for random
+integer fixed_DA_port = 2;						// can be 0-3
+integer oversized_delay = 0;					// 0 for regular delay, 1 for large delay
 
 
 environment env (
@@ -43,27 +48,33 @@ environment env (
 integer i;
 integer pkt_no = 0;
 
-always @( negedge read_0 or read_1 or read_2 or read_3 )
+always @( negedge read_0 or negedge read_1 or negedge read_2 or negedge read_3 )
 begin
 	for ( i=0; i<env.gen.len+4; i=i+1 )
 	begin
 		if ( env.sent_ports[i] != env.recv_ports[i] )
 			begin
 				-> env.error;
-				$display("*** ERROR! *** [PKT %0d]: SENT PORT [%0d] DOESN'T MATCH RECEIVED PORT [%0d] AT PACKET BYTE # %0d **** :(", pkt_no, env.sent_ports[i], env.recv_ports[i], i);
+				@( env.error_recorded );
+				$display("*** ERROR! *** [%0d] - [PKT %0d]: SENT PORT [%0d] DOESN'T MATCH RECEIVED PORT [%0d] AT PACKET BYTE # %0d **** :(", $time, pkt_no, env.sent_ports[i], env.recv_ports[i], i);
 			end
 		else
-			$display("Success! [PKT %0d]: Sent port [%0d] matches received port [%0d] at packet byte # %0d :)", pkt_no, env.sent_ports[i], env.recv_ports[i], i);
+			$display("Success! [%0d] - [PKT %0d]: Sent port [%0d] matches received port [%0d] at packet byte # %0d :)", $time, pkt_no, env.sent_ports[i], env.recv_ports[i], i);
 
 		if ( env.sent_pkts[i] != env.recv_pkts[i] )
 			begin
 				-> env.error;
-				$display("*** ERROR! *** [PKT %0d]: SENT DATA [%b] DOESN'T MATCH RECEIVED DATA [%b] AT PACKET BYTE # %0d **** :(", pkt_no, env.sent_pkts[i], env.recv_pkts[i], i);
+				@( env.error_recorded );
+				$display("*** ERROR! *** [%0d] - [PKT %0d]: SENT DATA [%b] DOESN'T MATCH RECEIVED DATA [%b] AT PACKET BYTE # %0d **** :(", $time, pkt_no, env.sent_pkts[i], env.recv_pkts[i], i);
 			end
 		else
-			$display("Success! [PKT %0d]: Sent data [%b] matches received data [%b] at packet byte # %0d :)", pkt_no, env.sent_pkts[i], env.recv_pkts[i], i);
+			$display("Success! [%0d] - [PKT %0d]: Sent data [%b] matches received data [%b] at packet byte # %0d :)", $time, pkt_no, env.sent_pkts[i], env.recv_pkts[i], i);
 	end
 	pkt_no = pkt_no + 1;
+
+	if ( pkt_no == 5 )
+		size_of_payload = 0;
+
 end
 
 initial
@@ -75,4 +86,4 @@ end
 final
 	$display("******************** End of testcases *****************");
 
-endmodule : testbench
+endmodule : testbench_payload_endpoint

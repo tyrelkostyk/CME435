@@ -19,28 +19,82 @@ initial
 	uid = 0;
 
 
+// task randomize();
+// 	begin
+// 		uid = uid + 1;
+// 		parity_type = {$random}%2;		// 0 and 1 are selected randomly
+// 		rand_port = {$random}%4;			// 0, 1, 2, and 3 are selected randomly
+// 		Da = $root.tbench_top.test.env.mem[rand_port];
+// 		Sa = $random;
+//
+// 		if ( $root.tbench_top.test.randomize_payload_size == 1 ) begin
+// 			payload_size = {$random}%3;		// 0, 1, and 2 are selected randomly
+// 			if ( payload_size == `SMALL )
+// 				len = {$random}%10;					// payload between 0-9 bytes
+// 			else if ( payload_size == `MEDIUM )
+// 				len = 10 + {$random}%10;		// payload between 10-19 bytes
+// 			else if ( payload_size == `LARGE )
+// 				len = 20 + {$random}%10;		// payload between 20-29 bytes
+// 			else
+// 				len = 30 + {$random}%10;		// payload between 30-39 bytes
+// 			end
+//
+// 		else
+// 			len = $root.tbench_top.test.env.size_of_payload;
+//
+// 		if ( parity_type == 0 )
+// 			parity = 8'b0;
+// 		else
+// 			parity = 8'b1;
+//
+// 	end
+// endtask
+
+
 task randomize();
+	// generates a pkt with random payload size
 	begin
 		uid = uid + 1;
 		parity_type = {$random}%2;		// 0 and 1 are selected randomly
-		rand_port = {$random}%4;			// 0, 1, 2, and 3 are selected randomly
+		if ( $root.tbench_top.test.randomize_DA == 1 )
+			rand_port = {$random}%4;			// 0, 1, 2, and 3 are selected randomly
+		else
+			rand_port = $root.tbench_top.test.fixed_DA_port;
 		Da = $root.tbench_top.test.env.mem[rand_port];
 		Sa = $random;
 
-		if ( $root.tbench_top.test.randomize_payload_size == 1 ) begin
-			payload_size = {$random}%3;		// 0, 1, and 2 are selected randomly
-			if ( payload_size == `SMALL )
-				len = {$random}%10;					// payload between 0-9 bytes
-			else if ( payload_size == `MEDIUM )
-				len = 10 + {$random}%10;		// payload between 10-19 bytes
-			else if ( payload_size == `LARGE )
-				len = 20 + {$random}%10;		// payload between 20-29 bytes
-			else
-				len = 30 + {$random}%10;		// payload between 30-39 bytes
-			end
-
+		payload_size = {$random}%3;		// 0, 1, and 2 are selected randomly
+		if ( payload_size == `SMALL )
+			len = {$random}%10;					// payload between 0-9 bytes
+		else if ( payload_size == `MEDIUM )
+			len = 10 + {$random}%10;		// payload between 10-19 bytes
+		else if ( payload_size == `LARGE )
+			len = 20 + {$random}%10;		// payload between 20-29 bytes
 		else
-			len = $root.tbench_top.test.env.size_of_payload;
+			len = 30 + {$random}%10;		// payload between 30-39 bytes
+
+		if ( parity_type == 0 )
+			parity = 8'b0;
+		else
+			parity = 8'b1;
+
+	end
+endtask
+
+
+task gen_pkt();
+	// generates a packet with a predefined (in test module) payload size
+	begin
+		uid = uid + 1;
+		parity_type = {$random}%2;		// 0 and 1 are selected randomly
+		if ( $root.tbench_top.test.randomize_DA == 1 )
+			rand_port = {$random}%4;			// 0, 1, 2, and 3 are selected randomly
+		else
+			rand_port = $root.tbench_top.test.fixed_DA_port;
+		Da = $root.tbench_top.test.env.mem[rand_port];
+		Sa = $random;
+
+		len = $root.tbench_top.test.size_of_payload;
 
 		if ( parity_type == 0 )
 			parity = 8'b0;

@@ -5,8 +5,8 @@ adder adder_core (
 	.reset( i_intf.reset ),
 	.a( i_intf.a ),
 	.b( i_intf.b ),
-	.valid( i_intf ),
-	.c( i_intf )
+	.valid( i_intf.valid ),
+	.c( i_intf.c )
 );
 
 endmodule

@@ -1,3 +1,6 @@
+`ifndef INTERFACE_SV
+`define	INTERFACE_SV
+
 interface intf( input logic clk, reset );
 
 logic valid;
@@ -9,3 +12,4 @@ logic [6:0] c;
 
 
 endinterface
+`endif

@@ -10,7 +10,7 @@ cModel Technology
 Z0 d/home/tck290/engr-ece/CME435/lab_3/cme435_assign3
 vadder
 Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z2 !s110 1570126723
+Z2 !s110 1570486779
 !i10b 1
 !s100 Mb[[c<@L]C93gk@mliWRf2
 Io]`=cOK4Z@D3[@6_hMQQY2
@@ -26,7 +26,7 @@ Z4 OE;L;10.3a;59
 r1
 !s85 0
 31
-!s108 1570126723.042574
+!s108 1570486779.494516
 !s107 dut/adder.sv|
 !s90 -reportprogress|300|dut/adder.sv|
 !i113 0
@@ -35,13 +35,13 @@ vdut_top
 R1
 R2
 !i10b 1
-!s100 c10Yh;nTHFoW7blTe4k>@3
-IgSNLdiHVo9GMm5MAbbYGW1
+!s100 ZI7MQkV:b1=LMmFbYgN>^3
+IHXHagliPHEmTkKOI=bbNS1
 R3
 !s105 dut_top_sv_unit
 S1
 R0
-w1570124387
+w1570483439
 8testbench/dut_top.sv
 Ftestbench/dut_top.sv
 L0 1
@@ -49,25 +49,52 @@ R4
 r1
 !s85 0
 31
-Z6 !s108 1570126723.130588
-Z7 !s107 testbench.sv|interface.sv|testbench/testbench.sv|testbench/tbench_top.sv|testbench/interface.sv|testbench/environment.sv|testbench/dut_top.sv|
-Z8 !s90 -reportprogress|300|testbench/dut_top.sv|testbench/environment.sv|testbench/interface.sv|testbench/tbench_top.sv|testbench/testbench.sv|
+Z6 !s108 1570486779.595413
+Z7 !s107 testbench/transaction.sv|testbench/testbench.sv|testbench/tbench_top.sv|testbench/interface.sv|testbench/generator.sv|testbench/environment.sv|testbench/dut_top.sv|
+Z8 !s90 -reportprogress|300|testbench/dut_top.sv|testbench/environment.sv|testbench/generator.sv|testbench/interface.sv|testbench/tbench_top.sv|testbench/testbench.sv|testbench/transaction.sv|
 !i113 0
 R5
 Xenvironment_sv_unit
 R1
 R2
 !i10b 1
-!s100 ALS8i8b`Ll:d2T`BAb:UR3
-IlEERafnPKe?977WMfYnm;0
-VlEERafnPKe?977WMfYnm;0
+!s100 :onGAfWdTiOW6^h6`Sl:W0
+IS?DOiiQXMCjPdjVaga?<[3
+VS?DOiiQXMCjPdjVaga?<[3
 !i103 1
 S1
 R0
-w1570124401
+Z9 w1570486773
 8testbench/environment.sv
-Ftestbench/environment.sv
-L0 1
+Z10 Ftestbench/environment.sv
+Z11 Ftestbench/interface.sv
+Z12 Ftestbench/transaction.sv
+Z13 Ftestbench/generator.sv
+L2 4
+R4
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R5
+Xgenerator_sv_unit
+R1
+R2
+!i10b 1
+!s100 M_C6M6GUo2VcPl^C<AXjY2
+IWM;6H<fK<h47]oXdKH`Z92
+VWM;6H<fK<h47]oXdKH`Z92
+!i103 1
+S1
+R0
+R9
+R12
+8testbench/generator.sv
+R13
+L2 4
 R4
 r1
 !s85 0
@@ -81,17 +108,18 @@ Yintf
 R1
 R2
 !i10b 1
-!s100 @N0g_aJnH1_Og<KRAOch^0
-IZ09KWD:MzeHaF@k;jfo8X3
+!s100 LO^g8XIP7@KH01id8hXhQ2
+ICY:Y_g0X4LNOIV^@I:=>a3
 R3
-Z9 !s105 tbench_top_sv_unit
+Z14 !s105 testbench_sv_unit
 S1
 R0
-Z10 w1570124685
-Finterface.sv
-Z11 8testbench/tbench_top.sv
-Z12 Ftestbench/tbench_top.sv
-L0 1
+w1570486632
+R11
+R10
+Z15 8testbench/testbench.sv
+Z16 Ftestbench/testbench.sv
+L0 4
 R4
 r1
 !s85 0
@@ -105,16 +133,16 @@ vtbench_top
 R1
 R2
 !i10b 1
-!s100 ;Qz0neUaK;4Ac[;cM[?V:3
-IP3>f=DQCAbKWc_d6D^>aY0
+!s100 7c^5aEoz5zV1E:_Z2SdfV0
+I18LMoQ=I2fcE7HShK_=Qn3
 R3
-R9
+!s105 tbench_top_sv_unit
 S1
 R0
-R10
-R11
-R12
-L0 4
+w1570483170
+8testbench/tbench_top.sv
+Ftestbench/tbench_top.sv
+L0 1
 R4
 r1
 !s85 0
@@ -126,25 +154,74 @@ R8
 R5
 Ttbench_top_opt
 R2
-VaY12]l41Y@61Bjl_i:B@91
+V2K2GnOaUPn=<3KNDm6jWj3
 04 10 4 work tbench_top fast 0
 o+acc
 ntbench_top_opt
 OE;O;10.3a;59
 4testbench
 R1
-R2
-!i10b 1
-!s100 I:5HkCEjBaoD?nho<7k6G2
-I[=aKZe<VA6XmO6PWYm3TA3
+DXx4 work 17 testbench_sv_unit 0 22 DGIO;EZI8H1oDLL1DL7nR1
 R3
-!s105 testbench_sv_unit
+r1
+!s85 0
+31
+!i10b 1
+!s100 C;NL=g0Um>9Q<J4jQ:6G50
+I[aJV7]ZVJ;V^]QGf:abJo2
+R14
 S1
 R0
-w1570124409
-8testbench/testbench.sv
-Ftestbench/testbench.sv
-L0 1
+w1570484665
+R15
+R16
+L0 3
+R4
+R6
+R7
+R8
+!i113 0
+R5
+Xtestbench_sv_unit
+R1
+VDGIO;EZI8H1oDLL1DL7nR1
+r1
+!s85 0
+31
+!i10b 1
+!s100 8CSg;bf<KKHL?BYV;hI?M1
+IDGIO;EZI8H1oDLL1DL7nR1
+!i103 1
+S1
+R0
+R9
+R15
+R16
+R10
+R11
+R12
+R13
+L3 4
+R4
+R6
+R7
+R8
+!i113 0
+R5
+Xtransaction_sv_unit
+R1
+R2
+!i10b 1
+!s100 Qd5FeB^7[]m<6Pfc=W8D>2
+IP17BT5?^bF6G3mNR03kS63
+VP17BT5?^bF6G3mNR03kS63
+!i103 1
+S1
+R0
+w1570483896
+8testbench/transaction.sv
+R12
+L0 4
 R4
 r1
 !s85 0

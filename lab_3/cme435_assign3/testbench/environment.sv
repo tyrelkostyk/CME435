@@ -2,21 +2,24 @@
 `include "testbench/transaction.sv"
 `include "testbench/generator.sv"
 `include "testbench/driver.sv"
+`include "testbench/monitor.sv"
 
 `ifndef ENVIRONMENT_SV
 `define ENVIRONMENT_SV
 
 class environment;
 
+
 // ************************* INSTANTIATIONS ************************* //
 
 // instantiate class instances
 generator gen;
 driver drive;
+monitor mon;
 
 // instantiate mailbox handles
 mailbox gen2drive;			// to generate and send the packets to driver
-
+mailbox mon2scb;				// to share received data with the scoreboard
 // instantiate virtual interfaces
 virtual intf vif;
 
@@ -28,12 +31,14 @@ function new( virtual intf vif );
   // get the interface from test
   this.vif = vif;
 
-	// create the mailbox (Same handle will be shared across generator and driver)
+	// create the mailboxes (Same handle will be shared across objects)
 	gen2drive = new();
+	mon2scb = new();
 
-	// construct the gen and drive objects
+	// construct the objects
 	gen = new( gen2drive );
 	drive = new( vif, gen2drive );
+	mon = new( vif, mon2scb );
 
 endfunction
 
@@ -72,6 +77,7 @@ task test();
 	fork
 		gen.main();
 		drive.main();
+		mon.main();
 	join_any
 
 	wait( gen.end_gen.triggered );

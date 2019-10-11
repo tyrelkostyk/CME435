@@ -10,7 +10,7 @@ cModel Technology
 Z0 d/home/tck290/engr-ece/CME435/lab_3/cme435_assign3
 vadder
 Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z2 !s110 1570831842
+Z2 !s110 1570832718
 !i10b 1
 !s100 Mb[[c<@L]C93gk@mliWRf2
 Io]`=cOK4Z@D3[@6_hMQQY2
@@ -26,7 +26,7 @@ Z4 OE;L;10.3a;59
 r1
 !s85 0
 31
-!s108 1570831842.577498
+!s108 1570832718.851312
 !s107 dut/adder.sv|
 !s90 -reportprogress|300|dut/adder.sv|
 !i113 0
@@ -35,13 +35,13 @@ Xdriver_sv_unit
 R1
 R2
 !i10b 1
-!s100 cUD9Wk`N8jWVZDG<f6A=I3
-IWCU@jAWDb`A?Q91^ZfHKJ2
-VWCU@jAWDb`A?Q91^ZfHKJ2
+!s100 ;al8K]DN1mFERX8_fS_^W0
+I6JiML=i[P7JHWQlS^fcJ31
+V6JiML=i[P7JHWQlS^fcJ31
 !i103 1
 S1
 R0
-w1570826721
+w1570832033
 8testbench/driver.sv
 Z6 Ftestbench/driver.sv
 Z7 Ftestbench/transaction.sv
@@ -50,9 +50,9 @@ R4
 r1
 !s85 0
 31
-Z8 !s108 1570831842.680235
-Z9 !s107 testbench/transaction.sv|testbench/testbench.sv|testbench/tbench_top.sv|testbench/interface.sv|testbench/generator.sv|testbench/environment.sv|testbench/dut_top.sv|testbench/driver.sv|
-Z10 !s90 -reportprogress|300|testbench/driver.sv|testbench/dut_top.sv|testbench/environment.sv|testbench/generator.sv|testbench/interface.sv|testbench/tbench_top.sv|testbench/testbench.sv|testbench/transaction.sv|
+Z8 !s108 1570832718.948779
+Z9 !s107 testbench/transaction.sv|testbench/testbench.sv|testbench/tbench_top.sv|testbench/monitor.sv|testbench/interface.sv|testbench/generator.sv|testbench/environment.sv|testbench/dut_top.sv|testbench/driver.sv|
+Z10 !s90 -reportprogress|300|testbench/driver.sv|testbench/dut_top.sv|testbench/environment.sv|testbench/generator.sv|testbench/interface.sv|testbench/monitor.sv|testbench/tbench_top.sv|testbench/testbench.sv|testbench/transaction.sv|
 !i113 0
 R5
 vdut_top
@@ -82,19 +82,20 @@ Xenvironment_sv_unit
 R1
 R2
 !i10b 1
-!s100 QdK]GD2<dcO4o?PZndBLY2
-IfNUnlTJ2oghXZJXc_8_0E1
-VfNUnlTJ2oghXZJXc_8_0E1
+!s100 8?]2=QePf1H@@JQ=KH]`51
+IKenGn<I2hi3A7jgz4hBmR2
+VKenGn<I2hi3A7jgz4hBmR2
 !i103 1
 S1
 R0
-Z11 w1570831826
+Z11 w1570832716
 8testbench/environment.sv
 Z12 Ftestbench/environment.sv
 Z13 Ftestbench/interface.sv
 R7
 Z14 Ftestbench/generator.sv
 R6
+Z15 Ftestbench/monitor.sv
 L2 4
 R4
 r1
@@ -109,13 +110,13 @@ Xgenerator_sv_unit
 R1
 R2
 !i10b 1
-!s100 H59@VJE[dEhMz_b6EgakZ0
-IT@6a<BQ`P1GU66R^==NTW1
-VT@6a<BQ`P1GU66R^==NTW1
+!s100 UOlibIjXkIN99D@?9hAAK0
+I^4i_J[5meoHIUWVV;KM]J3
+V^4i_J[5meoHIUWVV;KM]J3
 !i103 1
 S1
 R0
-w1570831083
+w1570832023
 R7
 8testbench/generator.sv
 R14
@@ -131,20 +132,44 @@ R10
 R5
 Yintf
 R1
-R2
+Z16 !s110 1570832719
 !i10b 1
 !s100 LO^g8XIP7@KH01id8hXhQ2
 ICY:Y_g0X4LNOIV^@I:=>a3
 R3
-Z15 !s105 testbench_sv_unit
+Z17 !s105 testbench_sv_unit
+S1
+R0
+w1570832645
+R13
+R12
+Z18 8testbench/testbench.sv
+Z19 Ftestbench/testbench.sv
+L0 4
+R4
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R5
+Xmonitor_sv_unit
+R1
+R16
+!i10b 1
+!s100 ]3U2DSozbTfSN_;3n=iIK2
+ILELQ=>Zi9V^dL_lA?NA:P2
+VLELQ=>Zi9V^dL_lA?NA:P2
+!i103 1
 S1
 R0
 R11
-R13
-R12
-Z16 8testbench/testbench.sv
-Z17 Ftestbench/testbench.sv
-L0 4
+8testbench/monitor.sv
+R15
+R7
+L1 4
 R4
 r1
 !s85 0
@@ -156,7 +181,7 @@ R10
 R5
 vtbench_top
 R1
-R2
+R16
 !i10b 1
 !s100 7c^5aEoz5zV1E:_Z2SdfV0
 I18LMoQ=I2fcE7HShK_=Qn3
@@ -178,15 +203,15 @@ R10
 !i113 0
 R5
 Ttbench_top_opt
-R2
-VQcP7<o<3zaoJVnSW@nPVi3
+R16
+V4Rk[3Fi`IL9i7IVgniMYZ2
 04 10 4 work tbench_top fast 0
 o+acc
 ntbench_top_opt
 OE;O;10.3a;59
 4testbench
 R1
-DXx4 work 17 testbench_sv_unit 0 22 I8n[=Y9oQl^97UCP4B]L>2
+DXx4 work 17 testbench_sv_unit 0 22 5Fd1jT7_4;n8gS?YNn1DB0
 R3
 r1
 !s85 0
@@ -194,12 +219,12 @@ r1
 !i10b 1
 !s100 LMHlTU`94lo28mU39BgmU3
 I4a4E^SQm:@oA9OO1ga_jf0
-R15
+R17
 S1
 R0
 w1570831808
-R16
-R17
+R18
+R19
 L0 3
 R4
 R8
@@ -209,24 +234,25 @@ R10
 R5
 Xtestbench_sv_unit
 R1
-VI8n[=Y9oQl^97UCP4B]L>2
+V5Fd1jT7_4;n8gS?YNn1DB0
 r1
 !s85 0
 31
 !i10b 1
-!s100 aR0PPCeSb[DZ`Hd=@hhM81
-II8n[=Y9oQl^97UCP4B]L>2
+!s100 ^DOQP0f8Q:ebf9_iPT@B<0
+I5Fd1jT7_4;n8gS?YNn1DB0
 !i103 1
 S1
 R0
 R11
-R16
-R17
+R18
+R19
 R12
 R13
 R7
 R14
 R6
+R15
 L3 4
 R4
 R8
@@ -236,7 +262,7 @@ R10
 R5
 Xtransaction_sv_unit
 R1
-R2
+R16
 !i10b 1
 !s100 V0fC;7?<5gZEbzAKmZn<;2
 IfcOEQ<RO1miJ<U8e46z8f3

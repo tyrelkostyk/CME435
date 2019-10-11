@@ -16,6 +16,7 @@ mailbox gen2drive;
 // instantiate virtual interface
 virtual intf vif;
 
+
 // constructor
 function new( virtual intf vif );
   // get the interface from test
@@ -26,6 +27,7 @@ function new( virtual intf vif );
 
 	// create generator
 	gen = new( gen2drive );
+	
 endfunction
 
 

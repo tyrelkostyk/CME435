@@ -3,6 +3,7 @@
 `include "testbench/generator.sv"
 `include "testbench/driver.sv"
 `include "testbench/monitor.sv"
+`include "testbench/scoreboard.sv"
 
 `ifndef ENVIRONMENT_SV
 `define ENVIRONMENT_SV
@@ -16,10 +17,12 @@ class environment;
 generator gen;
 driver drive;
 monitor mon;
+scoreboard scb;
 
 // instantiate mailbox handles
 mailbox gen2drive;			// to generate and send the packets to driver
 mailbox mon2scb;				// to share received data with the scoreboard
+
 // instantiate virtual interfaces
 virtual intf vif;
 
@@ -39,6 +42,7 @@ function new( virtual intf vif );
 	gen = new( gen2drive );
 	drive = new( vif, gen2drive );
 	mon = new( vif, mon2scb );
+	scb = new( mon2scb );
 
 endfunction
 
@@ -78,10 +82,12 @@ task test();
 		gen.main();
 		drive.main();
 		mon.main();
+		scb.main();
 	join_any
 
 	wait( gen.end_gen.triggered );
-	wait( gen.repeat_count == drive.num_transactions );
+	wait( gen.repeat_count == drive.num_transactions_sent );
+	wait( gen.repeat_count == scb.num_transactions_recv );
 
 	$display("%0d : Environment : End of test() task", $time);
 endtask

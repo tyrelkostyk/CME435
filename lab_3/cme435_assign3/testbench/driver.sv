@@ -8,9 +8,6 @@ class driver;
 
 // ************************* INSTANTIATIONS ************************* //
 
-// keep track of the number of transactions
-int num_transactions;
-
 // create virtual interface handle
 virtual intf vif;
 
@@ -22,13 +19,19 @@ mailbox gen2drive;
 
 // driver constructor
 function new( virtual intf vif, mailbox gen2drive );
-	// get the interface
+	// get the interface from env
 	this.vif = vif;
 
 	// get the mailbox handle from env
 	this.gen2drive = gen2drive;
 
 endfunction
+
+
+// *********************** EVENTS AND INTEGERS ********************** //
+
+// keep track of the number of transactions sent
+int num_transactions_sent;
 
 
 // ***************************** TASKS ***************************** //
@@ -53,7 +56,7 @@ task main();
 		@( posedge vif.clk );
 			trans.display("[ Driver ]");
 
-		num_transactions++;
+		num_transactions_sent++;
 	end
 endtask
 

@@ -5,26 +5,38 @@
 
 class generator;
 
-// declaring transaction class
+// ************************* INSTANTIATIONS ************************* //
+
+// declaring transaction object
 rand transaction trans;
 
-// mailbox, to generate and send the packet to driver
-mailbox gen2drive;
+// mailbox handles
+mailbox gen2drive;		// to generate and send the packets to driver
 
-// constructor
-function new(mailbox gen2drive);
+
+// ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
+
+// generator constructor
+function new( mailbox gen2drive );
 	//getting the mailbox handle from env.
 	this.gen2drive = gen2drive;
 
 endfunction
 
 
-// main task, generates (creates and randomizes) <repeat_count> number of ransaction packets
+// *********************** EVENTS AND INTEGERS ********************** //
+
 int repeat_count;
 
-task main();
+event end_gen;
 
-	repeat(repeat_count) begin
+
+// ***************************** TASKS ***************************** //
+
+task main();
+// main task, generates (creates and randomizes) <repeat_count> number of ransaction packets
+
+	repeat( repeat_count ) begin
 		trans = new();
 
 		if( !trans.randomize() ) $fatal("Gen:: trans randomization failed");
@@ -33,7 +45,7 @@ task main();
 		// place a transaction message in the generator-to-driver mailbox
 		gen2drive.put( trans );
 	end
-
+	-> end_gen;		// trigger the end of generation
 endtask
 
 endclass

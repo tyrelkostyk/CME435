@@ -10,7 +10,7 @@ cModel Technology
 Z0 d/home/tck290/engr-ece/CME435/lab_3/cme435_assign3
 vadder
 Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z2 !s110 1570824389
+Z2 !s110 1570831842
 !i10b 1
 !s100 Mb[[c<@L]C93gk@mliWRf2
 Io]`=cOK4Z@D3[@6_hMQQY2
@@ -26,11 +26,35 @@ Z4 OE;L;10.3a;59
 r1
 !s85 0
 31
-!s108 1570824389.216976
+!s108 1570831842.577498
 !s107 dut/adder.sv|
 !s90 -reportprogress|300|dut/adder.sv|
 !i113 0
 Z5 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Xdriver_sv_unit
+R1
+R2
+!i10b 1
+!s100 cUD9Wk`N8jWVZDG<f6A=I3
+IWCU@jAWDb`A?Q91^ZfHKJ2
+VWCU@jAWDb`A?Q91^ZfHKJ2
+!i103 1
+S1
+R0
+w1570826721
+8testbench/driver.sv
+Z6 Ftestbench/driver.sv
+Z7 Ftestbench/transaction.sv
+L1 4
+R4
+r1
+!s85 0
+31
+Z8 !s108 1570831842.680235
+Z9 !s107 testbench/transaction.sv|testbench/testbench.sv|testbench/tbench_top.sv|testbench/interface.sv|testbench/generator.sv|testbench/environment.sv|testbench/dut_top.sv|testbench/driver.sv|
+Z10 !s90 -reportprogress|300|testbench/driver.sv|testbench/dut_top.sv|testbench/environment.sv|testbench/generator.sv|testbench/interface.sv|testbench/tbench_top.sv|testbench/testbench.sv|testbench/transaction.sv|
+!i113 0
+R5
 vdut_top
 R1
 R2
@@ -49,59 +73,60 @@ R4
 r1
 !s85 0
 31
-Z6 !s108 1570824389.318650
-Z7 !s107 testbench/transaction.sv|testbench/testbench.sv|testbench/tbench_top.sv|testbench/interface.sv|testbench/generator.sv|testbench/environment.sv|testbench/dut_top.sv|
-Z8 !s90 -reportprogress|300|testbench/dut_top.sv|testbench/environment.sv|testbench/generator.sv|testbench/interface.sv|testbench/tbench_top.sv|testbench/testbench.sv|testbench/transaction.sv|
+R8
+R9
+R10
 !i113 0
 R5
 Xenvironment_sv_unit
 R1
 R2
 !i10b 1
-!s100 eEC=bC9[SNgUNmcg8[nAV1
-IF2K]Lm_FoP>R1io]<6oSR2
-VF2K]Lm_FoP>R1io]<6oSR2
+!s100 QdK]GD2<dcO4o?PZndBLY2
+IfNUnlTJ2oghXZJXc_8_0E1
+VfNUnlTJ2oghXZJXc_8_0E1
 !i103 1
 S1
 R0
-Z9 w1570824352
+Z11 w1570831826
 8testbench/environment.sv
-Z10 Ftestbench/environment.sv
-Z11 Ftestbench/interface.sv
-Z12 Ftestbench/transaction.sv
-Z13 Ftestbench/generator.sv
+Z12 Ftestbench/environment.sv
+Z13 Ftestbench/interface.sv
+R7
+Z14 Ftestbench/generator.sv
+R6
 L2 4
 R4
 r1
 !s85 0
 31
-R6
-R7
 R8
+R9
+R10
 !i113 0
 R5
 Xgenerator_sv_unit
 R1
 R2
 !i10b 1
-!s100 92XBb^od=XF8]183PUBa_2
-I0EeeX@iom8^DIXmZ3@nTj2
-V0EeeX@iom8^DIXmZ3@nTj2
+!s100 H59@VJE[dEhMz_b6EgakZ0
+IT@6a<BQ`P1GU66R^==NTW1
+VT@6a<BQ`P1GU66R^==NTW1
 !i103 1
 S1
 R0
-R9
-R12
+w1570831083
+R7
 8testbench/generator.sv
-R13
+R14
 L2 4
 R4
 r1
 !s85 0
 31
-R6
-R7
 R8
+R9
+R10
 !i113 0
 R5
 Yintf
@@ -111,22 +136,22 @@ R2
 !s100 LO^g8XIP7@KH01id8hXhQ2
 ICY:Y_g0X4LNOIV^@I:=>a3
 R3
-Z14 !s105 testbench_sv_unit
+Z15 !s105 testbench_sv_unit
 S1
 R0
-w1570824214
 R11
-R10
-Z15 8testbench/testbench.sv
-Z16 Ftestbench/testbench.sv
+R13
+R12
+Z16 8testbench/testbench.sv
+Z17 Ftestbench/testbench.sv
 L0 4
 R4
 r1
 !s85 0
 31
-R6
-R7
 R8
+R9
+R10
 !i113 0
 R5
 vtbench_top
@@ -147,87 +172,88 @@ R4
 r1
 !s85 0
 31
-R6
-R7
 R8
+R9
+R10
 !i113 0
 R5
 Ttbench_top_opt
 R2
-VM]NNW>U4m]3TKFQWh<nbf2
+VQcP7<o<3zaoJVnSW@nPVi3
 04 10 4 work tbench_top fast 0
 o+acc
 ntbench_top_opt
 OE;O;10.3a;59
 4testbench
 R1
-DXx4 work 17 testbench_sv_unit 0 22 kgBB`F]J<DU<Zjb?B>eYB2
+DXx4 work 17 testbench_sv_unit 0 22 I8n[=Y9oQl^97UCP4B]L>2
 R3
 r1
 !s85 0
 31
 !i10b 1
-!s100 C;NL=g0Um>9Q<J4jQ:6G50
-I[aJV7]ZVJ;V^]QGf:abJo2
-R14
+!s100 LMHlTU`94lo28mU39BgmU3
+I4a4E^SQm:@oA9OO1ga_jf0
+R15
 S1
 R0
-w1570484665
-R15
+w1570831808
 R16
+R17
 L0 3
 R4
-R6
-R7
 R8
+R9
+R10
 !i113 0
 R5
 Xtestbench_sv_unit
 R1
-VkgBB`F]J<DU<Zjb?B>eYB2
+VI8n[=Y9oQl^97UCP4B]L>2
 r1
 !s85 0
 31
 !i10b 1
-!s100 FLTk^O=PeEH=BR5dQSXCK3
-IkgBB`F]J<DU<Zjb?B>eYB2
+!s100 aR0PPCeSb[DZ`Hd=@hhM81
+II8n[=Y9oQl^97UCP4B]L>2
 !i103 1
 S1
 R0
-R9
-R15
-R16
-R10
 R11
+R16
+R17
 R12
 R13
+R7
+R14
+R6
 L3 4
 R4
-R6
-R7
 R8
+R9
+R10
 !i113 0
 R5
 Xtransaction_sv_unit
 R1
 R2
 !i10b 1
-!s100 Qd5FeB^7[]m<6Pfc=W8D>2
-IP17BT5?^bF6G3mNR03kS63
-VP17BT5?^bF6G3mNR03kS63
+!s100 V0fC;7?<5gZEbzAKmZn<;2
+IfcOEQ<RO1miJ<U8e46z8f3
+VfcOEQ<RO1miJ<U8e46z8f3
 !i103 1
 S1
 R0
-w1570483896
+w1570826344
 8testbench/transaction.sv
-R12
+R7
 L0 4
 R4
 r1
 !s85 0
 31
-R6
-R7
 R8
+R9
+R10
 !i113 0
 R5

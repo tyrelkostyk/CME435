@@ -1,5 +1,5 @@
 // module dut_top( interface i_intf );
-module dut_top( intf.DUT i_intf );
+module dut_top( intf i_intf );
 // use the DUT modport of the intf interface
 
 adder adder_core (

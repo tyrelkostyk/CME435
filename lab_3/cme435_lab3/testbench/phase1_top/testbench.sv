@@ -1,19 +1,19 @@
-// `include "testbench/phase2_environment/environment.sv"
+`include "testbench/phase2_environment/environment.sv"
 
 program testbench( intf i_intf );
 
 // declaring environment class object instance
-// environment env;
+environment env;
 
 
 initial begin
 	// instantiate environment object
-	// env = new( i_intf );
+	env = new( i_intf );
 	$display("*************** Start of testbench ***************");
 
 	// TODO: global envs go here
 
-	// env.run();
+	env.run();
 end
 
 

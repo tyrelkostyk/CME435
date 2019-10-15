@@ -1,4 +1,4 @@
-`include "phase4_generator/transaction.sv"
+`include "testbench/phase4_generator/transaction.sv"
 
 `ifndef MONITOR_SV
 `define MONITOR_SV

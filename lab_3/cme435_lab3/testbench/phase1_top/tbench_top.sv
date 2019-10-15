@@ -1,3 +1,5 @@
+`timescale 1ns/1ns
+
 module tbench_top;
 
 // clock and reset signal declaration

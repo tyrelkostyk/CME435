@@ -1,9 +1,9 @@
-`include "phase1_top/interface.sv"
-`include "phase4_generator/transaction.sv"
-`include "phase4_generator/generator.sv"
-`include "phase5_driver/driver.sv"
-`include "phase6_monitor/monitor.sv"
-`include "phase7_scoreboard/scoreboard.sv"
+`include "testbench/phase1_top/interface.sv"
+`include "testbench/phase4_generator/transaction.sv"
+`include "testbench/phase4_generator/generator.sv"
+`include "testbench/phase5_driver/driver.sv"
+`include "testbench/phase6_monitor/monitor.sv"
+`include "testbench/phase7_scoreboard/scoreboard.sv"
 
 `ifndef ENVIRONMENT_SV
 `define ENVIRONMENT_SV

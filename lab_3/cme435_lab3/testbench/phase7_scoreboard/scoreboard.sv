@@ -1,4 +1,4 @@
-`include "phase4_generator/transaction.sv"
+`include "testbench/phase4_generator/transaction.sv"
 
 `ifndef SCOREBOARD_SV
 `define SCOREBOARD_SV

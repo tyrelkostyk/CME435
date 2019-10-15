@@ -1,4 +1,4 @@
-`include "phase4_generator/transaction.sv"
+`include "testbench/phase4_generator/transaction.sv"
 
 `ifndef DRIVER_SV
 `define DRIVER_SV

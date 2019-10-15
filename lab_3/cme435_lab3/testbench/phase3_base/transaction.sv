@@ -6,14 +6,14 @@ class transaction;
 
 // ************************* INSTANTIATIONS ************************* //
 
-rand bit [3:0] a;
-rand bit [3:0] b;
-bit [6:0] c;
+rand bit [7:0] data_in;
+
+bit [7:0] data_out_1, data_out_2, data_out_3, data_out_4;
 
 
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
-function void display( string name );
+function void display_trans( string name );
 	$display("- %s ",name);
 	$display("-------------------------");
 	$display("- a = %0d, b = %0d",a,b);

@@ -1,4 +1,4 @@
-`include "testbench/phase4_generator/transaction.sv"
+`include "testbench/phase3_base/transaction.sv"
 
 `ifndef MONITOR_SV
 `define MONITOR_SV
@@ -19,7 +19,7 @@ mailbox mon2scb;
 
 // monitor constructor
 function new( virtual intf vif, mailbox mon2scb );
-	// get the interface
+	// get the interface (MONITOR modport) from env
 	this.vif = vif;
 
 	// get the mailbox handles
@@ -45,7 +45,7 @@ task main();
 
 		@( posedge vif.clk );
 			mon2scb.put( trans );
-			trans.display("[ monitor ]");
+			trans.display_trans("[ monitor ]");
 	end
 endtask
 

@@ -1,4 +1,4 @@
-`include "testbench/phase4_generator/transaction.sv"
+`include "testbench/phase3_base/transaction.sv"
 
 `ifndef DRIVER_SV
 `define DRIVER_SV
@@ -19,7 +19,7 @@ mailbox gen2drive;
 
 // driver constructor
 function new( virtual intf vif, mailbox gen2drive );
-	// get the interface from env
+	// get the interface (DRIVER modport) from env
 	this.vif = vif;
 
 	// get the mailbox handle from env
@@ -54,7 +54,7 @@ task main();
 			trans.c 	= vif.c;
 
 		@( posedge vif.clk );
-			trans.display("[ Driver ]");
+			trans.display_trans("[ Driver ]");
 
 		num_transactions_sent++;
 	end

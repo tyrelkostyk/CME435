@@ -1,4 +1,4 @@
-`include "testbench/phase4_generator/transaction.sv"
+`include "testbench/phase3_base/transaction.sv"
 
 `ifndef GENERATOR_SV
 `define GENERATOR_SV
@@ -41,7 +41,7 @@ task main();
 		trans = new();
 
 		if( !trans.randomize() ) $fatal("Gen:: trans randomization failed");
-		trans.display("[ Generator ]");
+		trans.display_trans("[ Generator ]");
 
 		// place a transaction message in the generator-to-driver mailbox
 		gen2drive.put( trans );

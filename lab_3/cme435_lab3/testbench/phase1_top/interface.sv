@@ -26,7 +26,7 @@ endclocking
 
 modport DUT (
 	clocking cb_dut,
-	input clk, reset		//TODO: clk here? or in cb_dut?
+	input clk, reset
 );
 
 

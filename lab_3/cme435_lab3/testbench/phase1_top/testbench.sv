@@ -11,7 +11,7 @@ initial begin
 	env = new( i_intf );
 	$display("*************** Start of testbench ***************");
 
-	// TODO: global envs go here
+	// global envs go here
 
 	env.run();
 end

@@ -1,5 +1,5 @@
 `include "testbench/phase1_top/interface.sv"
-// `include "testbench/phase4_generator/transaction.sv"
+`include "testbench/phase3_base/transaction.sv"
 // `include "testbench/phase4_generator/generator.sv"
 // `include "testbench/phase5_driver/driver.sv"
 // `include "testbench/phase6_monitor/monitor.sv"
@@ -14,7 +14,7 @@ class environment;
 // ************************* INSTANTIATIONS ************************* //
 
 // instantiate class instances
-// generator gen;
+generator gen;
 // driver drive;
 // monitor mon;
 // scoreboard scb;
@@ -34,12 +34,12 @@ function new( virtual intf vif );
   // get the interface from test
   this.vif = vif;
 
-	// // create the mailboxes (Same handle will be shared across objects)
-	// gen2drive = new();
-	// mon2scb = new();
-	//
-	// // construct the objects
-	// gen = new( gen2drive );
+	// create the mailboxes (Same handle will be shared across objects)
+	gen2drive = new();
+	mon2scb = new();
+
+	// construct the objects
+	gen = new( gen2drive );
 	// drive = new( vif.DRIVER, gen2drive );		// TODO: is this the proper way to instantiate a modport?
 	// mon = new( vif.MONITOR, mon2scb );			// TODO: is this the proper way to instantiate a modport?
 	// scb = new( mon2scb );
@@ -82,12 +82,12 @@ endtask
 task test();
 	$display("%0d : Environment : Start of test() task", $time);
 
-	// fork
-	// 	gen.main();
+	fork
+		gen.main();
 	// 	drive.main();
 	// 	mon.main();
 	// 	scb.main();
-	// join_any					// TODO: should this be join_any or join?
+	join_any					// join_any bc driver never exits (forever loop)
 
 	// TODO: put necessary wait statements here
 	// wait( gen.end_gen.triggered );

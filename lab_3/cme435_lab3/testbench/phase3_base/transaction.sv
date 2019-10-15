@@ -23,10 +23,11 @@ constraint payload_dest_addr_c {
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
 function void display_trans( string name );
-	$display(  "-- %s : ----- PACKET -----", name);
-	$display(  "--------------------------");
-	$display(  "DEST_ADDR    : - 0 : %h ", dest_addr);
+	$display(  "------- %s -------", name);
+	$display(  "----------- PACKET -----------");
+	$display(  "DEST_ADDR    : %h ", dest_addr);
 	foreach( data_in[i] ) begin
+		$display("--------- PACKET[%3d] ---------", i);
 		$display("DATA_IN      : %3d : %h ", i, data_in[i]);
 		$display("DATA_OUT_1   : %3d : %h ", i, data_out_1[i]);
 		$display("DATA_OUT_2   : %3d : %h ", i, data_out_2[i]);

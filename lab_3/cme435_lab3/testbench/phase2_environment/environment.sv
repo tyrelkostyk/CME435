@@ -1,6 +1,6 @@
 `include "testbench/phase1_top/interface.sv"
 `include "testbench/phase3_base/transaction.sv"
-// `include "testbench/phase4_generator/generator.sv"
+`include "testbench/phase4_generator/generator.sv"
 // `include "testbench/phase5_driver/driver.sv"
 // `include "testbench/phase6_monitor/monitor.sv"
 // `include "testbench/phase7_scoreboard/scoreboard.sv"
@@ -14,7 +14,7 @@ class environment;
 // ************************* INSTANTIATIONS ************************* //
 
 // instantiate class instances
-// generator gen;
+generator gen;
 // driver drive;
 // monitor mon;
 // scoreboard scb;
@@ -39,7 +39,7 @@ function new( virtual intf vif );
 	mon2scb = new();
 
 	// construct the objects
-	// gen = new( gen2drive );
+	gen = new( gen2drive );
 	// drive = new( vif.DRIVER, gen2drive );		// TODO: is this the proper way to instantiate a modport?
 	// mon = new( vif.MONITOR, mon2scb );			// TODO: is this the proper way to instantiate a modport?
 	// scb = new( mon2scb );
@@ -82,15 +82,15 @@ endtask
 task test();
 	$display("%0d : Environment : Start of test() task", $time);
 
-	// fork
-	// 	gen.main();
+	fork
+		gen.main();
 	// 	drive.main();
 	// 	mon.main();
 	// 	scb.main();
-	// join_any					// join_any bc driver never exits (forever loop)
+	join_any					// join_any bc driver never exits (forever loop)
 
 	// TODO: put necessary wait statements here
-	// wait( gen.end_gen.triggered );
+	wait( gen.end_gen.triggered );
 	// wait( gen.repeat_count == drive.num_transactions_sent );
 	// wait( gen.repeat_count == scb.num_transactions_recv );
 

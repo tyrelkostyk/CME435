@@ -12,6 +12,7 @@ initial begin
 	$display("*************** Start of testbench ***************");
 
 	// global envs go here
+	env.gen.pkt_count = 3;		// how many packets to generate and send
 
 	env.run();
 end

@@ -1,4 +1,4 @@
-`include "testbench/environment.sv"
+`include "phase2_environment/environment.sv"
 
 program testbench( intf i_intf );
 
@@ -11,8 +11,7 @@ initial begin
 	env = new( i_intf );
 	$display("*************** Start of testbench ***************");
 
-	// repeat_count is how many packets to generate
-	env.gen.repeat_count = 5;
+	// TODO: global envs go here
 
 	env.run();
 end

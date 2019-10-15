@@ -1,9 +1,9 @@
-`include "testbench/interface.sv"
-`include "testbench/transaction.sv"
-`include "testbench/generator.sv"
-`include "testbench/driver.sv"
-`include "testbench/monitor.sv"
-`include "testbench/scoreboard.sv"
+`include "phase1_top/interface.sv"
+`include "phase4_generator/transaction.sv"
+`include "phase4_generator/generator.sv"
+`include "phase5_driver/driver.sv"
+`include "phase6_monitor/monitor.sv"
+`include "phase7_scoreboard/scoreboard.sv"
 
 `ifndef ENVIRONMENT_SV
 `define ENVIRONMENT_SV
@@ -56,7 +56,7 @@ integer error_count = 0;
 // ***************************** TASKS ****************************** //
 
 task reset();
-	wait( vif.reset );		// TODO: where is vif.reset defined?
+	wait( vif.reset );
 	$display("[ ENVIRONMENT ] ----- Reset Started -----");
 
 	vif.a 		<= 0;

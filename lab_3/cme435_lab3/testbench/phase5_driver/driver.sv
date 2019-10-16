@@ -45,15 +45,21 @@ task main();
 		gen2drive.get( trans );
 
 		@( posedge vif.clk );
-			vif.valid = 1;
-			vif.a 		= trans.a;
-			vif.b 		= trans.b;
+			vif.bnd_plse 	= 1;
+			vif.data_in		= trans.dest_addr;
+
+		foreach( trans.data_in[i] ) begin
+			@( posedge vif.clk );
+				if ( i == trans.data_in.size() - 1 )		// last byte
+					vif.bnd_plse 	= 1;
+				else
+					vif.bnd_plse 	= 0;
+
+				vif.data_in			= trans.data_in[i];
+		end
 
 		@( posedge vif.clk );
-			vif.valid = 0;
-			trans.c 	= vif.c;
-
-		@( posedge vif.clk );
+			$display(  "----------- PACKET NUMBER %1d -----------", num_transactions_sent+1);
 			trans.display_trans("[ Driver ]");
 
 		num_transactions_sent++;

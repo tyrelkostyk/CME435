@@ -1,7 +1,7 @@
 `include "testbench/phase1_top/interface.sv"
 `include "testbench/phase3_base/transaction.sv"
 `include "testbench/phase4_generator/generator.sv"
-// `include "testbench/phase5_driver/driver.sv"
+`include "testbench/phase5_driver/driver.sv"
 // `include "testbench/phase6_monitor/monitor.sv"
 // `include "testbench/phase7_scoreboard/scoreboard.sv"
 
@@ -15,7 +15,7 @@ class environment;
 
 // instantiate class instances
 generator gen;
-// driver drive;
+driver drive;
 // monitor mon;
 // scoreboard scb;
 
@@ -40,7 +40,7 @@ function new( virtual intf vif );
 
 	// construct the objects
 	gen = new( gen2drive );
-	// drive = new( vif.DRIVER, gen2drive );		// TODO: is this the proper way to instantiate a modport?
+	drive = new( vif.DRIVER, gen2drive );		// TODO: is this the proper way to instantiate a modport?
 	// mon = new( vif.MONITOR, mon2scb );			// TODO: is this the proper way to instantiate a modport?
 	// scb = new( mon2scb );
 
@@ -84,7 +84,7 @@ task test();
 
 	fork
 		gen.main();
-	// 	drive.main();
+		drive.main();
 	// 	mon.main();
 	// 	scb.main();
 	join_any					// join_any bc driver never exits (forever loop)

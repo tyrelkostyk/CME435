@@ -28,7 +28,7 @@ endfunction
 // *********************** EVENTS AND INTEGERS ********************** //
 
 int pkt_count;
-int pkts_sent = 0;
+int num_transactions_gen = 0;
 
 event end_gen;
 
@@ -42,12 +42,12 @@ task main();
 		trans = new();
 
 		if( !trans.randomize() ) $fatal("Gen:: trans randomization failed");
-		$display(  "----------- PACKET NUMBER %1d -----------", pkts_sent+1);
+		$display(  "----------- PACKET NUMBER %1d -----------", num_transactions_gen+1);
 		trans.display_trans("[ Generator ]");
 
 		// place a transaction message in the generator-to-driver mailbox
 		gen2drive.put( trans );
-		pkts_sent++;
+		num_transactions_gen++;
 	end
 	-> end_gen;		// trigger the end of generation
 endtask

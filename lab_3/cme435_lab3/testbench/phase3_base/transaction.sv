@@ -23,7 +23,7 @@ constraint payload_dest_addr_c {
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
 function void display_trans( string name );
-	$display(  "------- %s -------", name);
+	$display(  "---------- %s ----------", name);
 	$display(  "----------- PACKET -----------");
 	$display(  "DEST_ADDR    : %h ", dest_addr);
 	foreach( data_in[i] ) begin

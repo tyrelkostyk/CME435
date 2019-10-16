@@ -60,7 +60,7 @@ task main();
 
 		@( posedge vif.clk );
 			$display(  "----------- PACKET NUMBER %1d -----------", num_transactions_sent+1);
-			trans.display_trans("[ Driver ]");
+			trans.display_trans("[ DRIVER ]");
 
 		num_transactions_sent++;
 	end

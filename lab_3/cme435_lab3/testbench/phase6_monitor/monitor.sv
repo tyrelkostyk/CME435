@@ -45,7 +45,7 @@ task main();
 
 		@( posedge vif.clk );
 			mon2scb.put( trans );
-			trans.display_trans("[ monitor ]");
+			trans.display_trans("[ MONITOR ]");
 	end
 endtask
 

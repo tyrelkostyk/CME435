@@ -43,7 +43,7 @@ task main();
 
 		if( !trans.randomize() ) $fatal("Gen:: trans randomization failed");
 		$display(  "----------- PACKET NUMBER %1d -----------", num_transactions_gen+1);
-		trans.display_trans("[ Generator ]");
+		trans.display_trans("[ GENERATOR ]");
 
 		// place a transaction message in the generator-to-driver mailbox
 		gen2drive.put( trans );

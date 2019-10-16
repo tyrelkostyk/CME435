@@ -4,7 +4,7 @@ add wave -noupdate /tbench_top/dut/i_intf/clk
 add wave -noupdate /tbench_top/dut/i_intf/reset
 add wave -noupdate -divider {Input Interface}
 add wave -noupdate /tbench_top/dut/i_intf/bnd_plse
-add wave -noupdate /tbench_top/dut/i_intf/ack
+add wave -noupdate -color Red /tbench_top/dut/i_intf/ack
 add wave -noupdate -color Gold -itemcolor Gold -radix unsigned /tbench_top/dut/i_intf/data_in
 add wave -noupdate -divider {Output Port 1 Interface}
 add wave -noupdate /tbench_top/dut/i_intf/proceed_1
@@ -23,7 +23,7 @@ add wave -noupdate /tbench_top/dut/i_intf/proceed_4
 add wave -noupdate -radix unsigned /tbench_top/dut/i_intf/newdata_len_4
 add wave -noupdate -color Gold -itemcolor Gold -radix unsigned /tbench_top/dut/i_intf/data_out_4
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {39 ns} 0}
+WaveRestoreCursors {{Cursor 1} {15 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 194
 configure wave -valuecolwidth 63

@@ -95,7 +95,7 @@ task test();
 	// 	scb.main();
 	join_any					// join_any bc driver never exits (forever loop)
 
-	// TODO: put necessary wait statements here
+	// put necessary wait statements here
 	wait( gen.end_gen.triggered );
 	// wait( gen.repeat_count == drive.num_transactions_sent );
 	// wait( gen.repeat_count == scb.num_transactions_recv );

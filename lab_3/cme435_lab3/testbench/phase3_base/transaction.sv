@@ -23,16 +23,16 @@ constraint payload_dest_addr_c {
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
 function void display_trans( string name );
-	$display(  "---------- %s ----------", name);
-	$display(  "----------- PACKET -----------");
-	$display(  "DEST_ADDR    : %h ", dest_addr);
+	$display(  "%0d : ---------- %s ----------", $time, name);
+	$display(  "%0d : ----------- PACKET -----------", $time, );
+	$display(  "%0d : DEST_ADDR    : %h ", $time, dest_addr);
 	foreach( data_in[i] ) begin
-		$display("--------- BYTE %2d ---------", i);
-		$display("DATA_IN      : %3d : %h ", i, data_in[i]);
-		$display("DATA_OUT_1   : %3d : %h ", i, data_out_1[i]);
-		$display("DATA_OUT_2   : %3d : %h ", i, data_out_2[i]);
-		$display("DATA_OUT_3   : %3d : %h ", i, data_out_3[i]);
-		$display("DATA_OUT_4   : %3d : %h ", i, data_out_4[i]);
+		$display("%0d : --------- BYTE %2d ---------", $time,  i);
+		$display("%0d : DATA_IN      : %3d : %h ", $time, i, data_in[i]);
+		$display("%0d : DATA_OUT_1   : %3d : %h ", $time, i, data_out_1[i]);
+		$display("%0d : DATA_OUT_2   : %3d : %h ", $time, i, data_out_2[i]);
+		$display("%0d : DATA_OUT_3   : %3d : %h ", $time, i, data_out_3[i]);
+		$display("%0d : DATA_OUT_4   : %3d : %h ", $time, i, data_out_4[i]);
 	end
 
 endfunction

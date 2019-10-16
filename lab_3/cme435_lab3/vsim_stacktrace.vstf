@@ -293,3 +293,99 @@
 # End of Stack Trace
 
 
+# Current time Wed Oct 16 12:57:15 2019
+# QuestaSim Stack Trace
+# Program = vsim
+# Id = "10.3a"
+# Version = "2014.04"
+# Date = "Apr 13 2014"
+# Platform = linux
+# 0    0x08507c82: '<unknown (@0x8507c82)>'
+# 1    0x0850803f: '<unknown (@0x850803f)>'
+# 2    0x0850c88b: '<unknown (@0x850c88b)>'
+# 3    0x08fed6fd: '<unknown (@0x8fed6fd)>'
+# 4    0x08fef1b6: '<unknown (@0x8fef1b6)>'
+# 5    0x08fef7a5: '<unknown (@0x8fef7a5)>'
+# 6    0x08d1981b: '<unknown (@0x8d1981b)>'
+# 7    0x09052d7e: '<unknown (@0x9052d7e)>'
+# 8    0x090a4022: '<unknown (@0x90a4022)>'
+# 9    0x0906a083: '<unknown (@0x906a083)>'
+# 10   0x0906a3ea: '<unknown (@0x906a3ea)>'
+# 11   0x08efabc0: '<unknown (@0x8efabc0)>'
+# 12   0x084e4333: '<unknown (@0x84e4333)>'
+# 13   0x083dba00: '<unknown (@0x83dba00)>'
+# End of Stack Trace
+
+
+# Current time Wed Oct 16 13:05:32 2019
+# QuestaSim Stack Trace
+# Program = vsim
+# Id = "10.3a"
+# Version = "2014.04"
+# Date = "Apr 13 2014"
+# Platform = linux
+# 0    0x08507c82: '<unknown (@0x8507c82)>'
+# 1    0x0850803f: '<unknown (@0x850803f)>'
+# 2    0x0850c88b: '<unknown (@0x850c88b)>'
+# 3    0x08fed6fd: '<unknown (@0x8fed6fd)>'
+# 4    0x08fef1b6: '<unknown (@0x8fef1b6)>'
+# 5    0x08fef7a5: '<unknown (@0x8fef7a5)>'
+# 6    0x08d1981b: '<unknown (@0x8d1981b)>'
+# 7    0x09052d7e: '<unknown (@0x9052d7e)>'
+# 8    0x090a4022: '<unknown (@0x90a4022)>'
+# 9    0x0906a083: '<unknown (@0x906a083)>'
+# 10   0x0906a3ea: '<unknown (@0x906a3ea)>'
+# 11   0x08efabc0: '<unknown (@0x8efabc0)>'
+# 12   0x084e4333: '<unknown (@0x84e4333)>'
+# 13   0x083dba00: '<unknown (@0x83dba00)>'
+# End of Stack Trace
+
+
+# Current time Wed Oct 16 13:06:31 2019
+# QuestaSim Stack Trace
+# Program = vsim
+# Id = "10.3a"
+# Version = "2014.04"
+# Date = "Apr 13 2014"
+# Platform = linux
+# 0    0x08507c82: '<unknown (@0x8507c82)>'
+# 1    0x0850803f: '<unknown (@0x850803f)>'
+# 2    0x0850c88b: '<unknown (@0x850c88b)>'
+# 3    0x08fed6fd: '<unknown (@0x8fed6fd)>'
+# 4    0x08fef1b6: '<unknown (@0x8fef1b6)>'
+# 5    0x08fef7a5: '<unknown (@0x8fef7a5)>'
+# 6    0x08d1981b: '<unknown (@0x8d1981b)>'
+# 7    0x09052d7e: '<unknown (@0x9052d7e)>'
+# 8    0x090a4022: '<unknown (@0x90a4022)>'
+# 9    0x0906a083: '<unknown (@0x906a083)>'
+# 10   0x0906a3ea: '<unknown (@0x906a3ea)>'
+# 11   0x08efabc0: '<unknown (@0x8efabc0)>'
+# 12   0x084e4333: '<unknown (@0x84e4333)>'
+# 13   0x083dba00: '<unknown (@0x83dba00)>'
+# End of Stack Trace
+
+
+# Current time Wed Oct 16 13:15:56 2019
+# QuestaSim Stack Trace
+# Program = vsim
+# Id = "10.3a"
+# Version = "2014.04"
+# Date = "Apr 13 2014"
+# Platform = linux
+# 0    0x08507c82: '<unknown (@0x8507c82)>'
+# 1    0x0850803f: '<unknown (@0x850803f)>'
+# 2    0x0850c88b: '<unknown (@0x850c88b)>'
+# 3    0x08fed6fd: '<unknown (@0x8fed6fd)>'
+# 4    0x08fef1b6: '<unknown (@0x8fef1b6)>'
+# 5    0x08fef7a5: '<unknown (@0x8fef7a5)>'
+# 6    0x08d1981b: '<unknown (@0x8d1981b)>'
+# 7    0x09052d7e: '<unknown (@0x9052d7e)>'
+# 8    0x090a4022: '<unknown (@0x90a4022)>'
+# 9    0x0906a083: '<unknown (@0x906a083)>'
+# 10   0x0906a3ea: '<unknown (@0x906a3ea)>'
+# 11   0x08efabc0: '<unknown (@0x8efabc0)>'
+# 12   0x084e4333: '<unknown (@0x84e4333)>'
+# 13   0x083dba00: '<unknown (@0x83dba00)>'
+# End of Stack Trace
+
+

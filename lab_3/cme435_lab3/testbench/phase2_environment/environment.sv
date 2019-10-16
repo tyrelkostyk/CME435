@@ -40,7 +40,7 @@ function new( virtual intf vif );
 
 	// construct the objects
 	gen = new( gen2drive );
-	drive = new( vif.DRIVER, gen2drive );		// TODO: is this the proper way to instantiate a modport?
+	drive = new( vif, gen2drive );		// TODO: is this the proper way to instantiate a modport?
 	// mon = new( vif.MONITOR, mon2scb );			// TODO: is this the proper way to instantiate a modport?
 	// scb = new( mon2scb );
 

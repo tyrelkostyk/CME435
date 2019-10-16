@@ -9,7 +9,7 @@ class driver;
 // ************************* INSTANTIATIONS ************************* //
 
 // create virtual interface handle
-virtual intf vif;
+virtual intf.DRIVER vif;
 
 // create mailbox handle
 mailbox gen2drive;
@@ -18,7 +18,7 @@ mailbox gen2drive;
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
 // driver constructor
-function new( virtual intf vif, mailbox gen2drive );
+function new( virtual intf.DRIVER vif, mailbox gen2drive );
 	// get the interface (DRIVER modport) from env
 	this.vif = vif;
 
@@ -48,18 +48,16 @@ task main();
 			vif.bnd_plse 	= 1;
 			vif.data_in		= trans.dest_addr;
 
-		foreach( trans.data_in[i] ) begin
-			@( posedge vif.clk );
-				if ( i == trans.data_in.size() - 1 )		// last byte
-					vif.bnd_plse 	= 1;
-				else
-					vif.bnd_plse 	= 0;
+		fork
+			@( posedge vif.clk ) vif.bnd_plse = 0;
+			foreach( trans.data_in[i] )
+				@( posedge vif.clk ) vif.data_in = trans.data_in[i];
+		join
 
-				vif.data_in			= trans.data_in[i];
-		end
+		vif.bnd_plse = 1;
 
 		@( posedge vif.clk );
-			$display(  "----------- PACKET NUMBER %1d -----------", num_transactions_sent+1);
+			$display("%0d : ----------- PACKET NUMBER %1d -----------", $time, num_transactions_sent+1);
 			trans.display_trans("[ DRIVER ]");
 
 		num_transactions_sent++;

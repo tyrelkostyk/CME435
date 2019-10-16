@@ -60,12 +60,18 @@ task reset();
 	$display("[ ENVIRONMENT ] ----- Reset Started -----");
 
 	// reset DUT signals
-	vif.cb_dut.bnd_plse 				<= 0;
-	vif.cb_dut.data_in					<= 0;
-	vif.cb_dut.proceed_1				<= 0;
-	vif.cb_dut.proceed_2				<= 0;
-	vif.cb_dut.proceed_3				<= 0;
-	vif.cb_dut.proceed_4				<= 0;
+	// vif.cb_dut.bnd_plse 				<= 0;
+	// vif.cb_dut.data_in					<= 0;
+	// vif.cb_dut.proceed_1				<= 0;
+	// vif.cb_dut.proceed_2				<= 0;
+	// vif.cb_dut.proceed_3				<= 0;
+	// vif.cb_dut.proceed_4				<= 0;
+	vif.bnd_plse 				<= 0;
+	vif.data_in					<= 0;
+	vif.proceed_1				<= 0;
+	vif.proceed_2				<= 0;
+	vif.proceed_3				<= 0;
+	vif.proceed_4				<= 0;
 
 	wait( !vif.reset );
 	$display("[ ENVIRONMENT ] ----- Reset Ended   -----");
@@ -114,7 +120,7 @@ task run();
 	post_test();
 
 	$display("%0d : Environment : End of post_test() task", $time);
-	#1000 finish();
+	#2000 finish();
 endtask
 
 

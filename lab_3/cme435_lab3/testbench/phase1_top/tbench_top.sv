@@ -13,6 +13,7 @@ always #5 clk = ~clk;
 initial begin
   reset = 1;
   #5 reset = 0;
+	#5 reset = 1;
 end
 
 // creatinng instance of interface, in order to connect DUT and testcase

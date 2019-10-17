@@ -122,7 +122,7 @@ task run();
 	post_test();
 
 	$display("%0d : Environment : End of post_test() task", $time);
-	#2000 finish();
+	#2500 finish();
 endtask
 
 

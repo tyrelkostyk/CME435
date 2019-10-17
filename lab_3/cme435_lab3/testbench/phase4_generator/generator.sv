@@ -44,13 +44,13 @@ task main();
 		trans_gen = new();
 
 		if( !trans_gen.randomize() ) $fatal("Gen:: trans_gen randomization failed");
-		$display(  "----------- PACKET NUMBER %1d -----------", num_transactions_gen+1);
+		num_transactions_gen++;
+		$display(  "----------- PACKET NUMBER %1d -----------", num_transactions_gen);
 		trans_gen.display_trans("[ GENERATOR ]");
 
 		// send the transaction message via mailbox to the driver and monitor
 		gen2drive.put( trans_gen );
 		gen2mon.put( trans_gen );
-		num_transactions_gen++;
 	end
 	-> end_gen;		// trigger the end of generation
 endtask

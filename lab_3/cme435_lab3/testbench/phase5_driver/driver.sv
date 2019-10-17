@@ -39,9 +39,8 @@ int num_transactions_sent;
 // drive the transaction items to the interface signals
 task main();
 	forever begin
-		// instantiate transaction object
+		// instantiate transaction object and grab it from generator
 		transaction trans_tx;
-
 		gen2drive.get( trans_tx );
 
 		@( posedge vif.clk );
@@ -50,7 +49,7 @@ task main();
 
 		fork
 			@( posedge vif.clk ) vif.bnd_plse = 1'b0;
-			foreach( trans_tx.data_in[i] )
+			foreach ( trans_tx.data_in[i] )
 				@( posedge vif.clk ) vif.data_in = trans_tx.data_in[i];
 		join
 
@@ -58,10 +57,10 @@ task main();
 
 		@( posedge vif.clk );
 			vif.bnd_plse = 1'b0;
-			$display("%0d : ----------- PACKET NUMBER %1d -----------", $time, num_transactions_sent+1);
-			trans_tx.display_trans("[ DRIVER ]");
 
 		num_transactions_sent++;
+		$display("%0d : ----------- PACKET NUMBER %1d -----------", $time, num_transactions_sent);
+		trans_tx.display_trans("[ DRIVER ]");
 
 		wait( vif.ack );
 		wait( !vif.ack );

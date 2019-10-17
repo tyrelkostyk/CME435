@@ -23,7 +23,7 @@ add wave -noupdate /tbench_top/dut/i_intf/proceed_4
 add wave -noupdate -radix unsigned /tbench_top/dut/i_intf/newdata_len_4
 add wave -noupdate -color Gold -itemcolor Gold -radix unsigned /tbench_top/dut/i_intf/data_out_4
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {15 ns} 0}
+WaveRestoreCursors {{Cursor 1} {185 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 194
 configure wave -valuecolwidth 63
@@ -39,4 +39,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits us
 update
-WaveRestoreZoom {0 ns} {279 ns}
+WaveRestoreZoom {79 ns} {358 ns}

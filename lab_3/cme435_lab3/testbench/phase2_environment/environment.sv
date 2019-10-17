@@ -2,7 +2,7 @@
 `include "testbench/phase3_base/transaction.sv"
 `include "testbench/phase4_generator/generator.sv"
 `include "testbench/phase5_driver/driver.sv"
-// `include "testbench/phase6_monitor/monitor.sv"
+`include "testbench/phase6_monitor/monitor.sv"
 // `include "testbench/phase7_scoreboard/scoreboard.sv"
 
 `ifndef ENVIRONMENT_SV
@@ -16,11 +16,12 @@ class environment;
 // instantiate class instances
 generator gen;
 driver drive;
-// monitor mon;
+monitor mon;
 // scoreboard scb;
 
 // instantiate mailbox handles
 mailbox gen2drive;			// to generate and send the packets to driver
+mailbox gen2mon;				// to generate and send the dest_addr to monitor
 mailbox mon2scb;				// to share received data with the scoreboard
 
 // instantiate virtual interfaces
@@ -36,12 +37,13 @@ function new( virtual intf vif );
 
 	// create the mailboxes (Same handle will be shared across objects)
 	gen2drive = new();
+	gen2mon = new();
 	mon2scb = new();
 
 	// construct the objects
-	gen = new( gen2drive );
-	drive = new( vif, gen2drive );		// TODO: is this the proper way to instantiate a modport?
-	// mon = new( vif.MONITOR, mon2scb );			// TODO: is this the proper way to instantiate a modport?
+	gen = new( gen2drive, gen2mon );
+	drive = new( vif, gen2drive );
+	mon = new( vif, gen2mon, mon2scb );
 	// scb = new( mon2scb );
 
 endfunction
@@ -91,13 +93,13 @@ task test();
 	fork
 		gen.main();
 		drive.main();
-	// 	mon.main();
+		mon.main();
 	// 	scb.main();
 	join_any					// join_any bc driver never exits (forever loop)
 
 	// put necessary wait statements here
 	wait( gen.end_gen.triggered );
-	// wait( gen.repeat_count == drive.num_transactions_sent );
+	wait( gen.pkt_count == drive.num_transactions_sent );
 	// wait( gen.repeat_count == scb.num_transactions_recv );
 
 	$display("%0d : Environment : End of test() task", $time);

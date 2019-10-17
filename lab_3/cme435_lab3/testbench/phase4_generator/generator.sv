@@ -13,14 +13,16 @@ rand transaction trans_gen;
 
 // mailbox handles
 mailbox gen2drive;		// to generate and send the packets to driver
+mailbox gen2mon;			// to generate and send the dest_addr to monitor
 
 
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
 // generator constructor
-function new( mailbox gen2drive );
-	//getting the mailbox handle from env.
+function new( mailbox gen2drive, gen2mon );
+	// getting the mailbox handles from env.
 	this.gen2drive = gen2drive;
+	this.gen2mon = gen2mon;
 
 endfunction
 
@@ -45,8 +47,9 @@ task main();
 		$display(  "----------- PACKET NUMBER %1d -----------", num_transactions_gen+1);
 		trans_gen.display_trans("[ GENERATOR ]");
 
-		// place a transaction message in the generator-to-driver mailbox
+		// send the transaction message via mailbox to the driver and monitor
 		gen2drive.put( trans_gen );
+		gen2mon.put( trans_gen );
 		num_transactions_gen++;
 	end
 	-> end_gen;		// trigger the end of generation

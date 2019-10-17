@@ -23,7 +23,7 @@ function new( virtual intf.MONITOR vif, mailbox gen2mon, mailbox mon2scb );
 	// get the interface (MONITOR modport) from env
 	this.vif = vif;
 
-	// get the mailbox handles
+	// get the mailboxes from env
 	this.mon2scb = mon2scb;
 	this.gen2mon = gen2mon;
 

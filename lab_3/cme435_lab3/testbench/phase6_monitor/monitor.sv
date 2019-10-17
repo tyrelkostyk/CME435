@@ -15,6 +15,8 @@ virtual intf.MONITOR vif;
 mailbox mon2scb;
 mailbox gen2mon;
 
+// temp var for iterating over duration of (dut) output data
+bit [4:0] tmp_data_len;
 
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
@@ -41,43 +43,65 @@ int num_transactions_recv = 0;
 task main();
 	forever begin
 		// instantiate transaction objects
-		transaction trans_gen, trans_rx;
+		transaction trans_rx;
 		trans_rx = new();
-		gen2mon.get( trans_gen );						// grab the generated object
 
 		wait(	vif.newdata_len_4 || vif.newdata_len_3 || vif.newdata_len_2 || vif.newdata_len_1 );
-			if ( vif.newdata_len_1 )
-				for (int i=0; i<vif.newdata_len_1; i++) begin
+			if ( vif.newdata_len_1 ) begin
+				trans_rx.dest_addr = 8'd1;
+				trans_rx.newdata_len = vif.newdata_len_1;
+				tmp_data_len = vif.newdata_len_1;
+				trans_rx.data_out = new[tmp_data_len];
+				wait( vif.data_out_1 );
+				for (int i=0; i<tmp_data_len; i++) begin
 					@( posedge vif.clk );
-					trans_rx.data_out_1[i] = vif.data_out_1;
+					trans_rx.data_out[i] = vif.data_out_1;
 				end
+			end
 
-			else if ( vif.newdata_len_2 )
-				for (int i=0; i<vif.newdata_len_2; i++) begin
+			else if ( vif.newdata_len_2 ) begin
+			trans_rx.dest_addr = 8'd2;
+				trans_rx.newdata_len = vif.newdata_len_2;
+				tmp_data_len = vif.newdata_len_2;
+				trans_rx.data_out = new[tmp_data_len];
+				wait( vif.data_out_2 );
+				for (int i=0; i<tmp_data_len; i++) begin
 					@( posedge vif.clk );
-					trans_rx.data_out_2[i] = vif.data_out_2;
+					trans_rx.data_out[i] = vif.data_out_2;
 				end
+			end
 
-			else if ( vif.newdata_len_3 )
-				for (int i=0; i<vif.newdata_len_3; i++) begin
+			else if ( vif.newdata_len_3 ) begin
+				trans_rx.dest_addr = 8'd3;
+				trans_rx.newdata_len = vif.newdata_len_3;
+				tmp_data_len = vif.newdata_len_3;
+				trans_rx.data_out = new[tmp_data_len];
+				wait( vif.data_out_3 );
+				for (int i=0; i<tmp_data_len; i++) begin
 					@( posedge vif.clk );
-					trans_rx.data_out_3[i] = vif.data_out_3;
+					trans_rx.data_out[i] = vif.data_out_3;
 				end
+			end
 
-			else if ( vif.newdata_len_4 )
-				for (int i=0; i<vif.newdata_len_4; i++) begin
+			else if ( vif.newdata_len_4 ) begin
+				trans_rx.dest_addr = 8'd4;
+				trans_rx.newdata_len = vif.newdata_len_4;
+				tmp_data_len = vif.newdata_len_4;
+				trans_rx.data_out = new[tmp_data_len];
+				wait( vif.data_out_4 );
+				for (int i=0; i<tmp_data_len; i++) begin
 					@( posedge vif.clk );
-					trans_rx.data_out_4[i] = vif.data_out_4;
+					trans_rx.data_out[i] = vif.data_out_4;
 				end
+			end
 
-
-
-		@( posedge vif.clk );
-			mon2scb.put( trans_rx );
 
 		num_transactions_recv++;
-		$display("%0d : ----------- PACKET NUMBER %1d -----------", $time, num_transactions_recv);
-		trans_rx.display_trans("[ MONITOR ]");
+		$display("\n%0d : ----------- PACKET NUMBER %1d | MONITOR -----------", $time, num_transactions_recv);
+		trans_rx.display_upstream("[ MONITOR ]");
+
+		@( posedge vif.clk );
+			// mon2scb.put( trans_rx );
 
 	end
 endtask

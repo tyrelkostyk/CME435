@@ -44,7 +44,7 @@ task main();
 			$error("%0d : Scoreboard : Wrong  Result.\n\tExpeced:  %0d  Actual:  %0d", $time, (trans.a+trans.b), trans.c);
 
 		num_transactions_recv++;
-		trans.display_trans("[ SCOREBOARD ]");
+		trans.display_upstream("[ SCOREBOARD ]");
 	end
 endtask
 

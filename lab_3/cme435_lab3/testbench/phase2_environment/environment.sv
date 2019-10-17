@@ -94,12 +94,13 @@ task test();
 		gen.main();
 		drive.main();
 		mon.main();
-	// 	scb.main();
+		// 	scb.main();
 	join_any					// join_any bc driver never exits (forever loop)
 
 	// put necessary wait statements here
 	wait( gen.end_gen.triggered );
 	wait( gen.pkt_count == drive.num_transactions_sent );
+	// wait( gen.pkt_count == mon.num_transactions_recv );
 	// wait( gen.repeat_count == scb.num_transactions_recv );
 
 	$display("%0d : Environment : End of test() task", $time);

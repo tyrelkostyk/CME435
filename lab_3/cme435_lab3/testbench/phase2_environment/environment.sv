@@ -21,7 +21,6 @@ monitor mon;
 
 // instantiate mailbox handles
 mailbox gen2drive;			// to generate and send the packets to driver
-mailbox gen2mon;				// to generate and send the dest_addr to monitor
 mailbox mon2scb;				// to share received data with the scoreboard
 
 // instantiate virtual interfaces
@@ -37,13 +36,12 @@ function new( virtual intf vif );
 
 	// create the mailboxes (Same handle will be shared across objects)
 	gen2drive = new();
-	gen2mon = new();
 	mon2scb = new();
 
 	// construct the objects
-	gen = new( gen2drive, gen2mon );
+	gen = new( gen2drive );
 	drive = new( vif, gen2drive );
-	mon = new( vif, gen2mon, mon2scb );
+	mon = new( vif, mon2scb );
 	// scb = new( mon2scb );
 
 endfunction

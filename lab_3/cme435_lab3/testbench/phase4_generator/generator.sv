@@ -13,16 +13,14 @@ rand transaction trans_gen;
 
 // mailbox handles
 mailbox gen2drive;		// to generate and send the packets to driver
-mailbox gen2mon;			// to generate and send the dest_addr to monitor
 
 
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
 // generator constructor
-function new( mailbox gen2drive, gen2mon );
+function new( mailbox gen2drive );
 	// getting the mailbox handles from env.
 	this.gen2drive = gen2drive;
-	this.gen2mon = gen2mon;
 
 endfunction
 

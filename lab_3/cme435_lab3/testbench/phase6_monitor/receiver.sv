@@ -50,25 +50,19 @@ task main();
 		trans_rx = new();
 		trans_rx.dest_addr = port;
 
-		$display("%3d : RECEIVER %1d : Pre Wait(data_len)", $time, port);
 		wait(	vif.newdata_len[port] );
-			$display("%3d : RECEIVER %1d : Post Wait(data_len)", $time, port);
 			trans_rx.newdata_len = vif.newdata_len[port];
 			tmp_data_len = vif.newdata_len[port];
 			trans_rx.data_out = new[tmp_data_len];
 
-			$display("%3d : RECEIVER %1d : Pre Wait(data_out)", $time, port);
 			wait( vif.data_out[port] );
-				$display("%3d : RECEIVER %1d : Post Wait(data_out)", $time, port);
 				for (int i=0; i<tmp_data_len; i++) begin
 					@( posedge vif.clk );
 					trans_rx.data_out[i] = vif.data_out[port];
 				end
 
 		num_transactions_recv++;
-		$display("\n%0d : ----------- PACKET NUMBER %1d | RECEIVER %1d -----------", $time, num_transactions_recv, port);
 		trans_rx.display_upstream("[ RECEIVER ]");
-
 
 		@( posedge vif.clk );
 			mon2scb.put( trans_rx );

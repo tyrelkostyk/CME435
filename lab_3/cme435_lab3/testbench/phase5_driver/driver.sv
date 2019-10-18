@@ -13,17 +13,19 @@ virtual intf.DRIVER vif;
 
 // create mailbox handle
 mailbox gen2drive;
+mailbox drive2scb;
 
 
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
 // driver constructor
-function new( virtual intf.DRIVER vif, mailbox gen2drive );
+function new( virtual intf.DRIVER vif, mailbox gen2drive, drive2scb );
 	// get the interface (DRIVER modport) from env
 	this.vif = vif;
 
-	// get the mailbox handle from env
+	// get the mailbox handles from env
 	this.gen2drive = gen2drive;
+	this.drive2scb = drive2scb;
 
 endfunction
 
@@ -77,6 +79,8 @@ task main();
 			vif.proceed_2 <= 1'b0;
 			vif.proceed_3 <= 1'b0;
 			vif.proceed_4 <= 1'b0;
+
+		drive2scb.put( trans_tx );
 
 	end
 endtask

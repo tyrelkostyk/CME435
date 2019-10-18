@@ -48,8 +48,6 @@ endfunction
 
 task main();
 
-$display("%3d : MONITOR : Pre Fork", $time);
-
 	fork
 		recv1.main();
 		recv2.main();
@@ -57,86 +55,7 @@ $display("%3d : MONITOR : Pre Fork", $time);
 		recv4.main();
 	join_any
 
-$display("%3d : MONITOR : Post Fork", $time);
-
 endtask
-
-
-
-
-// task main();
-// 	forever begin
-// 		// instantiate transaction objects
-// 		transaction trans_rx;
-// 		trans_rx = new();
-//
-// 		// wait(	vif.newdata_len_4 || vif.newdata_len_3 || vif.newdata_len_2 || vif.newdata_len_1 );
-// 		fork
-// 			if ( vif.newdata_len_1 ) begin
-// 				trans_rx.dest_addr = 8'd1;
-// 				trans_rx.newdata_len = vif.newdata_len_1;
-// 				tmp_data_len = vif.newdata_len_1;
-// 				trans_rx.data_out = new[tmp_data_len];
-//
-// 				wait( vif.data_out_1 );
-// 				for (int i=0; i<tmp_data_len; i++) begin
-// 					@( posedge vif.clk );
-// 					trans_rx.data_out[i] = vif.data_out_1;
-// 				end
-// 				num_transactions_recv++;
-// 			end
-//
-// 			if ( vif.newdata_len_2 ) begin
-// 			trans_rx.dest_addr = 8'd2;
-// 				trans_rx.newdata_len = vif.newdata_len_2;
-// 				tmp_data_len = vif.newdata_len_2;
-// 				trans_rx.data_out = new[tmp_data_len];
-//
-// 				wait( vif.data_out_2 );
-// 				for (int i=0; i<tmp_data_len; i++) begin
-// 					@( posedge vif.clk );
-// 					trans_rx.data_out[i] = vif.data_out_2;
-// 				end
-// 				num_transactions_recv++;
-// 			end
-//
-// 			if ( vif.newdata_len_3 ) begin
-// 				trans_rx.dest_addr = 8'd3;
-// 				trans_rx.newdata_len = vif.newdata_len_3;
-// 				tmp_data_len = vif.newdata_len_3;
-// 				trans_rx.data_out = new[tmp_data_len];
-//
-// 				wait( vif.data_out_3 );
-// 				for (int i=0; i<tmp_data_len; i++) begin
-// 					@( posedge vif.clk );
-// 					trans_rx.data_out[i] = vif.data_out_3;
-// 				end
-// 				num_transactions_recv++;
-// 			end
-//
-// 			if ( vif.newdata_len_4 ) begin
-// 				trans_rx.dest_addr = 8'd4;
-// 				trans_rx.newdata_len = vif.newdata_len_4;
-// 				tmp_data_len = vif.newdata_len_4;
-// 				trans_rx.data_out = new[tmp_data_len];
-//
-// 				wait( vif.data_out_4 );
-// 				for (int i=0; i<tmp_data_len; i++) begin
-// 					@( posedge vif.clk );
-// 					trans_rx.data_out[i] = vif.data_out_4;
-// 				end
-// 				num_transactions_recv++;
-// 			end
-// 		join_any
-//
-// 		$display("\n%0d : ----------- PACKET NUMBER %1d | MONITOR -----------", $time, num_transactions_recv);
-// 		trans_rx.display_upstream("[ MONITOR ]");
-//
-// 		@( posedge vif.clk );
-// 			// mon2scb.put( trans_rx );
-//
-// 	end
-// endtask
 
 
 endclass

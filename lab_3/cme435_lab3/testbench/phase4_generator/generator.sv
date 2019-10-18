@@ -13,14 +13,16 @@ rand transaction trans_gen;
 
 // mailbox handles
 mailbox gen2drive;		// to generate and send the packets to driver
+mailbox drive2scb;		// to generate and send the packets to scoreboard
 
 
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
 // generator constructor
-function new( mailbox gen2drive );
+function new( mailbox gen2drive );  //, drive2scb );
 	// getting the mailbox handles from env.
 	this.gen2drive = gen2drive;
+	// this.drive2scb = drive2scb;
 
 endfunction
 
@@ -46,8 +48,9 @@ task main();
 		$display("\n----------- PACKET NUMBER %1d | GENERATOR -----------", num_transactions_gen);
 		trans_gen.display_downstream("[ GENERATOR ]");
 
-		// send the transaction message via mailbox to the driver and monitor
+		// send the transaction message via mailbox to the driver and scoreboard
 		gen2drive.put( trans_gen );
+		// drive2scb.put( trans_gen );
 	end
 	-> end_gen;		// trigger the end of generation
 endtask

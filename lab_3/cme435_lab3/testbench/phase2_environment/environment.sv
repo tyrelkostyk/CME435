@@ -3,7 +3,7 @@
 `include "testbench/phase4_generator/generator.sv"
 `include "testbench/phase5_driver/driver.sv"
 `include "testbench/phase6_monitor/monitor.sv"
-// `include "testbench/phase7_scoreboard/scoreboard.sv"
+`include "testbench/phase7_scoreboard/scoreboard.sv"
 
 `ifndef ENVIRONMENT_SV
 `define ENVIRONMENT_SV
@@ -17,11 +17,12 @@ class environment;
 generator gen;
 driver drive;
 monitor mon;
-// scoreboard scb;
+scoreboard scb;
 
 // instantiate mailbox handles
-mailbox gen2drive;			// to generate and send the packets to driver
-mailbox mon2scb;				// to share received data with the scoreboard
+mailbox gen2drive;		// to send the generated packets to driver
+mailbox drive2scb;		// to send the generated packets to scoreboard
+mailbox mon2scb;			// to share received data with the scoreboard
 
 // instantiate virtual interfaces
 virtual intf vif;
@@ -37,20 +38,15 @@ function new( virtual intf vif );
 	// create the mailboxes (Same handle will be shared across objects)
 	gen2drive = new();
 	mon2scb = new();
+	drive2scb = new();
 
 	// construct the objects
 	gen = new( gen2drive );
-	drive = new( vif, gen2drive );
+	drive = new( vif, gen2drive, drive2scb );
 	mon = new( vif, mon2scb );
-	// scb = new( mon2scb );
+	scb = new( drive2scb, mon2scb );
 
 endfunction
-
-
-// *********************** EVENTS AND INTEGERS ********************** //
-
-// Error checking / counting
-integer error_count = 0;
 
 
 // ***************************** TASKS ****************************** //
@@ -60,12 +56,6 @@ task reset();
 	$display("[ ENVIRONMENT ] ----- Reset Started -----");
 
 	// reset DUT signals
-	// vif.cb_dut.bnd_plse 				<= 0;
-	// vif.cb_dut.data_in					<= 0;
-	// vif.cb_dut.proceed_1				<= 0;
-	// vif.cb_dut.proceed_2				<= 0;
-	// vif.cb_dut.proceed_3				<= 0;
-	// vif.cb_dut.proceed_4				<= 0;
 	vif.bnd_plse 				<= 0;
 	vif.data_in					<= 0;
 	vif.proceed_1				<= 0;
@@ -88,18 +78,18 @@ endtask
 task test();
 	$display("%0d : Environment : Start of test() task", $time);
 
+	// join_any bc some never exit (forever loop)
 	fork
 		gen.main();
 		drive.main();
 		mon.main();
-		// 	scb.main();
-	join_any					// join_any bc driver never exits (forever loop)
+		scb.main();
+	join_any
 
 	// put necessary wait statements here
 	wait( gen.end_gen.triggered );
 	wait( gen.pkt_count == drive.num_transactions_sent );
-	// wait( gen.pkt_count == mon.num_transactions_recv );
-	// wait( gen.repeat_count == scb.num_transactions_recv );
+	wait( gen.pkt_count == scb.num_transactions_recv );
 
 	$display("%0d : Environment : End of test() task", $time);
 endtask
@@ -121,27 +111,20 @@ task run();
 	post_test();
 
 	$display("%0d : Environment : End of post_test() task", $time);
-	#2500 finish();
+	#250 finish();
 endtask
 
 
 task finish();
 begin
-	if ( error_count != 0 )
-		$display("%0d : ############# TEST FAILED (%0d) TIMES ###############", $time, error_count);
+	if ( scb.error_count != 0 )
+		$display("%0d : ############# TEST FAILED (%0d) TIMES ###############", $time, scb.error_count);
 	else
 		$display("%0d : ############# TEST PASSED ###############", $time);
 
 	$finish;
 end
 endtask
-
-
-// TODO: implement calling this somewhere (can you do that?)
-task record_error();
-	error_count = error_count + 1;
-endtask
-
 
 
 endclass

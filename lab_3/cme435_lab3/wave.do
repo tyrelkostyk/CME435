@@ -8,22 +8,22 @@ add wave -noupdate -color Red /tbench_top/dut/i_intf/ack
 add wave -noupdate -color Gold -itemcolor Gold -radix unsigned /tbench_top/dut/i_intf/data_in
 add wave -noupdate -divider {Output Port 1 Interface}
 add wave -noupdate /tbench_top/dut/i_intf/proceed_1
-add wave -noupdate -radix unsigned /tbench_top/dut/i_intf/newdata_len_1
-add wave -noupdate -color Gold -itemcolor Gold -radix unsigned /tbench_top/dut/i_intf/data_out_1
+add wave -noupdate -radix unsigned {/tbench_top/dut/i_intf/newdata_len[1]}
+add wave -noupdate -color Gold -itemcolor Gold -radix unsigned {/tbench_top/dut/i_intf/data_out[1]}
 add wave -noupdate -divider {Output Port 2 Interface}
 add wave -noupdate /tbench_top/dut/i_intf/proceed_2
-add wave -noupdate -radix unsigned /tbench_top/dut/i_intf/newdata_len_2
-add wave -noupdate -color Gold -itemcolor Gold -radix unsigned /tbench_top/dut/i_intf/data_out_2
+add wave -noupdate -radix unsigned {/tbench_top/dut/i_intf/newdata_len[2]}
+add wave -noupdate -color Gold -itemcolor Gold -radix unsigned {/tbench_top/dut/i_intf/data_out[2]}
 add wave -noupdate -divider {Output Port 3 Interface}
 add wave -noupdate /tbench_top/dut/i_intf/proceed_3
-add wave -noupdate -radix unsigned /tbench_top/dut/i_intf/newdata_len_3
-add wave -noupdate -color Gold -itemcolor Gold -radix unsigned /tbench_top/dut/i_intf/data_out_3
+add wave -noupdate -radix unsigned {/tbench_top/dut/i_intf/newdata_len[3]}
+add wave -noupdate -color Gold -itemcolor Gold -radix unsigned {/tbench_top/dut/i_intf/data_out[3]}
 add wave -noupdate -divider {Output Port 4 Interface}
 add wave -noupdate /tbench_top/dut/i_intf/proceed_4
-add wave -noupdate -radix unsigned /tbench_top/dut/i_intf/newdata_len_4
-add wave -noupdate -color Gold -itemcolor Gold -radix unsigned /tbench_top/dut/i_intf/data_out_4
+add wave -noupdate -radix unsigned {/tbench_top/dut/i_intf/newdata_len[4]}
+add wave -noupdate -color Gold -itemcolor Gold -radix unsigned {/tbench_top/dut/i_intf/data_out[4]}
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {185 ns} 0}
+WaveRestoreCursors {{Cursor 1} {18 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 194
 configure wave -valuecolwidth 63
@@ -39,4 +39,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits us
 update
-WaveRestoreZoom {79 ns} {358 ns}
+WaveRestoreZoom {0 ns} {279 ns}

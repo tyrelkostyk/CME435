@@ -1,4 +1,5 @@
 `include "testbench/phase3_base/transaction.sv"
+`include "testbench/phase6_monitor/receiver.sv"
 
 `ifndef MONITOR_SV
 `define MONITOR_SV
@@ -17,11 +18,12 @@ receiver recv4;
 // create virtual interface handle
 virtual intf.MONITOR vif;
 
-// create mailbox handles
+// create mailbox handle
 mailbox mon2scb;
 
 // temp var for iterating over duration of (dut) output data
 bit [4:0] tmp_data_len;
+
 
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
@@ -30,50 +32,23 @@ function new( virtual intf.MONITOR vif, mailbox mon2scb );
 	// get the interface (MONITOR modport) from env
 	this.vif = vif;
 
-	// get the mailboxes from env
+	// get the mailbox from env
 	this.mon2scb = mon2scb;
 
 	// construct the receiver objects
-	recv1 = new(
-		vif.clk,
-		1'd1,
-		vif.data_out_1,
-		vif.newdata_len_1,
-		mon2scb );
-
-	recv2 = new(
-		vif.clk,
-		1'd2,
-		vif.data_out_2,
-		vif.newdata_len_2,
-		mon2scb );
-
-	recv3 = new(
-		vif.clk,
-		1'd3,
-		vif.data_out_3,
-		vif.newdata_len_3,
-		mon2scb );
-
-	recv4 = new(
-		vif.clk,
-		1'd4,
-		vif.data_out_4,
-		vif.newdata_len_4,
-		mon2scb );
+	recv1 = new( vif, 1, mon2scb );
+	recv2 = new( vif, 2, mon2scb );
+	recv3 = new( vif, 3, mon2scb );
+	recv4 = new( vif, 4, mon2scb );
 
 endfunction
-
-
-// *********************** EVENTS AND INTEGERS ********************** //
-
-// keep track of the number of transactions sent
-int num_transactions_recv = 0;
 
 
 // ***************************** TASKS ***************************** //
 
 task main();
+
+$display("%3d : MONITOR : Pre Fork", $time);
 
 	fork
 		recv1.main();
@@ -81,6 +56,8 @@ task main();
 		recv3.main();
 		recv4.main();
 	join_any
+
+$display("%3d : MONITOR : Post Fork", $time);
 
 endtask
 

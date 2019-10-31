@@ -24,6 +24,9 @@ mailbox gen2drive;		// to send the generated packets to driver
 mailbox drive2scb;		// to send the generated packets to scoreboard
 mailbox mon2scb;			// to share received data with the scoreboard
 
+// instantiate semaphore handles
+semaphore semComm;		// prevent driving packets until incoming packets are all received
+
 // instantiate virtual interfaces
 virtual intf vif;
 
@@ -35,15 +38,18 @@ function new( virtual intf vif );
   // get the interface from test
   this.vif = vif;
 
-	// create the mailboxes (Same handle will be shared across objects)
+	// create the mailboxes (Same handle shared across objects)
 	gen2drive = new();
 	mon2scb = new();
 	drive2scb = new();
 
+	// create the semaphores
+	semComm = new(1);		// binary semaphore (mutex)
+
 	// construct the objects
-	gen = new( gen2drive );
+	gen = new( gen2drive, semComm );
 	drive = new( vif, gen2drive, drive2scb );
-	mon = new( vif, mon2scb );
+	mon = new( vif, mon2scb, semComm );
 	scb = new( drive2scb, mon2scb );
 
 endfunction

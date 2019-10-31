@@ -62,7 +62,7 @@ task main();
 
 		num_transactions_sent++;
 		$display("\n%0d : ----------- PACKET NUMBER %1d | DRIVER -----------", $time, num_transactions_sent);
-		trans_tx.display_downstream("[ DRIVER ]");
+		// trans_tx.display_downstream("[ DRIVER ]");
 
 		wait( vif.ack );
 		wait( !vif.ack );

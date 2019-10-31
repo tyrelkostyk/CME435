@@ -17,19 +17,25 @@ logic [4:0] port;
 // create mailbox handle
 mailbox mon2scb;
 
+// semaphore handles
+semaphore semComm;		// prevent driving packets while receiving previous packets
+
 // temp var for iterating over duration of (dut) output data
 logic [4:0] tmp_data_len;
 
 
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
-function new( virtual intf.MONITOR vif, logic [4:0] port, mailbox mon2scb );
+function new( virtual intf.MONITOR vif, logic [4:0] port, mailbox mon2scb, semaphore semComm );
 	// get interface and port from monitor class
 	this.vif = vif;
 	this.port = port;
 
 	// get the mailbox from env
 	this.mon2scb = mon2scb;
+
+	// getting the semaphore handles from env
+	this.semComm = semComm;
 
 endfunction
 
@@ -55,17 +61,18 @@ task main();
 			tmp_data_len = vif.newdata_len[port];
 			trans_rx.data_out = new[tmp_data_len];
 
-			wait( vif.data_out[port] );
+			repeat(4) @( posedge vif.clk );
 				for (int i=0; i<tmp_data_len; i++) begin
 					@( posedge vif.clk );
 					trans_rx.data_out[i] = vif.data_out[port];
 				end
 
 		num_transactions_recv++;
-		trans_rx.display_upstream("[ RECEIVER ]");
+		// trans_rx.display_upstream("[ RECEIVER ]");
 
 		@( posedge vif.clk );
 			mon2scb.put( trans_rx );
+			semComm.put();		// release comm line
 
 	end
 endtask

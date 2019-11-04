@@ -61,7 +61,7 @@ task main();
 			tmp_data_len = vif.newdata_len[port];
 			trans_rx.data_out = new[tmp_data_len];
 
-			repeat(4) @( posedge vif.clk );
+			repeat(2) @( posedge vif.clk );
 				for (int i=0; i<tmp_data_len; i++) begin
 					@( posedge vif.clk );
 					trans_rx.data_out[i] = vif.data_out[port];

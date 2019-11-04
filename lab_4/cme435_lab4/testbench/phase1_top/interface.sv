@@ -24,7 +24,9 @@ endclocking
 // **************************** MODPORTS **************************** //
 
 modport DUT (
-	clocking cb_dut,
+	// clocking cb_dut,
+	input bnd_plse, data_in, proceed_1, proceed_2, proceed_3, proceed_4,
+	output ack, data_out, newdata_len,
 	input clk, reset
 );
 

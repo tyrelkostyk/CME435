@@ -15,8 +15,8 @@ logic proceed_1, proceed_2, proceed_3, proceed_4;
 
 // ************************ CLOCKING BLOCKS ************************* //
 
-clocking cb_dut @( posedge clk );
-endclocking
+// clocking cb_dut @( posedge clk );
+// endclocking
 
 
 // **************************** MODPORTS **************************** //

@@ -11,7 +11,6 @@ vlog testbench/phase4_generator/*.sv
 vlog testbench/phase5_driver/*.sv
 vlog testbench/phase6_monitor/*.sv
 vlog testbench/phase7_scoreboard/*.sv
-vlog testbench/phase9_testcases/*.sv
 
 vopt +acc tbench_top -o tbench_top_opt
 vsim tbench_top_opt

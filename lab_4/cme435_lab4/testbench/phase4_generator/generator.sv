@@ -3,13 +3,13 @@
 `ifndef GENERATOR_SV
 `define GENERATOR_SV
 
-class generator;
+class generator #(type T=transaction);
 
 
 // ************************* INSTANTIATIONS ************************* //
 
 // declaring transaction object
-rand transaction trans_gen;
+rand T trans_gen;
 
 // mailbox handles
 mailbox gen2drive;		// to generate and send the packets to driver

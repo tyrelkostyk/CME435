@@ -1,7 +1,14 @@
 `ifndef TRANSACTION_SV
 `define	TRANSACTION_SV
 
-class transaction;
+class transaction #( parameter
+	int MAX_PAYLOAD_SIZE=16,
+	int MIN_PAYLOAD_SIZE=4,
+	int PS_ARRAY_LEN=4,
+	int PAYLOAD_SIZE_ARRAY[PS_ARRAY_LEN]={4,8,12,16},
+	int DA_ARRAY_LEN=4,
+	int DEST_ADDR_PORTS_ARRAY[DA_ARRAY_LEN]={1,2,3,4}
+);
 
 
 // ************************* INSTANTIATIONS ************************* //
@@ -14,11 +21,13 @@ bit [4:0] newdata_len;
 
 
 constraint payload_size_c {
-	data_in.size inside { 4, 8, 12, 16 };
+	// data_in.size inside { 4, 8, 12, 16 };
+	data_in.size inside { PAYLOAD_SIZE_ARRAY };
 }
 
 constraint payload_dest_addr_c {
-	dest_addr inside { [1:4] };
+	// dest_addr inside { [1:4] };
+	dest_addr inside { DEST_ADDR_PORTS_ARRAY };
 }
 
 

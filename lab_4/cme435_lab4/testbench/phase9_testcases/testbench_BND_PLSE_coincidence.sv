@@ -1,6 +1,6 @@
 `include "testbench/phase2_environment/environment.sv"
 
-program testbench( intf i_intf );
+program testbench_sanity_check( intf i_intf );
 
 // declaring environment class object instance
 environment env;
@@ -12,7 +12,7 @@ initial begin
 	$display("*************** Start of testbench ***************");
 
 	// global envs go here
-	env.gen.pkt_count = 5000;		// how many packets to generate and send
+	env.gen.pkt_count = 100;		// how many packets to generate and send
 
 	env.run();
 end

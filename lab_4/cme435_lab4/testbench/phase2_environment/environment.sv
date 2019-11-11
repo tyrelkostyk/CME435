@@ -8,13 +8,13 @@
 `ifndef ENVIRONMENT_SV
 `define ENVIRONMENT_SV
 
-class environment;
+class environment #(type T=transaction);
 
 
 // ************************* INSTANTIATIONS ************************* //
 
 // instantiate class instances
-generator gen;
+generator #(T) gen;
 driver drive;
 monitor mon;
 scoreboard scb;

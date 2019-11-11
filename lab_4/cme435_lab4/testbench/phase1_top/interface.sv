@@ -16,18 +16,15 @@ logic proceed_1, proceed_2, proceed_3, proceed_4;
 // ************************ CLOCKING BLOCKS ************************* //
 
 clocking cb_dut @( posedge clk );
-	input bnd_plse, data_in, proceed_1, proceed_2, proceed_3, proceed_4;
-	output ack, data_out, newdata_len;
 endclocking
 
 
 // **************************** MODPORTS **************************** //
 
 modport DUT (
-	// clocking cb_dut,
+	input clk, reset,
 	input bnd_plse, data_in, proceed_1, proceed_2, proceed_3, proceed_4,
-	output ack, data_out, newdata_len,
-	input clk, reset
+	output ack, data_out, newdata_len
 );
 
 

@@ -42,7 +42,7 @@ int num_transactions_sent;
 task main();
 	forever begin
 		// instantiate transaction object and grab it from generator
-		transaction trans_tx;
+		TransBase trans_tx;
 		gen2drive.get( trans_tx );
 
 		@( posedge vif.clk );

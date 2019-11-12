@@ -8,7 +8,7 @@
 `ifndef ENVIRONMENT_SV
 `define ENVIRONMENT_SV
 
-class environment #(type T=transaction);
+class environment #( type T=TransBase );
 
 
 // ************************* INSTANTIATIONS ************************* //

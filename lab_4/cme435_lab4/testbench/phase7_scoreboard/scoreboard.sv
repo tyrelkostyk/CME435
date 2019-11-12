@@ -39,8 +39,8 @@ int error_count = 0;
 // ***************************** TASKS ***************************** //
 
 task main();
-	transaction trans_tx;
-	transaction trans_rx;
+	TransBase trans_tx;
+	TransBase trans_rx;
 
 	forever begin
 		drive2scb.get( trans_tx );

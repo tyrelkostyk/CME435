@@ -1,7 +1,7 @@
 `ifndef TRANSACTION_SV
 `define	TRANSACTION_SV
 
-class transaction #( parameter
+class TransBase #( parameter
 	int MAX_PAYLOAD_SIZE=16,
 	int MIN_PAYLOAD_SIZE=4,
 	int PS_ARRAY_LEN=4,

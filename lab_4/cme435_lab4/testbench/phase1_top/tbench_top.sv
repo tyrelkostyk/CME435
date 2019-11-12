@@ -1,4 +1,8 @@
 `include "testbench/phase9_testcases/testbench_sanity_check.sv"
+`include "testbench/phase9_testcases/testbench_MAX_payload.sv"
+`include "testbench/phase9_testcases/testbench_MIN_payload.sv"
+`include "testbench/phase9_testcases/testbench_buffer_overflow.sv"
+`include "testbench/phase9_testcases/testbench_BND_PLSE_coincidence.sv"
 
 `timescale 1ns/1ns
 
@@ -22,7 +26,10 @@ end
 intf i_intf ( clk, reset );
 
 // Testcase instance, interface handle is passed to test as an argument
-testbench_sanity_check t1 ( i_intf );
+// testbench_MAX_payload t1 ( i_intf );
+// testbench_MIN_payload t1 ( i_intf );
+// testbench_buffer_overflow t1 ( i_intf );
+testbench_BND_PLSE_coincidence t1 ( i_intf );
 
 // DUT instance, interface signals are connected to the DUT ports
 dut_top dut ( i_intf.DUT );

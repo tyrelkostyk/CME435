@@ -52,7 +52,7 @@ int num_transactions_recv = 0;
 task main();
 	forever begin
 		// instantiate transaction object
-		transaction trans_rx;
+		TransBase trans_rx;
 		trans_rx = new();
 		trans_rx.dest_addr = port;
 

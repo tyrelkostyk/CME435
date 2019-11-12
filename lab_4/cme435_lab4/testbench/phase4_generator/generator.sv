@@ -3,8 +3,7 @@
 `ifndef GENERATOR_SV
 `define GENERATOR_SV
 
-class generator #(type T=transaction);
-
+class generator #( type T=TransBase );
 
 // ************************* INSTANTIATIONS ************************* //
 

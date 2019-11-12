@@ -3,6 +3,7 @@
 `include "testbench/phase9_testcases/testbench_MIN_payload.sv"
 `include "testbench/phase9_testcases/testbench_buffer_overflow.sv"
 `include "testbench/phase9_testcases/testbench_BND_PLSE_coincidence.sv"
+`include "testbench/phase9_testcases/testbench_reset.sv"
 
 `timescale 1ns/1ns
 
@@ -29,7 +30,8 @@ intf i_intf ( clk, reset );
 // testbench_MAX_payload t1 ( i_intf );
 // testbench_MIN_payload t1 ( i_intf );
 // testbench_buffer_overflow t1 ( i_intf );
-testbench_BND_PLSE_coincidence t1 ( i_intf );
+// testbench_BND_PLSE_coincidence t1 ( i_intf );
+testbench_reset test ( i_intf );
 
 // DUT instance, interface signals are connected to the DUT ports
 dut_top dut ( i_intf.DUT );

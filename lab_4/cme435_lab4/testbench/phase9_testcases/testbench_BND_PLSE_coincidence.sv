@@ -26,8 +26,6 @@ task check_BND_PLSE( input int pkt_count );
 				$error("%0d : Testbench : Wrong  Result.\n\tExpeced env.gen.trans_gen.dest_addr==%0d, but got data_in==%0d.", $time, env.gen.trans_gen.dest_addr, i_intf.data_in);
 				env.scb.record_error();
 			end
-			// else
-				// $display("%0d : Testbench : Correct Result! data_in is %0d", $time, i_intf.data_in);
 
 		@( posedge i_intf.clk );
 
@@ -36,8 +34,6 @@ task check_BND_PLSE( input int pkt_count );
 				$error("%0d : Testbench : Wrong  Result.\n\tExpeced env.gen.trans_gen.data_in[%0d]==%0d, but got data_in==%0d.", $time, env.gen.trans_gen.data_in.size-1,env.gen.trans_gen.data_in[env.gen.trans_gen.data_in.size-1], i_intf.data_in);
 				env.scb.record_error();
 			end
-			// else
-				// $display("%0d : Testbench : Correct Result! data_in is %0d", $time, i_intf.data_in);
 
 		@( posedge i_intf.clk );
 

@@ -34,6 +34,7 @@ int num_transactions_recv;
 
 // Error checking / counting
 int error_count = 0;
+int scb_error_override;
 
 
 // ***************************** TASKS ***************************** //
@@ -71,7 +72,8 @@ endtask
 
 
 task record_error();
-	error_count = error_count + 1;
+	if ( scb_error_override != 1 )
+		error_count = error_count + 1;
 endtask
 
 

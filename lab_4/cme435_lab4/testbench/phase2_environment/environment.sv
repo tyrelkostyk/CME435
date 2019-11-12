@@ -56,10 +56,10 @@ endfunction
 
 
 // ***************************** TASKS ****************************** //
+// TransBase dummy_tr;
 
 task reset();
-	wait( vif.reset );
-	$display("[ ENVIRONMENT ] ----- Reset Started -----");
+	$display("%0d : [ ENVIRONMENT ] ----- Reset Started -----", $time);
 
 	// reset DUT signals
 	vif.bnd_plse 				<= 0;
@@ -69,8 +69,12 @@ task reset();
 	vif.proceed_3				<= 0;
 	vif.proceed_4				<= 0;
 
-	wait( !vif.reset );
-	$display("[ ENVIRONMENT ] ----- Reset Ended   -----");
+	// while(gen2drive.try_get(dummy_tr));
+	// while(drive2scb.try_get(dummy_tr));
+	// while(mon2scb.try_get(dummy_tr));
+	// semComm.put();
+
+	$display("%0d : [ ENVIRONMENT ] ----- Reset Ended   -----", $time);
 endtask
 
 

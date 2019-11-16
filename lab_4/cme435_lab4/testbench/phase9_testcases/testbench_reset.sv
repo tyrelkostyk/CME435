@@ -2,17 +2,18 @@
 
 `timescale 1ns/1ns
 
-// ************************* INSTANTIATIONS ************************* //
-
 program testbench_reset( intf i_intf );
+
+// ************************* INSTANTIATIONS ************************* //
 
 // declaring environment class object instance
 environment env;
 
 
 // *********************** EVENTS AND INTEGERS ********************** //
+
 int test_pkt_count = 100;					// how many packets to generate and send
-int test_scb_error_override = 1;	// 1 == ignore scb error counter
+int test_scb_error_override = 1;	// 1 == ignore scb error counter (for manual testing)
 
 
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
@@ -132,6 +133,5 @@ endtask
 
 final
 	$display("*************** End of testbench ***************");
-
 
 endprogram

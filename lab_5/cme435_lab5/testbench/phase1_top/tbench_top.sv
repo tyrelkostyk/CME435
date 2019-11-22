@@ -1,3 +1,5 @@
+`include "dut/dut_top.sv"
+
 `ifdef TESTBENCH_SANITY_CHECK
 	`include "testbench/phase9_testcases/testbench_sanity_check.sv"
 `elsif TESTBENCH_MAX_PAYLOAD

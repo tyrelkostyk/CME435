@@ -1,0 +1,4 @@
+-html
+code_coverage/pdm_cov.ucdb
+-htmldir
+code_coverage/pdm_cov_html

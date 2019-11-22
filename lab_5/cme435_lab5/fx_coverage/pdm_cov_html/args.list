@@ -1,0 +1,4 @@
+-html
+fx_coverage/pdm_cov.ucdb
+-htmldir
+fx_coverage/pdm_cov_html

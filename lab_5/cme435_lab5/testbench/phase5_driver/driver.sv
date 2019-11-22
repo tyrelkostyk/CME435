@@ -1,4 +1,5 @@
 `include "testbench/phase3_base/TransBase.sv"
+`include "testbench/phase8_coverage/coverage.sv"
 
 `ifndef DRIVER_SV
 `define DRIVER_SV
@@ -15,6 +16,8 @@ virtual intf.DRIVER vif;
 mailbox gen2drive;
 mailbox drive2scb;
 
+// create coverage object
+coverage cvg;
 
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
@@ -26,6 +29,8 @@ function new( virtual intf.DRIVER vif, mailbox gen2drive, drive2scb );
 	// get the mailbox handles from env
 	this.gen2drive = gen2drive;
 	this.drive2scb = drive2scb;
+
+	cvg = new();
 
 endfunction
 
@@ -84,6 +89,7 @@ task main();
 			vif.proceed_4 <= 1'b0;
 
 		drive2scb.put( trans_tx );
+		cvg.sample( trans_tx );
 
 	end
 endtask

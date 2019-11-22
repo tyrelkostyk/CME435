@@ -1,4 +1,4 @@
-`include "testbench/phase3_base/transaction.sv"
+`include "testbench/phase3_base/TransBase.sv"
 `include "testbench/phase6_monitor/receiver.sv"
 
 `ifndef MONITOR_SV

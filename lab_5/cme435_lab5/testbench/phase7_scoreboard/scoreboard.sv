@@ -1,4 +1,4 @@
-`include "testbench/phase3_base/transaction.sv"
+`include "testbench/phase3_base/TransBase.sv"
 
 `ifndef SCOREBOARD_SV
 `define SCOREBOARD_SV
@@ -47,26 +47,31 @@ task main();
 		drive2scb.get( trans_tx );
 		mon2scb.get( trans_rx );
 
-
-		if ( trans_tx.dest_addr != trans_rx.dest_addr ) begin
-			$error("%0d : Scoreboard : Wrong  Result.\n\tExpeced:  %0d  Actual:  %0d", $time, trans_tx.dest_addr, trans_rx.dest_addr);
-			record_error();
-		end
-
-		if ( trans_tx.data_in.size != trans_rx.newdata_len ) begin
-			$error("%0d : Scoreboard : Wrong  Result.\n\tExpeced:  %0d  Actual:  %0d", $time, trans_tx.data_in.size, trans_rx.newdata_len);
-			record_error();
-		end
-
-		foreach( trans_tx.data_in[i] ) begin
-			if ( trans_tx.data_in[i] != trans_rx.data_out[i] ) begin
-				$error("%0d : Scoreboard : Wrong  Result.\n\tExpeced:  %0d  Actual:  %0d", $time, trans_tx.data_in[i], trans_rx.data_out[i]);
+		if ( scb_error_override != 1 ) begin
+			if ( trans_tx.dest_addr != trans_rx.dest_addr ) begin
+				$error("%0d : Scoreboard : Wrong  Result.\n\tExpeced:  %0d  Actual:  %0d", $time, trans_tx.dest_addr, trans_rx.dest_addr);
 				record_error();
+			end
+
+			if ( trans_tx.data_in.size != trans_rx.newdata_len ) begin
+				$error("%0d : Scoreboard : Wrong  Result.\n\tExpeced:  %0d  Actual:  %0d", $time, trans_tx.data_in.size, trans_rx.newdata_len);
+				record_error();
+			end
+
+			foreach( trans_tx.data_in[i] ) begin
+				if ( trans_tx.data_in[i] != trans_rx.data_out[i] ) begin
+					$error("%0d : Scoreboard : Wrong  Result.\n\tExpeced:  %0d  Actual:  %0d", $time, trans_tx.data_in[i], trans_rx.data_out[i]);
+					record_error();
+				end
 			end
 		end
 
 		num_transactions_recv++;
-		$display("\n%0d : ----------- PACKET NUMBER %1d | SCOREBOARD FINISHED -----------", $time, num_transactions_recv);
+
+		`ifdef VERBOSE
+			$display("\n%0d : ----------- PACKET NUMBER %1d | SCOREBOARD FINISHED -----------", $time, num_transactions_recv);
+		`endif
+
 	end
 endtask
 

@@ -1,5 +1,5 @@
 `include "testbench/phase1_top/interface.sv"
-`include "testbench/phase3_base/transaction.sv"
+`include "testbench/phase3_base/TransBase.sv"
 `include "testbench/phase4_generator/generator.sv"
 `include "testbench/phase5_driver/driver.sv"
 `include "testbench/phase6_monitor/monitor.sv"

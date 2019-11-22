@@ -1,4 +1,4 @@
-`include "testbench/phase3_base/transaction.sv"
+`include "testbench/phase3_base/TransBase.sv"
 
 `ifndef DRIVER_SV
 `define DRIVER_SV
@@ -61,8 +61,11 @@ task main();
 			vif.bnd_plse = 1'b0;
 
 		num_transactions_sent++;
-		$display("\n%0d : ----------- PACKET NUMBER %1d | DRIVER -----------", $time, num_transactions_sent);
-		// trans_tx.display_downstream("[ DRIVER ]");
+
+		`ifdef VERBOSE
+			$display("\n%0d : ----------- PACKET NUMBER %1d | DRIVER -----------", $time, num_transactions_sent);
+			trans_tx.display_downstream("[ DRIVER ]");
+		`endif
 
 		wait( vif.ack );
 		wait( !vif.ack );

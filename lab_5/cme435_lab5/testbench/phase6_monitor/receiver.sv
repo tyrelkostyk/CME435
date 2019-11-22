@@ -1,4 +1,4 @@
-`include "testbench/phase3_base/transaction.sv"
+`include "testbench/phase3_base/TransBase.sv"
 
 `ifndef RECEIVER_SV
 `define RECEIVER_SV
@@ -68,7 +68,10 @@ task main();
 				end
 
 		num_transactions_recv++;
-		// trans_rx.display_upstream("[ RECEIVER ]");
+
+		`ifdef VERBOSE
+			trans_rx.display_upstream("[ RECEIVER ]");
+		`endif
 
 		@( posedge vif.clk );
 			mon2scb.put( trans_rx );

@@ -1,0 +1,13 @@
+program testbench (
+// interface and ports here...   
+);
+
+// testbench code here...
+
+initial begin
+  $display("Running test_sanity...");
+  // ...
+  // ...
+end 
+
+endprogram

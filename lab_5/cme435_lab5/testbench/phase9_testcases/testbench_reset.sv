@@ -2,7 +2,7 @@
 
 `timescale 1ns/1ns
 
-program testbench_reset( intf i_intf );
+program testbench( intf i_intf );
 
 // ************************* INSTANTIATIONS ************************* //
 

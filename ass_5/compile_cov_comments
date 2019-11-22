@@ -1,0 +1,54 @@
+#!/bin/csh
+
+if (! -e work) then
+	vlib work
+endif
+
+
+vlog -coveropt 3 +cover +acc counter.v test_counter.v
+#-coveropt <opt_level>
+#  (optional) Overrides the default level of optimization for the current run only.
+#	3 — (default)
+
+#The +cover argument with no "=<spec>" designation is equivalent to "+cover=bcesft".
+# <spec> — A string of one or more of the following characters, spaces not allowed:
+#	b — Collect branch statistics.
+#	c — Collect condition statistics. Collects only FEC statistics, unless -coverudp is specified.
+#	e — Collect expression statistics, Collects only FEC statistics, unless -coverudp is specified.
+#	s — Collect statement statistics.
+#	t — Collect toggle statistics. Overridden if ‘x’ is specified elsewhere.
+#	x — Collect extended toggle statistics (Refer to “Toggle Coverage” for details). This takes precedence, if ‘t’ is specified elsewhere.
+#	f — Collect Finite State Machine statistics.
+
+#+acc[=<spec>][+<entity>[(architecture)]]
+# (optional) Enable debug command access to objects indicated by <spec> when optimizing a design. The effect of this argument is limited to only those design units being compiled in the current vcom session.
+# <spec> — A string of one or more of the following characters:
+#	f — Enable access to finite state machines
+#	v — Enable access to variables, constants, and aliases in processes that would otherwise be merged due to optimizations. Disables an optimization that automatically converts variables to constants.
+# If <spec> is omitted, access is enabled for all objects.
+
+
+vsim -coverage -vopt test_counter -c -do "coverage save -onexit -directive -codeAll counter_cov.ucdb;run -all; exit"
+#vsim -coverage -vopt test_counter -c -do "coverage save -onexit -directive -codeAll counter_cov.ucdb;run -all; exit"
+
+#-vopt
+# (optional) Instructs vsim to run the vopt command automatically if vopt was not manually invoked. Not needed unless the VoptFlow variable has been set to 0 in the modelsim.ini. Refer to the chapter entitled “Optimizing Designs with vopt” for more information.
+
+#-c
+# (optional) Specifies that the simulator is to be run in command-line mode.
+
+#coverage save
+#-codeAll
+# (optional) Specifies the command apply to all coverage types. Equivalent to -code bcestf or no specification of type at all.
+#-directive
+# (optional) Save only cover directives coverage data.
+
+
+#vcover report counter_cov.ucdb -file counter_cov.rpt
+
+vcover report -html counter_cov.ucdb
+# See bin details
+#vcover report counter_cov.ucdb -file counter_cov.rpt -details
+#vcover report -details -html counter_cov.ucdb
+#vcover report -details -html counter_cov.ucdb -htmldir counter_covhtmlrpt_details
+

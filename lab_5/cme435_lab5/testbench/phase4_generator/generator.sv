@@ -1,4 +1,4 @@
-`include "testbench/phase3_base/transaction.sv"
+`include "testbench/phase3_base/TransBase.sv"
 
 `ifndef GENERATOR_SV
 `define GENERATOR_SV
@@ -49,8 +49,11 @@ task main();
 
 		if( !trans_gen.randomize() ) $fatal("Gen:: trans_gen randomization failed");
 		num_transactions_gen++;
-		$display("\n%0d : ----------- PACKET NUMBER %1d | GENERATOR -----------", $time, num_transactions_gen);
-		// trans_gen.display_downstream("[ GENERATOR ]");
+
+		`ifdef VERBOSE
+			$display("\n%0d : ----------- PACKET NUMBER %1d | GENERATOR -----------", $time, num_transactions_gen);
+			trans_gen.display_downstream("[ GENERATOR ]");
+		`endif
 
 		// send the transaction message via mailbox to the driver and scoreboard
 		gen2drive.put( trans_gen );

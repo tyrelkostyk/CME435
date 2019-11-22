@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/tck290/engr-ece/CME435/ass_5/coverage
+vbeh_sram
+Z1 !s110 1574201357
+!i10b 1
+!s100 gb9oIF@LP@1@UehQSkRkl0
+IokU[mXQ`Ze>IBA[QUjKZm2
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+Z3 w1437363439
+8beh_sram.v
+Fbeh_sram.v
+L0 12
+Z4 OE;L;10.3a;59
+r1
+!s85 0
+31
+Z5 !s108 1574201357.857899
+Z6 !s107 test_sm.v|sm_seq.v|sm.v|beh_sram.v|
+Z7 !s90 -reportprogress|300|beh_sram.v|sm.v|sm_seq.v|test_sm.v|
+!i113 0
+Z8 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vsm
+R1
+!i10b 1
+!s100 93i^B;Xgl;D9mk389Df7Z2
+Ie>TD?`>PNQeJl]LAARoBJ2
+R2
+R0
+R3
+8sm.v
+Fsm.v
+L0 16
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+vsm_seq
+R1
+!i10b 1
+!s100 C8R72`>?zEZII8FC?[_aQ3
+Ihkc<;jA>>O1PJVQhTXHz32
+R2
+R0
+R3
+8sm_seq.v
+Fsm_seq.v
+L0 17
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+vtest_sm
+R1
+!i10b 1
+!s100 ?5iQKZ]4^aKH2A;Cae6[T3
+IKJhPiY]ik=Zk4ELhZ<T]Z1
+R2
+R0
+R3
+8test_sm.v
+Ftest_sm.v
+L0 15
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+Ttest_sm_opt
+!s110 1574201418
+VWGRWcbjnUCEEMj[8dNiP^3
+04 7 4 work test_sm fast 0
+!s102 +cover=bcesxf
+o+cover=bcesxf
+ntest_sm_opt
+OE;O;10.3a;59

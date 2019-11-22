@@ -1,0 +1,61 @@
+Coverage Report Summary Data by file
+
+=================================================================================
+=== File: beh_sram.v
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            6         5         1      83.3
+    Branches                         9         8         1      88.8
+    FEC Condition Terms              2         0         2       0.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                    170        16       154       9.4
+
+=================================================================================
+=== File: sm.v
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           25        22         3      88.0
+    Branches                        20        17         3      85.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms            11        11         0     100.0
+    FSMs                                                        76.4
+        States                      11        10         1      90.9
+        Transitions                 21        13         8      61.9
+    Toggle Bins                     52        40        12      76.9
+
+=================================================================================
+=== File: sm_seq.v
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           16        15         1      93.7
+    Branches                        13        12         1      92.3
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                    760        82       678      10.7
+
+=================================================================================
+=== File: test_sm.v
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           77        70         7      90.9
+    Branches                         0         0         0     100.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                   1112       158       954      14.2
+
+
+Total Coverage By File (code coverage only, filtered view): 61.4%
+

@@ -1,6 +1,6 @@
 `include "testbench/phase2_environment/environment.sv"
 
-program testbench_sanity_check( intf i_intf );
+program testbench( intf i_intf );
 
 // ************************* INSTANTIATIONS ************************* //
 

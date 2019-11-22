@@ -1,0 +1,19 @@
+#!/bin/csh
+
+if (! -e work) then
+	vlib work
+endif
+
+set testcase_list="test_sanity test_multi_req"
+foreach testcase ($testcase_list)
+  set testcase_uc = `echo $testcase | tr "[:lower:]" "[:upper:]"`
+  vlog -coveropt 3 +cover +acc +define+$testcase_uc arbiter.v tbench_top.sv
+  vsim -coverage -vopt tbench_top -c -do "coverage save -onexit -directive -codeAll $testcase.ucdb;run -all; exit"
+end
+vcover merge test_all.ucdb test_sanity.ucdb test_multi_req.ucdb
+
+vcover report test_all.ucdb -file test_all_report
+#vcover report -details test_all.ucdb -file test_all_report_details
+#vcover report -html test_all.ucdb -htmldir test_all_htmlreport
+vcover report -details -html test_all.ucdb -htmldir test_all_htmlreport_details
+

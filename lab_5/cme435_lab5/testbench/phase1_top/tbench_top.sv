@@ -1,11 +1,23 @@
-`include "testbench/phase9_testcases/testbench_sanity_check.sv"
-`include "testbench/phase9_testcases/testbench_MAX_payload.sv"
-`include "testbench/phase9_testcases/testbench_MIN_payload.sv"
-`include "testbench/phase9_testcases/testbench_buffer_overflow.sv"
-`include "testbench/phase9_testcases/testbench_BND_PLSE_coincidence.sv"
-`include "testbench/phase9_testcases/testbench_reset.sv"
+`ifdef TESTBENCH_SANITY_CHECK
+	`include "testbench/phase9_testcases/testbench_sanity_check.sv"
+`elsif TESTBENCH_MAX_PAYLOAD
+	`include "testbench/phase9_testcases/testbench_MAX_payload.sv"
+`elsif TESTBENCH_MIN_PAYLOAD
+	`include "testbench/phase9_testcases/testbench_MIN_payload.sv"
+`elsif TESTBENCH_BUFFER_OVERFLOW
+	`include "testbench/phase9_testcases/testbench_buffer_overflow.sv"
+`elsif TESTBENCH_BND_PLSE_COINCIDENCE
+	`include "testbench/phase9_testcases/testbench_BND_PLSE_coincidence.sv"
+`elsif TESTBENCH_RESET
+	`include "testbench/phase9_testcases/testbench_reset.sv"
+`else	//DEFAULT
+	// `include "testbench/phase9_testcases/testbench_sanity_check.sv"
+	`include "testbench/phase9_testcases/testbench_reset.sv"
+`endif
 
 `timescale 1ns/1ns
+
+`define VERBOSE 1
 
 module tbench_top;
 
@@ -27,12 +39,7 @@ end
 intf i_intf ( clk, reset );
 
 // Testcase instance, interface handle is passed to test as an argument
-testbench_sanity_check test ( i_intf );
-// testbench_MAX_payload test ( i_intf );
-// testbench_MIN_payload test ( i_intf );
-// testbench_buffer_overflow test ( i_intf );
-// testbench_BND_PLSE_coincidence test ( i_intf );
-// testbench_reset test ( i_intf );
+testbench test ( i_intf );
 
 // DUT instance, interface signals are connected to the DUT ports
 dut_top dut ( i_intf.DUT );

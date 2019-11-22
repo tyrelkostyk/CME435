@@ -1,0 +1,23 @@
+Start time: 11:10:41 on Nov 22,2019
+vcover merge pdm_cov.ucdb testbench_bnd_plse_coincidence.ucdb testbench_buffer_overflow.ucdb testbench_max_payload.ucdb testbench_min_payload.ucdb testbench_reset.ucdb testbench_sanity_check.ucdb 
+Merging file testbench_bnd_plse_coincidence.ucdb
+Merging file testbench_buffer_overflow.ucdb
+** Warning: (vcover-6820) Source code mismatch detected while merging ucdb file testbench_buffer_overflow.ucdb, skipping code coverage merge for design unit work.testbench defined in file testbench/phase9_testcases/testbench_buffer_overflow.sv, line 4
+** Warning: (vcover-6820) Source code mismatch detected while merging ucdb file testbench_buffer_overflow.ucdb, skipping code coverage merge for instance /tbench_top/test defined in file testbench/phase1_top/tbench_top.sv, line 42
+Merging file testbench_max_payload.ucdb
+** Warning: (vcover-6820) Source code mismatch detected while merging ucdb file testbench_max_payload.ucdb, skipping code coverage merge for design unit work.testbench defined in file testbench/phase9_testcases/testbench_max_payload.sv, line 4
+** Warning: (vcover-6820) Source code mismatch detected while merging ucdb file testbench_max_payload.ucdb, skipping code coverage merge for instance /tbench_top/test defined in file testbench/phase1_top/tbench_top.sv, line 42
+Merging file testbench_min_payload.ucdb
+** Warning: (vcover-6820) Source code mismatch detected while merging ucdb file testbench_min_payload.ucdb, skipping code coverage merge for design unit work.testbench defined in file testbench/phase9_testcases/testbench_min_payload.sv, line 4
+** Warning: (vcover-6820) Source code mismatch detected while merging ucdb file testbench_min_payload.ucdb, skipping code coverage merge for instance /tbench_top/test defined in file testbench/phase1_top/tbench_top.sv, line 42
+Merging file testbench_reset.ucdb
+** Warning: (vcover-6820) Source code mismatch detected while merging ucdb file testbench_reset.ucdb, skipping code coverage merge for design unit work.testbench defined in file testbench/phase9_testcases/testbench_reset.sv, line 5
+** Warning: (vcover-6820) Source code mismatch detected while merging ucdb file testbench_reset.ucdb, skipping code coverage merge for instance /tbench_top/test defined in file testbench/phase1_top/tbench_top.sv, line 42
+Merging file testbench_sanity_check.ucdb
+** Warning: (vcover-6820) Source code mismatch detected while merging ucdb file testbench_sanity_check.ucdb, skipping code coverage merge for design unit work.testbench defined in file testbench/phase9_testcases/testbench_sanity_check.sv, line 3
+** Warning: (vcover-6820) Source code mismatch detected while merging ucdb file testbench_sanity_check.ucdb, skipping code coverage merge for instance /tbench_top/test defined in file testbench/phase1_top/tbench_top.sv, line 42
+Writing merged result to pdm_cov.ucdb
+
+End time: 11:10:41 on Nov 22,2019
+, Elapsed time: 0: 0: 0
+Errors: 0, Warnings: 0

@@ -1,7 +1,7 @@
 `include "testbench/phase2_environment/environment.sv"
-`include "testbench/phase3_base/transaction.sv"
+`include "testbench/phase3_base/TransBase.sv"
 
-program testbench_buffer_overflow( intf i_intf );
+program testbench( intf i_intf );
 
 // ************************* INSTANTIATIONS ************************* //
 

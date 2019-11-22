@@ -75,7 +75,7 @@ Coverage Report Summary Data by file
 =================================================================================
     Enabled Coverage            Active      Hits    Misses % Covered
     ----------------            ------      ----    ------ ---------
-    Stmts                           31        30         1      96.7
+    Stmts                           33        32         1      96.9
     Branches                         5         4         1      80.0
     FEC Condition Terms              0         0         0     100.0
     FEC Expression Terms             0         0         0     100.0

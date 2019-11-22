@@ -13,8 +13,7 @@
 `elsif TESTBENCH_RESET
 	`include "testbench/phase9_testcases/testbench_reset.sv"
 `else	//DEFAULT
-	// `include "testbench/phase9_testcases/testbench_sanity_check.sv"
-	`include "testbench/phase9_testcases/testbench_reset.sv"
+	`include "testbench/phase9_testcases/testbench_sanity_check.sv"
 `endif
 
 `timescale 1ns/1ns

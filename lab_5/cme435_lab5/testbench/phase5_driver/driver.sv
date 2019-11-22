@@ -18,6 +18,7 @@ mailbox drive2scb;
 
 // create coverage object
 coverage cvg;
+// data_cg driv_cg;
 
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
@@ -31,6 +32,7 @@ function new( virtual intf.DRIVER vif, mailbox gen2drive, drive2scb );
 	this.drive2scb = drive2scb;
 
 	cvg = new();
+	// driv_cg = new();
 
 endfunction
 
@@ -56,8 +58,11 @@ task main();
 
 		fork
 			@( posedge vif.clk ) vif.bnd_plse = 1'b0;
-			foreach ( trans_tx.data_in[i] )
+			foreach ( trans_tx.data_in[i] ) begin
 				@( posedge vif.clk ) vif.data_in = trans_tx.data_in[i];
+				cvg.data_cg.sample( trans_tx.data_in[i] );
+				cvg.sample( trans_tx );
+			end
 		join
 
 		vif.bnd_plse = 1'b1;

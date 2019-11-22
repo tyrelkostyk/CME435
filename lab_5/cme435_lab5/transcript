@@ -1,4 +1,4 @@
-# vsim -coverage -do "coverage save -onexit -directive -codeAll fx_coverage/testbench_reset.ucdb;run -all; exit" -c -vopt tbench_top_opt
+# vsim -coverage -do "coverage save -onexit -directive -codeAll code_coverage/testbench_reset.ucdb;run -all; exit" -c -vopt tbench_top_opt
 # //  Questa Sim
 # //  Version 10.3a linux Apr 13 2014
 # //
@@ -9,7 +9,7 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# Start time: 13:43:09 on Nov 22,2019
+# Start time: 14:49:05 on Nov 22,2019
 # Loading sv_std.std
 # Loading work.tbench_top_sv_unit(fast)
 # Loading work.tbench_top(fast)
@@ -18,7 +18,7 @@
 # Loading work.testbench(fast)
 # Loading work.dut_top(fast)
 # Loading work.intf(fast)
-# coverage save -onexit -directive -codeAll fx_coverage/testbench_reset.ucdb
+# coverage save -onexit -directive -codeAll code_coverage/testbench_reset.ucdb
 # run -all
 # *************** Start of testbench ***************
 # 0 : Environment : Start of post_test() task
@@ -34,6 +34,6 @@
 # 27125 : ############# TEST PASSED ###############
 # ** Note: $finish    : testbench/phase2_environment/environment.sv(135)
 #    Time: 27125 ns  Iteration: 1  Instance: /tbench_top/test
-# End time: 13:43:10 on Nov 22,2019, Elapsed time: 0: 0: 1
+# End time: 14:49:07 on Nov 22,2019, Elapsed time: 0: 0: 2
 # Errors: 0, Warnings: 0
 # *************** End of testbench ***************

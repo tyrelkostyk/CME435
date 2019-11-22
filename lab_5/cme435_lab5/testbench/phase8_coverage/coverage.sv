@@ -14,7 +14,7 @@ class coverage;
 			bins port_4 = {4};
 		}
 
-		data_in_size : coverpoint trans.newdata_len {
+		data_in_size : coverpoint trans.data_in.size {
 			bins len_four = {4};
 			bins len_eight = {8};
 			bins len_twelve = {12};
@@ -37,7 +37,7 @@ class coverage;
 	endfunction : new
 
 	task sample( TransBase trans );
-		this.trans = new();
+		this.trans = trans;
 		drive_cg.sample();
 	endtask : sample
 

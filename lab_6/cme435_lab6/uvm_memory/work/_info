@@ -1,0 +1,133 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/tck290/engr-ece/CME435/lab_6/cme435_lab6/uvm_memory
+Ymem_if
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z2 !s110 1574720040
+!i10b 1
+!s100 TiTTLg>iB9Y>OV;Cl7I?72
+I4nPlBmdO1XX3fQ0HJc]X02
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+!s105 mem_if_sv_unit
+S1
+R0
+w1574449508
+8verification/mem_if.sv
+Fverification/mem_if.sv
+L0 5
+Z4 OE;L;10.3a;59
+r1
+!s85 0
+31
+Z5 !s108 1574720040.772198
+Z6 !s107 /CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|verification/tbench_top.sv|verification/mem_pkg.sv|verification/mem_if.sv|
+Z7 !s90 -reportprogress|300|verification/mem_if.sv|verification/mem_pkg.sv|verification/tbench_top.sv|
+!i113 0
+Z8 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Xmem_pkg
+R1
+Z9 DXx6 mtiUvm 7 uvm_pkg 0 22 G9Och?92YYV78_VT<]6?_3
+Z10 !s110 1574720041
+!i10b 1
+!s100 3ik2S96kY3iF1SZiFnC_^1
+ISQV^IAM:82?YSBIEIM2aB0
+VSQV^IAM:82?YSBIEIM2aB0
+S1
+R0
+w1574719933
+8verification/mem_pkg.sv
+Fverification/mem_pkg.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+vmemory
+R1
+R2
+!i10b 1
+!s100 <<z11ZD>CXBAeZ7YY@h:`0
+Ia:a0GD8Hlh[Hb7]<_4bS93
+R3
+!s105 mem_sv_unit
+S1
+R0
+w1574637580
+8dut/mem.sv
+Fdut/mem.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z11 !s108 1574720040.681163
+Z12 !s107 dut/mem_top.sv.sv|dut/mem.sv|
+Z13 !s90 -reportprogress|300|dut/mem.sv|dut/mem_top.sv.sv|
+!i113 0
+R8
+vmemory_top
+R1
+R2
+!i10b 1
+!s100 lPekbPSRII^0ze8QV?DQD1
+I55h;;GC3EUmZ=bTS>_Q:;2
+R3
+!s105 mem_top_sv_sv_unit
+S1
+R0
+w1574637232
+8dut/mem_top.sv.sv
+Fdut/mem_top.sv.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R8
+vtbench_top
+R1
+R9
+R10
+!i10b 1
+!s100 cP6BdhAje1CEL1VnV1F`W3
+I]medBYTYP3`3S8E6_YID20
+R3
+!s105 tbench_top_sv_unit
+S1
+R0
+w1574718303
+8verification/tbench_top.sv
+Fverification/tbench_top.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+Ttbench_top_opt
+R10
+V]FD74en]B8zN>GYjJUEb13
+04 10 4 work tbench_top fast 0
+o+acc
+ntbench_top_opt
+OE;O;10.3a;59

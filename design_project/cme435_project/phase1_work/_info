@@ -1,0 +1,135 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/tck290/engr-ece/CME435/design_project/cme435_project
+vdut_top
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z2 !s110 1575162444
+!i10b 1
+!s100 RNLznbNSE1jUVP9H3Y5h92
+IF>lTi_iI00A4K;oWKhn8g0
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+Z4 !s105 tbench_top_sv_unit
+S1
+R0
+Z5 w1575162030
+Z6 Fdut/dut_top.sv
+Z7 8verification/phase1_top/tbench_top.sv
+Z8 Fverification/phase1_top/tbench_top.sv
+L0 3
+Z9 OE;L;10.3a;59
+r1
+!s85 0
+31
+Z10 !s108 1575162444.525462
+Z11 !s107 dut/xswitch.svp|dut/dut_top.sv|verification/phase1_top/testbench_sanity_check.sv|verification/phase1_top/tbench_top.sv|verification/phase1_top/interface.sv|
+Z12 !s90 -reportprogress|300|verification/phase1_top/interface.sv|verification/phase1_top/tbench_top.sv|verification/phase1_top/testbench_sanity_check.sv|
+!i113 0
+Z13 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Yintf
+R1
+R2
+!i10b 1
+!s100 8bg?<7_YmPOed8e^RPC=]2
+I1zfklZFFGN?aBlzo7Lj9]3
+R3
+!s105 interface_sv_unit
+S1
+R0
+w1575162239
+8verification/phase1_top/interface.sv
+Fverification/phase1_top/interface.sv
+L0 4
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+vtbench_top
+R1
+R2
+!i10b 1
+!s100 0fKPPCN7_JzzdTKmN>aeO0
+Iie4ccBVc>`LBidOoib>lB1
+R3
+R4
+S1
+R0
+R5
+R7
+R8
+L0 3
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+Ttbench_top_opt
+R2
+Vl1UMR:g_aNc=<0@UKGjz:1
+04 10 4 work tbench_top fast 0
+o+acc
+ntbench_top_opt
+OE;O;10.3a;59
+4testbench
+R1
+R2
+!i10b 1
+!s100 @Sl`YWRIao8]dn:9Ik1gC3
+ID;kaRE?:3PECacfH2clnT2
+R3
+!s105 testbench_sanity_check_sv_unit
+S1
+R0
+w1575162049
+8verification/phase1_top/testbench_sanity_check.sv
+Fverification/phase1_top/testbench_sanity_check.sv
+L0 3
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+vxswitch
+R1
+R2
+!i10b 1
+!s100 D^8P4BYO9z15gJg`:VzGk1
+IZGaN9K9OO?2WeTQV>hdoD0
+R3
+R4
+S1
+R0
+R5
+Fdut/xswitch.svp
+R6
+R7
+R8
+L0 1
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13

@@ -112,7 +112,7 @@ endtask
 
 
 task run();
-	$display("%0d : Environment : Start of post_test() task", $time);
+	$display("%0d : Environment : Start of run() task", $time);
 
 	pre_test();
 
@@ -120,7 +120,7 @@ task run();
 
 	post_test();
 
-	$display("%0d : Environment : End of post_test() task", $time);
+	$display("%0d : Environment : End of run() task", $time);
 	#250 finish();
 endtask
 

@@ -1,6 +1,6 @@
 module tbench_top;
 
-	import uvm_pkg::*;
+  import uvm_pkg::*;
 
   bit clk;
   bit reset;
@@ -16,14 +16,14 @@ module tbench_top;
 
   memory_top DUT (intf);
 
-	initial begin
-		uvm_config_db#( virtual mem_if )::set( uvm_root::get(), "*", "vif", intf );
-		//$dumpfile( "dump.vcd" );
-		//$dumpvars;
-	end
+  initial begin
+    uvm_config_db#(virtual mem_if)::set(uvm_root::get(),"*","vif",intf);
+    //$dumpfile("dump.vcd");
+    //$dumpvars;
+  end
 
-	initial begin
-		run_test();
-	end
+  initial begin
+    run_test();
+  end
 
 endmodule

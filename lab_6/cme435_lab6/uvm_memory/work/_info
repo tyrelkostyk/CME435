@@ -8,126 +8,160 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/tck290/engr-ece/CME435/lab_6/cme435_lab6/uvm_memory
+T_opt
+!s110 1575173087
+V_1BOLX^WIBb?Zjo[Z^@Y@3
+Z1 04 10 4 work tbench_top fast 0
+=1-005056600039-5de33bde-cf499-2313
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z2 OE;O;10.3a;59
+R0
 Ymem_if
-Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z2 !s110 1574720040
+Z3 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z4 !s110 1575173547
 !i10b 1
 !s100 TiTTLg>iB9Y>OV;Cl7I?72
-I4nPlBmdO1XX3fQ0HJc]X02
-Z3 V`JN@9S9cnhjKRR_L]QIcM3
+I_kHgllPZYT;2WC0203GYk2
+Z5 V`JN@9S9cnhjKRR_L]QIcM3
 !s105 mem_if_sv_unit
 S1
 R0
 w1574449508
-8verification/mem_if.sv
-Fverification/mem_if.sv
+8./verification/mem_if.sv
+F./verification/mem_if.sv
 L0 5
-Z4 OE;L;10.3a;59
+Z6 OE;L;10.3a;59
 r1
 !s85 0
 31
-Z5 !s108 1574720040.772198
-Z6 !s107 /CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|verification/tbench_top.sv|verification/mem_pkg.sv|verification/mem_if.sv|
-Z7 !s90 -reportprogress|300|verification/mem_if.sv|verification/mem_pkg.sv|verification/tbench_top.sv|
+Z7 !s108 1575173547.698346
+Z8 !s107 /CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|./verification/test_pkg.sv|./verification/tbench_top.sv|./verification/mem_pkg.sv|./verification/mem_if.sv|
+Z9 !s90 ./verification/mem_if.sv|./verification/mem_pkg.sv|./verification/tbench_top.sv|./verification/test_pkg.sv|
 !i113 0
-Z8 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Xmem_pkg
-R1
-Z9 DXx6 mtiUvm 7 uvm_pkg 0 22 G9Och?92YYV78_VT<]6?_3
-Z10 !s110 1574720041
+R3
+Z11 DXx6 mtiUvm 7 uvm_pkg 0 22 G9Och?92YYV78_VT<]6?_3
+R4
 !i10b 1
-!s100 3ik2S96kY3iF1SZiFnC_^1
-ISQV^IAM:82?YSBIEIM2aB0
-VSQV^IAM:82?YSBIEIM2aB0
+!s100 F@=kZWzl3QGmNS5oUFbH13
+ImaGSeQdMi4gzh3?B^FNd51
+VmaGSeQdMi4gzh3?B^FNd51
 S1
 R0
-w1574719933
-8verification/mem_pkg.sv
-Fverification/mem_pkg.sv
+w1575172569
+8./verification/mem_pkg.sv
+F./verification/mem_pkg.sv
 L0 3
-R4
+R6
 r1
 !s85 0
 31
-R5
-R6
 R7
-!i113 0
 R8
+R9
+!i113 0
+R10
 vmemory
-R1
-R2
+R3
+R4
 !i10b 1
 !s100 <<z11ZD>CXBAeZ7YY@h:`0
-Ia:a0GD8Hlh[Hb7]<_4bS93
-R3
+IP]2P0<2dK@==knYY>MPQX1
+R5
 !s105 mem_sv_unit
 S1
 R0
 w1574637580
-8dut/mem.sv
-Fdut/mem.sv
+8./dut/mem.sv
+F./dut/mem.sv
 L0 1
-R4
+R6
 r1
 !s85 0
 31
-Z11 !s108 1574720040.681163
-Z12 !s107 dut/mem_top.sv.sv|dut/mem.sv|
-Z13 !s90 -reportprogress|300|dut/mem.sv|dut/mem_top.sv.sv|
+Z12 !s108 1575173547.633552
+Z13 !s107 ./dut/mem_top.sv.sv|./dut/mem.sv|
+Z14 !s90 ./dut/mem.sv|./dut/mem_top.sv.sv|
 !i113 0
-R8
+R10
 vmemory_top
-R1
-R2
+R3
+R4
 !i10b 1
 !s100 lPekbPSRII^0ze8QV?DQD1
-I55h;;GC3EUmZ=bTS>_Q:;2
-R3
+IN1WIb72Ld2_kQ?PzbW^I@0
+R5
 !s105 mem_top_sv_sv_unit
 S1
 R0
 w1574637232
-8dut/mem_top.sv.sv
-Fdut/mem_top.sv.sv
+8./dut/mem_top.sv.sv
+F./dut/mem_top.sv.sv
 L0 1
-R4
+R6
 r1
 !s85 0
 31
-R11
 R12
 R13
+R14
 !i113 0
-R8
-vtbench_top
-R1
-R9
 R10
+vtbench_top
+R3
+R11
+Z15 !s110 1575173548
 !i10b 1
 !s100 cP6BdhAje1CEL1VnV1F`W3
-I]medBYTYP3`3S8E6_YID20
-R3
+I:[lzc9@1P9BhKV=]hZ5z41
+R5
 !s105 tbench_top_sv_unit
 S1
 R0
-w1574718303
-8verification/tbench_top.sv
-Fverification/tbench_top.sv
+w1575171923
+8./verification/tbench_top.sv
+F./verification/tbench_top.sv
 L0 1
-R4
+R6
 r1
 !s85 0
 31
-R5
-R6
 R7
-!i113 0
 R8
-Ttbench_top_opt
+R9
+!i113 0
 R10
+Ttbench_top_opt
+!s110 1574720041
 V]FD74en]B8zN>GYjJUEb13
-04 10 4 work tbench_top fast 0
+R1
 o+acc
 ntbench_top_opt
-OE;O;10.3a;59
+R2
+R0
+Xtest_pkg
+R3
+R11
+DXx4 work 7 mem_pkg 0 22 maGSeQdMi4gzh3?B^FNd51
+R15
+!i10b 1
+!s100 ;b?5DdVWkLY8MkcmU=WC;1
+IAkhcF]anjKn2:X_BZc5^b0
+VAkhcF]anjKn2:X_BZc5^b0
+S1
+R0
+w1575171930
+8./verification/test_pkg.sv
+F./verification/test_pkg.sv
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10

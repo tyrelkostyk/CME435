@@ -12,8 +12,8 @@ class TransBase #( parameter
 rand bit [31:0] addr_in;	// random dest addr; Each byte can be 0, 1, 2, or 3
 rand bit [31:0] data_in;	// random payload data;
 
-bit [31:0] data_out;
 bit [31:0] addr_out;
+bit [31:0] data_out;
 
 constraint dest_addr_B1_c {
 	addr_in[7:0] inside { DEST_ADDR_PORTS };

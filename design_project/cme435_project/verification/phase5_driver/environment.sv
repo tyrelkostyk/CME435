@@ -1,6 +1,7 @@
 `include "interface.sv"
 `include "TransBase.sv"
 `include "generator.sv"
+`include "driver.sv"
 
 `ifndef ENVIRONMENT_SV
 `define ENVIRONMENT_SV
@@ -19,7 +20,6 @@ mailbox gen2drive[4];	// to send the generated packets to driver
 mailbox drive2scb[4];		// to send the generated packets to scoreboard
 
 // instantiate semaphore handles
-semaphore semComm[4];	// prevent driving packets until incoming packets are all received
 
 // instantiate virtual interfaces
 virtual intf vif;
@@ -39,11 +39,9 @@ function new( virtual intf vif );
 		drive2scb[i] = new();
 
 	// create the semaphores
-	foreach( semComm[i] )
-		semComm[i] = new(1);		// binary semaphore (mutex)
 
 	// construct the objects
-	gen = new( gen2drive, semComm );
+	gen = new( gen2drive );
 	foreach( drive[i] )
 		drive[i] = new( vif, gen2drive[i], drive2scb[i], i );
 
@@ -56,10 +54,10 @@ task reset();
 	$display("%0d : [ ENVIRONMENT ] ----- Reset Started -----", $time);
 
 	// reset DUT signals
-	vif.data_in 				<= 0;
-	vif.addr_in					<= 0;
-	vif.valid_in				<= 0;
-	vif.data_rd					<= 0;
+	vif.cb_tb.data_in 				<= 0;
+	vif.cb_tb.addr_in					<= 0;
+	vif.cb_tb.valid_in				<= 0;
+	vif.cb_tb.data_rd					<= 0;
 
 	$display("%0d : [ ENVIRONMENT ] ----- Reset Ended   -----", $time);
 endtask
@@ -77,12 +75,15 @@ task test();
 
 	fork
 		gen.main();
-		drive.main();
+		drive[0].main();
+		drive[1].main();
+		drive[2].main();
+		drive[3].main();
 	join_any
 
 	wait( gen.end_gen.triggered );
-	wait( gen.pkt_count == drive.num_transactions_sent );
-	// repeat (25) @( vif.cb_tb );	// simulate generator
+	foreach( drive[i] )
+		wait( gen.pkt_count == drive[i].num_transactions_sent );
 
 	$display("%0d : Environment : End of test() task", $time);
 endtask

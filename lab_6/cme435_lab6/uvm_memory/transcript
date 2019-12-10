@@ -1,6 +1,6 @@
 # vsim "+UVM_TESTNAME=mem_wr_rd_test" -coverage -do "run -all; exit" -c -vopt tbench_top
-# Start time: 22:12:29 on Nov 30,2019
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Start time: 12:40:48 on Dec 02,2019
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
 # //  Questa Sim
 # //  Version 10.3a linux Apr 13 2014
 # //
@@ -13,10 +13,26 @@
 # //
 # Loading sv_std.std
 # Loading mtiUvm.uvm_pkg
+# Loading work.mem_pkg(fast)
+# Loading work.test_pkg(fast)
 # Loading work.tbench_top(fast)
 # Loading work.mem_if(fast__1)
 # Loading mtiUvm.questa_uvm_pkg(fast)
 # Loading work.mem_if(fast)
+# ** Warning: (vsim-8637) ./verification/mem_pkg.sv(189): A modport ('MONITOR') should not be used in a hierarchical path.
+#         Region: /mem_pkg
+# ** Warning: (vsim-8637) ./verification/mem_pkg.sv(159): A modport ('DRIVER') should not be used in a hierarchical path.
+#         Region: /mem_pkg::mem_driver
+# ** Warning: (vsim-8637) ./verification/mem_pkg.sv(151): A modport ('DRIVER') should not be used in a hierarchical path.
+#         Region: /mem_pkg::mem_driver
+# ** Warning: (vsim-8637) ./verification/mem_pkg.sv(147): A modport ('DRIVER') should not be used in a hierarchical path.
+#         Region: /mem_pkg::mem_driver
+# ** Warning: (vsim-8637) ./verification/mem_pkg.sv(145): A modport ('DRIVER') should not be used in a hierarchical path.
+#         Region: /mem_pkg::mem_driver
+# ** Warning: (vsim-8637) ./verification/mem_pkg.sv(144): A modport ('DRIVER') should not be used in a hierarchical path.
+#         Region: /mem_pkg::mem_driver
+# ** Warning: (vsim-8637) ./verification/mem_pkg.sv(143): A modport ('DRIVER') should not be used in a hierarchical path.
+#         Region: /mem_pkg::mem_driver
 # Loading /CMC/tools/mentor/questasim.10.3a/questasim/uvm-1.1d/linux/uvm_dpi.so
 # ** Warning: (vsim-8634) Code was not compiled with coverage options.
 # run -all
@@ -42,21 +58,55 @@
 # 
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.2
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
-# UVM_WARNING @ 0: reporter [BDTYP] Cannot create a component of type 'mem_wr_rd_test' because it is not registered with the factory.
-# UVM_FATAL @ 0: reporter [INVTST] Requested test from command line +UVM_TESTNAME=mem_wr_rd_test not found.
+# UVM_INFO @ 0: reporter [RNTST] Running test mem_wr_rd_test...
+# ----------------------------------------------------------------
+# Name                         Type                    Size  Value
+# ----------------------------------------------------------------
+# uvm_test_top                 mem_wr_rd_test          -     @462 
+#   env                        mem_model_env           -     @470 
+#     mem_agnt                 mem_agent               -     @482 
+#       driver                 mem_driver              -     @520 
+#         rsp_port             uvm_analysis_port       -     @537 
+#         seq_item_port        uvm_seq_item_pull_port  -     @528 
+#       monitor                mem_monitor             -     @499 
+#         item_collected_port  uvm_analysis_port       -     @511 
+#       sequencer              mem_sequencer           -     @546 
+#         rsp_export           uvm_analysis_export     -     @554 
+#         seq_item_export      uvm_seq_item_pull_imp   -     @660 
+#         arbitration_queue    array                   0     -    
+#         lock_queue           array                   0     -    
+#         num_last_reqs        integral                32    'd1  
+#         num_last_rsps        integral                32    'd1  
+#     mem_scb                  mem_scoreboard          -     @490 
+#       item_collected_export  uvm_analysis_imp        -     @676 
+# ----------------------------------------------------------------
+# UVM_INFO ./verification/mem_pkg.sv(276) @ 25: uvm_test_top.env.mem_scb [mem_scoreboard] ------:: WRITE DATA       :: ------
+# UVM_INFO ./verification/mem_pkg.sv(277) @ 25: uvm_test_top.env.mem_scb [mem_scoreboard] Addr: 3
+# UVM_INFO ./verification/mem_pkg.sv(278) @ 25: uvm_test_top.env.mem_scb [mem_scoreboard] Data: 85
+# UVM_INFO ./verification/mem_pkg.sv(279) @ 25: uvm_test_top.env.mem_scb [mem_scoreboard] ------------------------------------
+# UVM_INFO ./verification/mem_pkg.sv(283) @ 55: uvm_test_top.env.mem_scb [mem_scoreboard] ------:: READ DATA Match :: ------
+# UVM_INFO ./verification/mem_pkg.sv(284) @ 55: uvm_test_top.env.mem_scb [mem_scoreboard] Addr: 2
+# UVM_INFO ./verification/mem_pkg.sv(285) @ 55: uvm_test_top.env.mem_scb [mem_scoreboard] Expected Data:ff Actual Data: ff
+# UVM_INFO ./verification/mem_pkg.sv(286) @ 55: uvm_test_top.env.mem_scb [mem_scoreboard] ------------------------------------
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 95: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ./verification/test_pkg.sv(39) @ 95: uvm_test_top [mem_wr_rd_test] ---------------------------------------
+# UVM_INFO ./verification/test_pkg.sv(40) @ 95: uvm_test_top [mem_wr_rd_test] ----TEST PASS           ----
+# UVM_INFO ./verification/test_pkg.sv(41) @ 95: uvm_test_top [mem_wr_rd_test] ---------------------------------------
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :    2
-# UVM_WARNING :    1
+# UVM_INFO :   15
+# UVM_WARNING :    0
 # UVM_ERROR :    0
-# UVM_FATAL :    1
+# UVM_FATAL :    0
 # ** Report counts by id
-# [BDTYP]     1
-# [INVTST]     1
 # [Questa UVM]     2
-# ** Note: $finish    : /CMC/tools/mentor/questasim.10.3a/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_report_object.svh(292)
-#    Time: 0 ns  Iteration: 0  Instance: /tbench_top
-# End time: 22:12:30 on Nov 30,2019, Elapsed time: 0: 0: 1
-# Errors: 0, Warnings: 1
+# [RNTST]     1
+# [TEST_DONE]     1
+# [mem_scoreboard]     8
+# [mem_wr_rd_test]     3
+# ** Note: $finish    : /CMC/tools/mentor/questasim.10.3a/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 95 ns  Iteration: 53  Instance: /tbench_top
+# End time: 12:40:50 on Dec 02,2019, Elapsed time: 0: 0: 2
+# Errors: 0, Warnings: 8

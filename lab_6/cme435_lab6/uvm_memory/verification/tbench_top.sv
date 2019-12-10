@@ -1,5 +1,6 @@
 module tbench_top;
 
+	import test_pkg::*;
   import uvm_pkg::*;
 
   bit clk;

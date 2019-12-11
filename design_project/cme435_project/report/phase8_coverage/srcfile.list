@@ -1,0 +1,11 @@
+dut/dut_top.sv
+dut/xswitch.svp
+verification/phase8_coverage/TransBase.sv
+verification/phase8_coverage/driver.sv
+verification/phase8_coverage/environment.sv
+verification/phase8_coverage/generator.sv
+verification/phase8_coverage/interface.sv
+verification/phase8_coverage/monitor.sv
+verification/phase8_coverage/scoreboard.sv
+verification/phase8_coverage/tbench_top.sv
+verification/phase8_coverage/testbench_sanity_check.sv

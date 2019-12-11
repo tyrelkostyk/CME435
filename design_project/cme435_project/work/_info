@@ -8,320 +8,333 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/tck290/engr-ece/CME435/design_project/cme435_project
+T_opt
+!s110 1576086508
+V6=V6lXm[XTVa6TB=g9@D?0
+04 10 4 work tbench_top fast 0
+=1-005056600035-5df12bec-a29b1-13fd
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OE;O;10.3a;59
 Xdriver_sv_unit
 Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z2 !s110 1576080354
+Z2 !s110 1576086507
 !i10b 1
-!s100 X:e6FLcT0OGz[1oSWi]]N0
-IPnJneH>6KC8ER>[BmjZnY1
-VPnJneH>6KC8ER>[BmjZnY1
+!s100 bd`3=E2WhO_j<1`LHf<6:1
+Iz6H^NHn[Cl<4SCH`a^YGL1
+Vz6H^NHn[Cl<4SCH`a^YGL1
 !i103 1
 S1
 R0
-w1576080299
-Z3 Fverification/phase7_scoreboard/TransBase.sv
-8verification/phase7_scoreboard/driver.sv
-Z4 Fverification/phase7_scoreboard/driver.sv
-L0 4
-Z5 OE;L;10.3a;59
+Z3 w1576080464
+8verification/phase8_coverage/driver.sv
+Z4 Fverification/phase8_coverage/driver.sv
+Z5 Fverification/phase8_coverage/TransBase.sv
+L1 4
+Z6 OE;L;10.3a;59
 r1
 !s85 0
 31
-Z6 !s108 1576080354.073839
-Z7 !s107 dut/xswitch.svp|dut/dut_top.sv|verification/phase7_scoreboard/testbench_sanity_check.sv|verification/phase7_scoreboard/tbench_top.sv|verification/phase7_scoreboard/scoreboard.sv|verification/phase7_scoreboard/monitor.sv|verification/phase7_scoreboard/interface.sv|verification/phase7_scoreboard/generator.sv|verification/phase7_scoreboard/environment.sv|verification/phase7_scoreboard/driver.sv|verification/phase7_scoreboard/TransBase.sv|
-Z8 !s90 -reportprogress|300|+incdir+verification/phase7_scoreboard|verification/phase7_scoreboard/TransBase.sv|verification/phase7_scoreboard/driver.sv|verification/phase7_scoreboard/environment.sv|verification/phase7_scoreboard/generator.sv|verification/phase7_scoreboard/interface.sv|verification/phase7_scoreboard/monitor.sv|verification/phase7_scoreboard/scoreboard.sv|verification/phase7_scoreboard/tbench_top.sv|verification/phase7_scoreboard/testbench_sanity_check.sv|
+Z7 !s108 1576086507.341685
+Z8 !s107 dut/xswitch.svp|dut/dut_top.sv|verification/phase8_coverage/TransBase.sv|verification/phase8_coverage/testbench_sanity_check.sv|verification/phase8_coverage/tbench_top.sv|verification/phase8_coverage/scoreboard.sv|verification/phase8_coverage/monitor.sv|verification/phase8_coverage/interface.sv|verification/phase8_coverage/generator.sv|verification/phase8_coverage/environment.sv|verification/phase8_coverage/driver.sv|
+Z9 !s90 +cover|+acc|+incdir+verification/phase8_coverage|verification/phase8_coverage/driver.sv|verification/phase8_coverage/environment.sv|verification/phase8_coverage/generator.sv|verification/phase8_coverage/interface.sv|verification/phase8_coverage/monitor.sv|verification/phase8_coverage/scoreboard.sv|verification/phase8_coverage/tbench_top.sv|verification/phase8_coverage/testbench_sanity_check.sv|verification/phase8_coverage/TransBase.sv|
 !i113 0
-Z9 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z10 !s92 +incdir+verification/phase7_scoreboard -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 !s102 +cover
+Z11 o+cover +acc -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 !s92 +cover +acc +incdir+verification/phase8_coverage -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 vdut_top
 R1
 R2
 !i10b 1
 !s100 RNLznbNSE1jUVP9H3Y5h92
-I8;XNSUfbb56@;aC735<jF0
-Z11 V`JN@9S9cnhjKRR_L]QIcM3
-Z12 !s105 tbench_top_sv_unit
+I_EBbchZ;QMP^WT1iQhWae2
+Z13 V`JN@9S9cnhjKRR_L]QIcM3
+Z14 !s105 tbench_top_sv_unit
 S1
 R0
-Z13 w1576024119
-Z14 Fdut/dut_top.sv
-Z15 8verification/phase7_scoreboard/tbench_top.sv
-Z16 Fverification/phase7_scoreboard/tbench_top.sv
+R3
+Z15 Fdut/dut_top.sv
+Z16 8verification/phase8_coverage/tbench_top.sv
+Z17 Fverification/phase8_coverage/tbench_top.sv
 L0 3
-R5
+R6
 r1
 !s85 0
 31
-R6
 R7
 R8
-!i113 0
 R9
+!i113 0
 R10
+R11
+R12
 Xenvironment_sv_unit
 R1
 R2
 !i10b 1
-!s100 eg@KmcOOFFaU^gKBz6]HF2
-IbHAZOjU`k]1<4zTB8?:?G1
-VbHAZOjU`k]1<4zTB8?:?G1
+!s100 8UVoR4Ne_NE?e41oZ`PU01
+Io1giN0bkDzh7B3:8fSKLA2
+Vo1giN0bkDzh7B3:8fSKLA2
 !i103 1
 S1
 R0
-Z17 w1576080348
-R3
+Z18 w1576086428
 R4
-8verification/phase7_scoreboard/environment.sv
-Z18 Fverification/phase7_scoreboard/environment.sv
-Z19 Fverification/phase7_scoreboard/interface.sv
-Z20 Fverification/phase7_scoreboard/generator.sv
-Z21 Fverification/phase7_scoreboard/monitor.sv
-Z22 Fverification/phase7_scoreboard/scoreboard.sv
-L0 4
 R5
+8verification/phase8_coverage/environment.sv
+Z19 Fverification/phase8_coverage/environment.sv
+Z20 Fverification/phase8_coverage/interface.sv
+Z21 Fverification/phase8_coverage/generator.sv
+Z22 Fverification/phase8_coverage/monitor.sv
+Z23 Fverification/phase8_coverage/scoreboard.sv
+L1 4
+R6
 r1
 !s85 0
 31
-R6
 R7
 R8
-!i113 0
 R9
+!i113 0
 R10
+R11
+R12
 Xgenerator_sv_unit
 R1
 R2
 !i10b 1
-!s100 NVW;@<3T4fo0;o<Mcd1^80
-Ij?Tn7fF3G4^n57ao`n;8?3
-Vj?Tn7fF3G4^n57ao`n;8?3
+!s100 ;aKBN68Tg>jdFj0A>Bdz20
+Idf1Pj:FQN<>@IEGJU]59Q1
+Vdf1Pj:FQN<>@IEGJU]59Q1
 !i103 1
 S1
 R0
-w1576080306
-R3
-8verification/phase7_scoreboard/generator.sv
-R20
-L0 4
+w1576086199
 R5
+8verification/phase8_coverage/generator.sv
+R21
+L1 4
+R6
 r1
 !s85 0
 31
-R6
 R7
 R8
-!i113 0
 R9
+!i113 0
 R10
+R11
+R12
 Yintf
 R1
 R2
 !i10b 1
-!s100 ]?6Ticf=oAN9B;ZSNO7;k1
-I4M[MU9X][PViDBT<5Be[]0
-R11
-Z23 !s105 testbench_sanity_check_sv_unit
+!s100 e6B7_2UJdGBYQ<F_8]8[J2
+I1cBZWGdWIJobmMFNQfF?Y2
+R13
+Z24 !s105 testbench_sanity_check_sv_unit
 S1
 R0
-w1576080267
+w1576084304
+R20
 R19
-R18
-Z24 8verification/phase7_scoreboard/testbench_sanity_check.sv
-Z25 Fverification/phase7_scoreboard/testbench_sanity_check.sv
+Z25 8verification/phase8_coverage/testbench_sanity_check.sv
+Z26 Fverification/phase8_coverage/testbench_sanity_check.sv
 L0 4
-R5
+R6
 r1
 !s85 0
 31
-R6
 R7
 R8
-!i113 0
 R9
+!i113 0
 R10
+R11
+R12
 Xmonitor_sv_unit
 R1
 R2
 !i10b 1
 !s100 Qh]=I`oNA1F[oT8f]TjDi2
-INmIOIlDUNljQ[EVGjb8hj1
-VNmIOIlDUNljQ[EVGjb8hj1
+Izo>CN:E7J^jKW`AEGNd1W0
+Vzo>CN:E7J^jKW`AEGNd1W0
 !i103 1
 S1
 R0
-w1576080094
-8verification/phase7_scoreboard/monitor.sv
-R21
-R3
-L1 4
+w1576086282
+8verification/phase8_coverage/monitor.sv
+R22
 R5
+L1 4
+R6
 r1
 !s85 0
 31
-R6
 R7
 R8
-!i113 0
 R9
+!i113 0
 R10
+R11
+R12
 Xscoreboard_sv_unit
 R1
 R2
 !i10b 1
-!s100 Ak2fak7l43?G1N?mOkVb]3
-IAHiJ3KnAnMGUE@e9J`Y=<2
-VAHiJ3KnAnMGUE@e9J`Y=<2
+!s100 33DFz31C8kmfQVLdb]chJ2
+IToCb6QI[7JQYeBi66;JAj3
+VToCb6QI[7JQYeBi66;JAj3
 !i103 1
 S1
 R0
-R17
-R3
-8verification/phase7_scoreboard/scoreboard.sv
-R22
-L1 4
+R18
 R5
+8verification/phase8_coverage/scoreboard.sv
+R23
+L1 4
+R6
 r1
 !s85 0
 31
-R6
 R7
 R8
-!i113 0
 R9
+!i113 0
 R10
+R11
+R12
 vtbench_top
 R1
 R2
 !i10b 1
 !s100 ;?=X`^NFR6ASDidoQh3GE2
-IPcMzIDJT3fcJgL8lK47Rz1
+IWaW<O:RlDK7`Iz^ndYTng0
+R13
+R14
+S1
+R0
+R3
+R16
+R17
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
 R11
 R12
-S1
-R0
-R13
-R15
-R16
-L0 3
-R5
-r1
-!s85 0
-31
-R6
-R7
-R8
-!i113 0
-R9
-R10
-Ttbench_top_opt
-R2
-V@aCc<RS4^>B<zlnH?7I[o0
-04 10 4 work tbench_top fast 0
-o+acc
-ntbench_top_opt
-OE;O;10.3a;59
 4testbench
 R1
-DXx4 work 30 testbench_sanity_check_sv_unit 0 22 C@P[3o`TDZJA_be?A3a3C0
-R11
+DXx4 work 30 testbench_sanity_check_sv_unit 0 22 <PCJ^83iC6G:ZDW6[MoR]1
+R13
 r1
 !s85 0
 31
 !i10b 1
-!s100 iLB9j@JzIbRDmdknV40W03
-Iez3J[h8@2Fg]j:mSLjZX>2
-R23
+!s100 j<2:[]:L:G>9lGUC6Z3DR1
+IPaG0D[?5A=gNYIoFP:HL50
+R24
 S1
 R0
-w1576080221
-R24
+R3
 R25
+R26
 L0 3
-R5
 R6
 R7
 R8
-!i113 0
 R9
+!i113 0
 R10
+R11
+R12
 Xtestbench_sanity_check_sv_unit
 R1
-VC@P[3o`TDZJA_be?A3a3C0
+V<PCJ^83iC6G:ZDW6[MoR]1
 r1
 !s85 0
 31
 !i10b 1
-!s100 JodmPDI1Fh;Fn4g^l^JnU3
-IC@P[3o`TDZJA_be?A3a3C0
+!s100 5[mGmE?hFRe5aKXcjhKSA2
+I<PCJ^83iC6G:ZDW6[MoR]1
 !i103 1
 S1
 R0
-R17
-R24
-R25
 R18
+R25
+R26
 R19
-R3
 R20
-R4
-R21
-R22
-L3 4
 R5
+R21
+R4
+R22
+R23
+L3 4
 R6
 R7
 R8
-!i113 0
 R9
+!i113 0
 R10
+R11
+R12
 XTransBase_sv_unit
 R1
 R2
 !i10b 1
 !s100 B0V7G@Nj6;V7<:g13l5ci1
-Ij`Eh56A7NPFzA_9n;Im=l1
-Vj`Eh56A7NPFzA_9n;Im=l1
+IPo`ej2mDS]hLlZQHDh9L`1
+VPo`ej2mDS]hLlZQHDh9L`1
 !i103 1
 S1
 R0
-w1576037380
-8verification/phase7_scoreboard/TransBase.sv
 R3
-L0 4
+8verification/phase8_coverage/TransBase.sv
 R5
+L0 4
+R6
 r1
 !s85 0
 31
-R6
 R7
 R8
-!i113 0
 R9
+!i113 0
 R10
+R11
+R12
 n@trans@base_sv_unit
 vxswitch
 R1
 R2
 !i10b 1
 !s100 @8kPXS^ZNi^;hHU:VYV@e2
-Ik0@4[7QdU3DeRafe8RBll1
-R11
-R12
+I<184<0Kf?Q[GQEQ@`Ohi?1
+R13
+R14
 S1
 R0
-R13
+R3
 Fdut/xswitch.svp
-R14
 R15
 R16
+R17
 L0 1
-R5
+R6
 r1
 !s85 0
 31
-R6
 R7
 R8
-!i113 0
 R9
+!i113 0
 R10
+R11
+R12

@@ -1,0 +1,292 @@
+Coverage Report by file with details
+
+=================================================================================
+=== File: ../dut/xswitch.svp
+=================================================================================
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    288       208        80      72.2
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../dut/xswitch.svp --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          1                             addr_in[7]           0           0        0.00 
+          1                             addr_in[6]           0           0        0.00 
+          1                             addr_in[5]           0           0        0.00 
+          1                             addr_in[4]           0           0        0.00 
+          1                             addr_in[3]           0           0        0.00 
+          1                            addr_in[31]           0           0        0.00 
+          1                            addr_in[30]           0           0        0.00 
+          1                             addr_in[2]           0           0        0.00 
+          1                            addr_in[29]           0           0        0.00 
+          1                            addr_in[28]           0           0        0.00 
+          1                            addr_in[27]           0           0        0.00 
+          1                            addr_in[26]           0           0        0.00 
+          1                            addr_in[23]           0           0        0.00 
+          1                            addr_in[22]           0           0        0.00 
+          1                            addr_in[21]           0           0        0.00 
+          1                            addr_in[20]           0           0        0.00 
+          1                            addr_in[19]           0           0        0.00 
+          1                            addr_in[18]           0           0        0.00 
+          1                            addr_in[15]           0           0        0.00 
+          1                            addr_in[14]           0           0        0.00 
+          1                            addr_in[13]           0           0        0.00 
+          1                            addr_in[12]           0           0        0.00 
+          1                            addr_in[11]           0           0        0.00 
+          1                            addr_in[10]           0           0        0.00 
+          2                             rcv_rdy[3]           0           0        0.00 
+          2                             rcv_rdy[2]           0           0        0.00 
+          2                             rcv_rdy[1]           0           0        0.00 
+          2                             rcv_rdy[0]           0           0        0.00 
+          3                            addr_out[7]           1           0       50.00 
+          3                            addr_out[6]           1           0       50.00 
+          3                            addr_out[5]           1           0       50.00 
+          3                            addr_out[4]           1           0       50.00 
+          3                            addr_out[3]           1           0       50.00 
+          3                           addr_out[31]           1           0       50.00 
+          3                           addr_out[30]           1           0       50.00 
+          3                            addr_out[2]           1           0       50.00 
+          3                           addr_out[29]           1           0       50.00 
+          3                           addr_out[28]           1           0       50.00 
+          3                           addr_out[27]           1           0       50.00 
+          3                           addr_out[26]           1           0       50.00 
+          3                           addr_out[23]           1           0       50.00 
+          3                           addr_out[22]           1           0       50.00 
+          3                           addr_out[21]           1           0       50.00 
+          3                           addr_out[20]           1           0       50.00 
+          3                           addr_out[19]           1           0       50.00 
+          3                           addr_out[18]           1           0       50.00 
+          3                           addr_out[15]           1           0       50.00 
+          3                           addr_out[14]           1           0       50.00 
+          3                           addr_out[13]           1           0       50.00 
+          3                           addr_out[12]           1           0       50.00 
+          3                           addr_out[11]           1           0       50.00 
+          3                           addr_out[10]           1           0       50.00 
+
+Total Node Count     =        144 
+Toggled Node Count   =         92 
+Untoggled Node Count =         52 
+
+Toggle Coverage      =       72.2% (208 of 288 bins)
+
+=================================================================================
+=== File: ../verification/phase9_testcases/phase9_interface.sv
+=================================================================================
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    292       212        80      72.6
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../verification/phase9_testcases/phase9_interface.sv --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          6                            addr_out[7]           1           0       50.00 
+          6                            addr_out[6]           1           0       50.00 
+          6                            addr_out[5]           1           0       50.00 
+          6                            addr_out[4]           1           0       50.00 
+          6                            addr_out[3]           1           0       50.00 
+          6                           addr_out[31]           1           0       50.00 
+          6                           addr_out[30]           1           0       50.00 
+          6                            addr_out[2]           1           0       50.00 
+          6                           addr_out[29]           1           0       50.00 
+          6                           addr_out[28]           1           0       50.00 
+          6                           addr_out[27]           1           0       50.00 
+          6                           addr_out[26]           1           0       50.00 
+          6                           addr_out[23]           1           0       50.00 
+          6                           addr_out[22]           1           0       50.00 
+          6                           addr_out[21]           1           0       50.00 
+          6                           addr_out[20]           1           0       50.00 
+          6                           addr_out[19]           1           0       50.00 
+          6                           addr_out[18]           1           0       50.00 
+          6                           addr_out[15]           1           0       50.00 
+          6                           addr_out[14]           1           0       50.00 
+          6                           addr_out[13]           1           0       50.00 
+          6                           addr_out[12]           1           0       50.00 
+          6                           addr_out[11]           1           0       50.00 
+          6                           addr_out[10]           1           0       50.00 
+          6                             addr_in[7]           0           0        0.00 
+          6                             addr_in[6]           0           0        0.00 
+          6                             addr_in[5]           0           0        0.00 
+          6                             addr_in[4]           0           0        0.00 
+          6                             addr_in[3]           0           0        0.00 
+          6                            addr_in[31]           0           0        0.00 
+          6                            addr_in[30]           0           0        0.00 
+          6                             addr_in[2]           0           0        0.00 
+          6                            addr_in[29]           0           0        0.00 
+          6                            addr_in[28]           0           0        0.00 
+          6                            addr_in[27]           0           0        0.00 
+          6                            addr_in[26]           0           0        0.00 
+          6                            addr_in[23]           0           0        0.00 
+          6                            addr_in[22]           0           0        0.00 
+          6                            addr_in[21]           0           0        0.00 
+          6                            addr_in[20]           0           0        0.00 
+          6                            addr_in[19]           0           0        0.00 
+          6                            addr_in[18]           0           0        0.00 
+          6                            addr_in[15]           0           0        0.00 
+          6                            addr_in[14]           0           0        0.00 
+          6                            addr_in[13]           0           0        0.00 
+          6                            addr_in[12]           0           0        0.00 
+          6                            addr_in[11]           0           0        0.00 
+          6                            addr_in[10]           0           0        0.00 
+          7                             rcv_rdy[3]           0           0        0.00 
+          7                             rcv_rdy[2]           0           0        0.00 
+          7                             rcv_rdy[1]           0           0        0.00 
+          7                             rcv_rdy[0]           0           0        0.00 
+
+Total Node Count     =        146 
+Toggled Node Count   =         94 
+Untoggled Node Count =         52 
+
+Toggle Coverage      =       72.6% (212 of 292 bins)
+
+=================================================================================
+=== File: ../verification/phase9_testcases/phase9_tbench_top.sv
+=================================================================================
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                      4         4         0     100.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../verification/phase9_testcases/phase9_tbench_top.sv --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+
+Total Node Count     =          2 
+Toggled Node Count   =          2 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =      100.0% (4 of 4 bins)
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------
+Covergroup                                             Metric      Goal/ Status                    
+                                                                At Least                           
+----------------------------------------------------------------------------------------------------
+ TYPE /phase9_testbench_sanity_sv_unit/coverage/driv_cg 
+                                                       100.0%        100 Covered                   
+    Coverpoint driv_cg::port_0_address                 100.0%        100 Covered                   
+        covered/total bins:                                 4          4                           
+        missing/total bins:                                 0          4                           
+        bin port_0                                        242          1 Covered                   
+        bin port_1                                        245          1 Covered                   
+        bin port_2                                        252          1 Covered                   
+        bin port_3                                        261          1 Covered                   
+    Coverpoint driv_cg::port_1_address                 100.0%        100 Covered                   
+        covered/total bins:                                 4          4                           
+        missing/total bins:                                 0          4                           
+        bin port_0                                        246          1 Covered                   
+        bin port_1                                        257          1 Covered                   
+        bin port_2                                        244          1 Covered                   
+        bin port_3                                        253          1 Covered                   
+    Coverpoint driv_cg::port_2_address                 100.0%        100 Covered                   
+        covered/total bins:                                 4          4                           
+        missing/total bins:                                 0          4                           
+        bin port_0                                        259          1 Covered                   
+        bin port_1                                        231          1 Covered                   
+        bin port_2                                        266          1 Covered                   
+        bin port_3                                        244          1 Covered                   
+    Coverpoint driv_cg::port_3_address                 100.0%        100 Covered                   
+        covered/total bins:                                 4          4                           
+        missing/total bins:                                 0          4                           
+        bin port_0                                        253          1 Covered                   
+        bin port_1                                        267          1 Covered                   
+        bin port_2                                        238          1 Covered                   
+        bin port_3                                        242          1 Covered                   
+    Coverpoint driv_cg::port_0_data                    100.0%        100 Covered                   
+        covered/total bins:                                 3          3                           
+        missing/total bins:                                 0          3                           
+        bin low                                           210          1 Covered                   
+        bin med                                           380          1 Covered                   
+        bin high                                          410          1 Covered                   
+    Coverpoint driv_cg::port_1_data                    100.0%        100 Covered                   
+        covered/total bins:                                 3          3                           
+        missing/total bins:                                 0          3                           
+        bin low                                           201          1 Covered                   
+        bin med                                           386          1 Covered                   
+        bin high                                          413          1 Covered                   
+    Coverpoint driv_cg::port_2_data                    100.0%        100 Covered                   
+        covered/total bins:                                 3          3                           
+        missing/total bins:                                 0          3                           
+        bin low                                           209          1 Covered                   
+        bin med                                           378          1 Covered                   
+        bin high                                          413          1 Covered                   
+    Coverpoint driv_cg::port_3_data                    100.0%        100 Covered                   
+        covered/total bins:                                 3          3                           
+        missing/total bins:                                 0          3                           
+        bin low                                           201          1 Covered                   
+        bin med                                           387          1 Covered                   
+        bin high                                          412          1 Covered                   
+ CLASS coverage
+
+TOTAL COVERGROUP COVERAGE: 100.0%  COVERGROUP TYPES: 1
+
+DIRECTIVE COVERAGE:
+---------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Count Status    
+                                         Unit   UnitType                                      
+---------------------------------------------------------------------------------------------
+/tbench_top/dut/u_dut_assertion/genblk2[3]/c_addr_in 
+                                         assertions Verilog  SVA  ../verification/phase9_testcases/phase9_assertions.sv(36)
+                                                                                490 Covered   
+/tbench_top/dut/u_dut_assertion/genblk2[2]/c_addr_in 
+                                         assertions Verilog  SVA  ../verification/phase9_testcases/phase9_assertions.sv(36)
+                                                                                499 Covered   
+/tbench_top/dut/u_dut_assertion/genblk2[1]/c_addr_in 
+                                         assertions Verilog  SVA  ../verification/phase9_testcases/phase9_assertions.sv(36)
+                                                                                489 Covered   
+/tbench_top/dut/u_dut_assertion/genblk2[0]/c_addr_in 
+                                         assertions Verilog  SVA  ../verification/phase9_testcases/phase9_assertions.sv(36)
+                                                                                499 Covered   
+/tbench_top/dut/u_dut_assertion/genblk1[3]/c_data_in 
+                                         assertions Verilog  SVA  ../verification/phase9_testcases/phase9_assertions.sv(19)
+                                                                                490 Covered   
+/tbench_top/dut/u_dut_assertion/genblk1[2]/c_data_in 
+                                         assertions Verilog  SVA  ../verification/phase9_testcases/phase9_assertions.sv(19)
+                                                                                499 Covered   
+/tbench_top/dut/u_dut_assertion/genblk1[1]/c_data_in 
+                                         assertions Verilog  SVA  ../verification/phase9_testcases/phase9_assertions.sv(19)
+                                                                                489 Covered   
+/tbench_top/dut/u_dut_assertion/genblk1[0]/c_data_in 
+                                         assertions Verilog  SVA  ../verification/phase9_testcases/phase9_assertions.sv(19)
+                                                                                499 Covered   
+/tbench_top/dut/u_dut_assertion/c_reset  assertions Verilog  SVA  ../verification/phase9_testcases/phase9_assertions.sv(51)
+                                                                                  2 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 100.0%  COVERS: 9
+
+ASSERTION RESULTS:
+-------------------------------------------------------
+Name                 File(Line)           Failure Pass 
+                                          Count   Count 
+-------------------------------------------------------
+/tbench_top/dut/u_dut_assertion/genblk2[3]/a_addr_in
+                     ../verification/phase9_testcases/phase9_assertions.sv(33)       0     -
+/tbench_top/dut/u_dut_assertion/genblk2[2]/a_addr_in
+                     ../verification/phase9_testcases/phase9_assertions.sv(33)       0     -
+/tbench_top/dut/u_dut_assertion/genblk2[1]/a_addr_in
+                     ../verification/phase9_testcases/phase9_assertions.sv(33)       0     -
+/tbench_top/dut/u_dut_assertion/genblk2[0]/a_addr_in
+                     ../verification/phase9_testcases/phase9_assertions.sv(33)       0     -
+/tbench_top/dut/u_dut_assertion/genblk1[3]/a_data_in
+                     ../verification/phase9_testcases/phase9_assertions.sv(16)       0     -
+/tbench_top/dut/u_dut_assertion/genblk1[2]/a_data_in
+                     ../verification/phase9_testcases/phase9_assertions.sv(16)       0     -
+/tbench_top/dut/u_dut_assertion/genblk1[1]/a_data_in
+                     ../verification/phase9_testcases/phase9_assertions.sv(16)       0     -
+/tbench_top/dut/u_dut_assertion/genblk1[0]/a_data_in
+                     ../verification/phase9_testcases/phase9_assertions.sv(16)       0     -
+/tbench_top/dut/u_dut_assertion/a_reset
+                     ../verification/phase9_testcases/phase9_assertions.sv(47)       0     -
+
+Total Coverage By File (code coverage only, filtered view): 72.6%
+

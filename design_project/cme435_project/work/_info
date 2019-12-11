@@ -10,291 +10,318 @@ cModel Technology
 Z0 d/home/tck290/engr-ece/CME435/design_project/cme435_project
 Xdriver_sv_unit
 Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z2 !s110 1576022856
+Z2 !s110 1576045017
 !i10b 1
-!s100 aoCVjkWDeGmZ7[i9E@l<L0
-I:EPAA;9TXjgHh<:GKWezP0
-V:EPAA;9TXjgHh<:GKWezP0
+!s100 c`=97efGCdTkl51F=7N>h1
+IB]2:4Cg5E]X<7V>@[inB:3
+VB]2:4Cg5E]X<7V>@[inB:3
 !i103 1
 S1
 R0
-Z3 w1576015728
-Z4 Fverification/phase6_monitor/TransBase.sv
-8verification/phase6_monitor/driver.sv
-Z5 Fverification/phase6_monitor/driver.sv
+w1576040393
+Z3 Fverification/phase7_scoreboard/TransBase.sv
+8verification/phase7_scoreboard/driver.sv
+Z4 Fverification/phase7_scoreboard/driver.sv
 L0 4
-Z6 OE;L;10.3a;59
+Z5 OE;L;10.3a;59
 r1
 !s85 0
 31
-Z7 !s108 1576022856.616912
-Z8 !s107 dut/xswitch.svp|dut/dut_top.sv|verification/phase6_monitor/testbench_sanity_check.sv|verification/phase6_monitor/tbench_top.sv|verification/phase6_monitor/monitor.sv|verification/phase6_monitor/interface.sv|verification/phase6_monitor/generator.sv|verification/phase6_monitor/environment.sv|verification/phase6_monitor/driver.sv|verification/phase6_monitor/TransBase.sv|
-Z9 !s90 -reportprogress|300|+incdir+verification/phase6_monitor|verification/phase6_monitor/TransBase.sv|verification/phase6_monitor/driver.sv|verification/phase6_monitor/environment.sv|verification/phase6_monitor/generator.sv|verification/phase6_monitor/interface.sv|verification/phase6_monitor/monitor.sv|verification/phase6_monitor/tbench_top.sv|verification/phase6_monitor/testbench_sanity_check.sv|
+Z6 !s108 1576045017.111614
+Z7 !s107 dut/xswitch.svp|dut/dut_top.sv|verification/phase7_scoreboard/testbench_sanity_check.sv|verification/phase7_scoreboard/tbench_top.sv|verification/phase7_scoreboard/scoreboard.sv|verification/phase7_scoreboard/monitor.sv|verification/phase7_scoreboard/interface.sv|verification/phase7_scoreboard/generator.sv|verification/phase7_scoreboard/environment.sv|verification/phase7_scoreboard/driver.sv|verification/phase7_scoreboard/TransBase.sv|
+Z8 !s90 -reportprogress|300|+incdir+verification/phase7_scoreboard|verification/phase7_scoreboard/TransBase.sv|verification/phase7_scoreboard/driver.sv|verification/phase7_scoreboard/environment.sv|verification/phase7_scoreboard/generator.sv|verification/phase7_scoreboard/interface.sv|verification/phase7_scoreboard/monitor.sv|verification/phase7_scoreboard/scoreboard.sv|verification/phase7_scoreboard/tbench_top.sv|verification/phase7_scoreboard/testbench_sanity_check.sv|
 !i113 0
-Z10 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z11 !s92 +incdir+verification/phase6_monitor -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 !s92 +incdir+verification/phase7_scoreboard -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 vdut_top
 R1
 R2
 !i10b 1
 !s100 RNLznbNSE1jUVP9H3Y5h92
-IM0kZ3g4lPF3_>k>h@]2Rh2
-Z12 V`JN@9S9cnhjKRR_L]QIcM3
-Z13 !s105 tbench_top_sv_unit
+I8;XNSUfbb56@;aC735<jF0
+Z11 V`JN@9S9cnhjKRR_L]QIcM3
+Z12 !s105 tbench_top_sv_unit
 S1
 R0
-Z14 w1576015727
-Z15 Fdut/dut_top.sv
-Z16 8verification/phase6_monitor/tbench_top.sv
-Z17 Fverification/phase6_monitor/tbench_top.sv
+Z13 w1576024119
+Z14 Fdut/dut_top.sv
+Z15 8verification/phase7_scoreboard/tbench_top.sv
+Z16 Fverification/phase7_scoreboard/tbench_top.sv
 L0 3
-R6
+R5
 r1
 !s85 0
 31
+R6
 R7
 R8
-R9
 !i113 0
+R9
 R10
-R11
 Xenvironment_sv_unit
 R1
 R2
 !i10b 1
-!s100 hc_0?kVRgIPSIh33><UYO3
-I9f[0agY1;l[zg0^XOlGBM3
-V9f[0agY1;l[zg0^XOlGBM3
+!s100 PnF=abhD_HBPFb65_X:2k3
+IPO>7?^4MF>n5I9j7?GZM02
+VPO>7?^4MF>n5I9j7?GZM02
 !i103 1
 S1
 R0
-Z18 w1576022849
+Z17 w1576045014
+R3
 R4
-R5
-8verification/phase6_monitor/environment.sv
-Z19 Fverification/phase6_monitor/environment.sv
-Z20 Fverification/phase6_monitor/interface.sv
-Z21 Fverification/phase6_monitor/generator.sv
-Z22 Fverification/phase6_monitor/monitor.sv
+8verification/phase7_scoreboard/environment.sv
+Z18 Fverification/phase7_scoreboard/environment.sv
+Z19 Fverification/phase7_scoreboard/interface.sv
+Z20 Fverification/phase7_scoreboard/generator.sv
+Z21 Fverification/phase7_scoreboard/monitor.sv
+Z22 Fverification/phase7_scoreboard/scoreboard.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
+R6
 R7
 R8
-R9
 !i113 0
+R9
 R10
-R11
 Xgenerator_sv_unit
 R1
 R2
 !i10b 1
-!s100 3F=LQlAnf8_h?]_7GDBVd2
-IeHOG@SXSkZL10=NO=ImaG1
-VeHOG@SXSkZL10=NO=ImaG1
+!s100 Ka@WN97i=nOM]QGV8Vj=h0
+I`o[VEDgDk;_>lR3W28TUc3
+V`o[VEDgDk;_>lR3W28TUc3
 !i103 1
 S1
 R0
+Z23 w1576037380
 R3
-R4
-8verification/phase6_monitor/generator.sv
-R21
+8verification/phase7_scoreboard/generator.sv
+R20
 L0 4
-R6
+R5
 r1
 !s85 0
 31
+R6
 R7
 R8
-R9
 !i113 0
+R9
 R10
-R11
 Yintf
 R1
 R2
 !i10b 1
-!s100 :Vh3EaGNhoG:_cAWbf2N53
-I?M7hh4IgL3]Um<X8m9Jbg0
-R12
-Z23 !s105 testbench_sanity_check_sv_unit
+!s100 ]?6Ticf=oAN9B;ZSNO7;k1
+I4M[MU9X][PViDBT<5Be[]0
+R11
+Z24 !s105 testbench_sanity_check_sv_unit
 S1
 R0
-w1576022786
-R20
+Z25 w1576041237
 R19
-Z24 8verification/phase6_monitor/testbench_sanity_check.sv
-Z25 Fverification/phase6_monitor/testbench_sanity_check.sv
+R18
+Z26 8verification/phase7_scoreboard/testbench_sanity_check.sv
+Z27 Fverification/phase7_scoreboard/testbench_sanity_check.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
+R6
 R7
 R8
-R9
 !i113 0
+R9
 R10
-R11
 Xmonitor_sv_unit
 R1
 R2
 !i10b 1
-!s100 ZQfnZozaoCg`mHEjo3JfP0
-I=nF;alzm]BFBAFFk13c1W0
-V=nF;alzm]BFBAFFk13c1W0
+!s100 J9TiCc>5P^;BUOiMVYlgi0
+I_aG]M;KE>OVgb>8Th9Q2T3
+V_aG]M;KE>OVgb>8Th9Q2T3
 !i103 1
 S1
 R0
-R18
-8verification/phase6_monitor/monitor.sv
-R22
-R4
+w1576040963
+8verification/phase7_scoreboard/monitor.sv
+R21
+R3
 L1 4
-R6
+R5
 r1
 !s85 0
 31
+R6
 R7
 R8
-R9
 !i113 0
+R9
 R10
-R11
+Xscoreboard_sv_unit
+R1
+R2
+!i10b 1
+!s100 hn]L]j^_lm0zGMLMAF]<22
+I3z4[LMT9`hT1=`m<oEd@d1
+V3z4[LMT9`hT1=`m<oEd@d1
+!i103 1
+S1
+R0
+R17
+R3
+8verification/phase7_scoreboard/scoreboard.sv
+R22
+L1 4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
 vtbench_top
 R1
 R2
 !i10b 1
 !s100 ;?=X`^NFR6ASDidoQh3GE2
-Imkj>5JhQkna7WeC742>:X2
+IPcMzIDJT3fcJgL8lK47Rz1
+R11
 R12
-R13
 S1
 R0
-R14
+R13
+R15
 R16
-R17
 L0 3
-R6
+R5
 r1
 !s85 0
 31
+R6
 R7
 R8
-R9
 !i113 0
+R9
 R10
-R11
 Ttbench_top_opt
 R2
-VSN9UalNB8WEbXTck0DHd10
+VfM0HQUAE2HgN`_a4;MRh^0
 04 10 4 work tbench_top fast 0
 o+acc
 ntbench_top_opt
 OE;O;10.3a;59
 4testbench
 R1
-DXx4 work 30 testbench_sanity_check_sv_unit 0 22 HLGUeG<bf<49B6P5Djic32
-R12
+DXx4 work 30 testbench_sanity_check_sv_unit 0 22 6l?bIX9=I<ejW_D7lZ>>b2
+R11
 r1
 !s85 0
 31
 !i10b 1
-!s100 0:6l9HCZF3lNo4Oa;XMc_2
-IJInjKSQlZWhokReWl0bjJ3
-R23
+!s100 FT0WSb3nn2KYbA2]i5a603
+Izz6`<ZZ<[l]50[W@mD8Fz2
+R24
 S1
 R0
-R3
-R24
 R25
+R26
+R27
 L0 3
+R5
 R6
 R7
 R8
-R9
 !i113 0
+R9
 R10
-R11
 Xtestbench_sanity_check_sv_unit
 R1
-VHLGUeG<bf<49B6P5Djic32
+V6l?bIX9=I<ejW_D7lZ>>b2
 r1
 !s85 0
 31
 !i10b 1
-!s100 4nRi1_djSHgl[9GMH81W;1
-IHLGUeG<bf<49B6P5Djic32
+!s100 ^mn:lAFg[RVW0=YBm8UAP1
+I6l?bIX9=I<ejW_D7lZ>>b2
 !i103 1
 S1
 R0
+R17
+R26
+R27
 R18
-R24
-R25
 R19
+R3
 R20
 R4
 R21
-R5
 R22
 L3 4
+R5
 R6
 R7
 R8
-R9
 !i113 0
+R9
 R10
-R11
 XTransBase_sv_unit
 R1
 R2
 !i10b 1
-!s100 QLBa`TLn5;^;mH3hDW?6X2
-I@cO5>DJdiV9>eSc^3WZ0Q0
-V@cO5>DJdiV9>eSc^3WZ0Q0
+!s100 B0V7G@Nj6;V7<:g13l5ci1
+Ij`Eh56A7NPFzA_9n;Im=l1
+Vj`Eh56A7NPFzA_9n;Im=l1
 !i103 1
 S1
 R0
+R23
+8verification/phase7_scoreboard/TransBase.sv
 R3
-8verification/phase6_monitor/TransBase.sv
-R4
 L0 4
-R6
+R5
 r1
 !s85 0
 31
+R6
 R7
 R8
-R9
 !i113 0
+R9
 R10
-R11
 n@trans@base_sv_unit
 vxswitch
 R1
 R2
 !i10b 1
 !s100 @8kPXS^ZNi^;hHU:VYV@e2
-I2n7egzbl=z]F^U^01:b>e3
+Ik0@4[7QdU3DeRafe8RBll1
+R11
 R12
-R13
 S1
 R0
-R14
+R13
 Fdut/xswitch.svp
+R14
 R15
 R16
-R17
 L0 1
-R6
+R5
 r1
 !s85 0
 31
+R6
 R7
 R8
-R9
 !i113 0
+R9
 R10
-R11

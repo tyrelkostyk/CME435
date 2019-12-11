@@ -1,0 +1,7 @@
+../dut/xswitch.svp
+../verification/phase9_testcases/phase9_assertions.sv
+../verification/phase9_testcases/phase9_coverage.sv
+../verification/phase9_testcases/phase9_dut_top.sv
+../verification/phase9_testcases/phase9_interface.sv
+../verification/phase9_testcases/phase9_tbench_top.sv
+../verification/phase9_testcases/phase9_transaction.sv

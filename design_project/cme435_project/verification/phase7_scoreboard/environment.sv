@@ -26,6 +26,9 @@ mailbox mon2scb[4];			// to share received data with the scoreboard
 
 // instantiate semaphore handles
 
+// declare packet count (defined in testbench)
+int pkt_count, verbose;
+
 // instantiate virtual interfaces
 virtual intf vif;
 
@@ -33,9 +36,11 @@ virtual intf vif;
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
 // environment constructor
-function new( virtual intf vif );
+function new( virtual intf vif, int pkt_count, verbose );
   // get the interface from test
   this.vif = vif;
+	this.pkt_count = pkt_count;
+	this.verbose = verbose;
 
 	// create the mailboxes (Same handle shared across objects)
 	foreach( gen2drive[i] )
@@ -48,10 +53,10 @@ function new( virtual intf vif );
 	// create the semaphores
 
 	// construct the objects
-	gen = new( gen2drive );
-	foreach( drive[i] ) drive[i] = new( vif, gen2drive[i], drive2scb[i], i );
-	foreach( mon[i] ) mon[i] = new ( vif, mon2scb[i], i, 25 );
-	scb = new( drive2scb, mon2scb );
+	gen = new( gen2drive, pkt_count, verbose );
+	foreach( drive[i] ) drive[i] = new( vif, gen2drive[i], drive2scb[i], i, verbose );
+	foreach( mon[i] ) mon[i] = new ( vif, mon2scb[i], i, pkt_count, verbose );
+	scb = new( drive2scb, mon2scb, verbose );
 
 endfunction
 

@@ -12,16 +12,17 @@ class scoreboard #( type T=TransBase );
 mailbox drive2scb[4];
 mailbox mon2scb[4];
 
+int verbose;
 
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
 // monitor constructor
-function new( mailbox drive2scb[4], mon2scb[4] );
+function new( mailbox drive2scb[4], mon2scb[4], int verbose );
 	// get the mailbox handle from env
 	foreach( mon2scb[i] ) this.mon2scb[i] = mon2scb[i];
-	// this.mon2scb = mon2scb;
 	foreach( drive2scb[i] ) this.drive2scb[i] = drive2scb[i];
-	// this.drive2scb = drive2scb;
+
+	this.verbose = verbose;
 
 endfunction
 
@@ -43,6 +44,7 @@ task evaluate_port( int port );
 	T trans_tx;		// the driven transaction
 	T trans_rx;		// the received transaction
 	int portSrc;	// the source port that this port's data came from (i)
+	int expectedVal;
 
 	forever begin
 		// receive driven and received transactions (blocking delay via mailboxes)
@@ -52,16 +54,22 @@ task evaluate_port( int port );
 		// determine source port to check data and dest validity
 		portSrc = trans_rx.addr_out[ (port*8) +: 8 ];
 
+		// if ( trans_rx.valid_out[port] )
+		// 	expectedVal = trans_tx.addr_in[ (portSrc*8) +: 8 ];
+		// else
+		// 	expectedVal = trans_tx.addr_in[ (portSrc*8) +: 8 ];
+
+
 		if ( scb_error_override != 1 ) begin
 			// if ( trans_rx.valid_out[port] ) begin
-			if ( trans_rx.valid_out[portSrc] ) begin
+			if ( trans_rx.valid_out[port] && trans_tx.valid_in[portSrc] ) begin
 				if ( trans_tx.data_in[ (portSrc*8) +: 8 ] != trans_rx.data_out[ (port*8) +: 8 ] ) begin
-					$error("%0d : Scoreboard | Port %0d : Wrong  Result.\n\tExpeced:  %0d  Actual:  %0d | portSrc = %0d | valid_in = %0b", $time, port, trans_tx.data_in[ (portSrc*8) +: 8 ], trans_rx.data_out[ (port*8) +: 8 ], portSrc, trans_tx.valid_in);
+					$error("%0d : Scoreboard | Port %0d : Wrong  Result.\n\tExpected:  %0d  Actual:  %0d | portSrc = %0d | valid_in = %0b | valid_out = %0b", $time, port, trans_tx.data_in[ (portSrc*8) +: 8 ], trans_rx.data_out[ (port*8) +: 8 ], portSrc, trans_tx.valid_in, trans_rx.valid_out);
 					record_error();
 				end
 
 				// if ( trans_tx.addr_in[ (port*8) +: 8 ] != trans_rx.addr_out[ (port*8) +: 8 ] ) begin
-				// 	$error("%0d : Scoreboard | Port %0d : Wrong  Result.\n\tExpeced:  %0d  Actual:  %0d", $time, port, trans_tx.addr_in[ (port*8) +: 8 ], trans_rx.addr_out[ (port*8) +: 8 ]);
+				// 	$error("%0d : Scoreboard | Port %0d : Wrong  Result.\n\tExpected:  %0d  Actual:  %0d", $time, port, trans_tx.addr_in[ (port*8) +: 8 ], trans_rx.addr_out[ (port*8) +: 8 ]);
 				// 	record_error();
 				// end
 			end
@@ -70,9 +78,9 @@ task evaluate_port( int port );
 
 		num_transactions_recv++;
 
-		// `ifdef VERBOSE
+		if ( verbose ) begin
 			$display("\n%0d : ----------- PACKET NUMBER %1d | PORT %0d | SCOREBOARD FINISHED -----------", $time, (num_transactions_recv/4)+1, port);
-		// `endif
+		end
 
 	end
 endtask : evaluate_port

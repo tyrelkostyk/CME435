@@ -16,7 +16,7 @@ mailbox gen2drive;
 mailbox drive2scb;
 
 // create port integer
-int port;
+int port, verbose;
 
 // create coverage object
 
@@ -24,12 +24,13 @@ int port;
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
 // driver constructor
-function new( virtual intf.DRIVER vif, mailbox gen2drive, drive2scb, int port );
+function new( virtual intf.DRIVER vif, mailbox gen2drive, drive2scb, int port, verbose );
 	// get the interface (DRIVER modport) from env
 	this.vif = vif;
 
 	// get the port number from env
 	this.port = port;
+	this.verbose = verbose;
 
 	// get the mailbox handles from env
 	this.gen2drive = gen2drive;
@@ -62,10 +63,10 @@ task main();
 
 		num_transactions_sent++;
 
-		// `ifdef VERBOSE
+		if ( verbose ) begin
 			$display("\n%0d : -------- PACKET NUMBER %1d | DRIVER | PORT %0d --------", $time, num_transactions_sent, port);
 			trans_tx.display_downstream("[ DRIVER ]");
-		// `endif
+		end
 
 		drive2scb.put( trans_tx );
 

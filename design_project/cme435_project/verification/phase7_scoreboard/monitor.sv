@@ -12,7 +12,7 @@ class monitor #( type T=TransBase );
 virtual intf.MONITOR vif;
 
 // initialize port bit, packet count
-int port, pkt_count;
+int port, pkt_count, verbose;
 
 // create mailbox handle
 mailbox mon2scb;
@@ -22,11 +22,12 @@ mailbox mon2scb;
 
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
-function new( virtual intf.MONITOR vif, mailbox mon2scb, int port, pkt_count );
+function new( virtual intf.MONITOR vif, mailbox mon2scb, int port, pkt_count, verbose );
 	// get interface, port, and packet count from env class
 	this.vif = vif;
 	this.port = port;
 	this.pkt_count = pkt_count;
+	this.verbose = verbose;
 
 	// get the mailbox from env
 	this.mon2scb = mon2scb;
@@ -54,7 +55,7 @@ task main();
 		@( negedge vif.clk ); // allow time for DUT to produce outputs
 			trans_rx.addr_out[ (port*8) +:8 ] = vif.addr_out[ (port*8) +:8 ];
 			trans_rx.data_out[ (port*8) +:8 ] = vif.data_out[ (port*8) +:8 ];
-			trans_rx.valid_out[port] = vif.data_out[port];
+			trans_rx.valid_out[port] = vif.valid_out[port];
 
 		num_transactions_recv++;
 
@@ -62,10 +63,10 @@ task main();
 
 		vif.cb_tb.data_rd[port] <= vif.valid_out[port];	// enable this port to receive data
 
-		// `ifdef VERBOSE
+		if ( verbose ) begin
 			$display("\n%0d : -------- PACKET NUMBER %1d | MONITOR | PORT %0d --------", $time, num_transactions_recv, port);
 			trans_rx.display_upstream("[ MONITOR ]");
-		// `endif
+		end
 
 	end
 endtask

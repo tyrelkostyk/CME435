@@ -13,25 +13,25 @@ rand T trans_gen;
 // mailbox handles
 mailbox gen2drive[4];		// to generate and send the packets to driver
 
-// semaphore handles
-
+int pkt_count;	// num packets to generate. Defined in testbench
+int verbose;
 
 // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
 
 // generator constructor
-function new( mailbox gen2drive[4] );
+function new( mailbox gen2drive[4], int pkt_count, verbose );
 	// getting the mailbox handles from env
 	foreach( gen2drive[i] )
 		this.gen2drive[i] = gen2drive[i];
 
-	// getting the semaphore handles from env
+	this.pkt_count = pkt_count;
+	this.verbose = verbose;
 
 endfunction
 
 
 // *********************** EVENTS AND INTEGERS ********************** //
 
-int pkt_count;	// num packets to generate. Defined in testbench
 int num_transactions_gen = 0;	// num packets generated
 
 event end_gen;	// tell environment when generation has stopped
@@ -48,10 +48,10 @@ task main();
 		if( !trans_gen.randomize() ) $fatal("Gen:: trans_gen randomization failed");
 		num_transactions_gen++;
 
-		// `ifdef VERBOSE
+		if ( verbose ) begin
 			$display("\n%0d : ----------- PACKET NUMBER %1d | GENERATOR -----------", $time, num_transactions_gen);
 			trans_gen.display_downstream("[ GENERATOR ]");
-		// `endif
+		end
 
 		// send the transaction message via mailbox to the driver and scoreboard
 		foreach( gen2drive[i] )

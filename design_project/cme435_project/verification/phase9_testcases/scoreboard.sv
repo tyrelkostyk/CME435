@@ -36,8 +36,6 @@ int num_transactions_recv = 0;
 int error_count = 0;
 int scb_error_override;
 
-event port0_eval, port1_eval, port2_eval, port3_eval;
-
 // ***************************** TASKS ***************************** //
 
 task evaluate_port( int port );
@@ -58,16 +56,15 @@ task evaluate_port( int port );
 			if ( trans_rx.valid_out[port] && trans_tx.valid_in[portSrc] ) begin
 				// check that received data (on this port) matches the sent data (from the source port)
 				if ( trans_tx.data_in[ (portSrc*8) +: 8 ] != trans_rx.data_out[ (port*8) +: 8 ] ) begin
-					$error("%0d : Scoreboard | Port %0d : Wrong  Result.\n\tExpected:  %0d  Actual:  %0d | portSrc = %0d | valid_in = %0b | valid_out = %0b", $time, port, trans_tx.data_in[ (portSrc*8) +: 8 ], trans_rx.data_out[ (port*8) +: 8 ], portSrc, trans_tx.valid_in, trans_rx.valid_out);
+					$error("%0d : Scoreboard | Port %0d : Wrong DATA Result.\n\tExpected:  %0d  Actual:  %0d | portSrc = %0d | valid_in = %0b | valid_out = %0b", $time, port, trans_tx.data_in[ (portSrc*8) +: 8 ], trans_rx.data_out[ (port*8) +: 8 ], portSrc, trans_tx.valid_in, trans_rx.valid_out);
 					record_error();
 				end
 
-				// check that the address it was received on (this port) matches the sent address (portSrc)
-				if ( trans_tx.addr_in[ (portSrc*8) +: 8 ] != trans_rx.addr_out[ (port*8) +: 8 ] ) begin
-					$error("%0d : Scoreboard | Port %0d : Wrong  Result.\n\tExpected:  %0d  Actual:  %0d | portSrc = %0d | valid_in = %0b | valid_out = %0b", $time, port, trans_tx.data_in[ (portSrc*8) +: 8 ], trans_rx.data_out[ (port*8) +: 8 ], portSrc, trans_tx.valid_in, trans_rx.valid_out);
+				// check that the address it was received on (this port) matches the desired destination address (portSrc)
+				if ( port != trans_tx.addr_in[ (portSrc*8) +: 8 ] ) begin
+					$error("%0d : Scoreboard | Port %0d : Wrong ADDR Result.\n\tExpected:  %0d  Actual:  %0d | portSrc = %0d | valid_in = %0b | valid_out = %0b", $time, port, port, trans_tx.addr_in[ (portSrc*8) +: 8 ], portSrc, trans_tx.valid_in, trans_rx.valid_out);
 					record_error();
 				end
-
 			end
 		end
 

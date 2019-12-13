@@ -12,7 +12,7 @@ vlog +incdir+verification/phase9_testcases verification/phase9_testcases/TransBa
 vlog +incdir+verification/phase9_testcases verification/phase9_testcases/monitor.sv
 vlog +incdir+verification/phase9_testcases verification/phase9_testcases/scoreboard.sv
 vlog +incdir+verification/phase9_testcases verification/phase9_testcases/tbench_top.sv
-vlog +incdir+verification/phase9_testcases verification/phase9_testcases/testbench_buffer_overflow.sv
+vlog +incdir+verification/phase9_testcases verification/phase9_testcases/testbench_sanity_check.sv
 
 vopt +acc tbench_top -o tbench_top_opt
 vsim tbench_top_opt

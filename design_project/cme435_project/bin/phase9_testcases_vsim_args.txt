@@ -7,6 +7,3 @@
  coverage exclude -srcfile monitor.sv -linerange 66-69;
  coverage exclude -srcfile scoreboard.sv -linerange 57 69 74-76;
  coverage save -onexit -directive -codeAll -cvg report/phase9_testcases.ucdb; run -all; exit"
-# invalid command name "7:2"
-# 
-# <EOF>

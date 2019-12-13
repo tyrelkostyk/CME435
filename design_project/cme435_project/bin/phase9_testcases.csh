@@ -47,7 +47,7 @@ if ($#argv == 2) then
 		vlog +incdir+verification/phase9_testcases verification/phase9_testcases/tbench_top.sv
 		vlog +incdir+verification/phase9_testcases verification/phase9_testcases/testbench_$test.sv
 
-		vsim -coverage +acc tbench_top -c -do "coverage exclude -srcfile TransBase.sv; coverage exclude -du work.intf -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -du work.testbench {pkt_count[31:0]} {verbose[31:0]}; coverage exclude -du work.xswitch -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -srcfile generator.sv -linerange 50 53-56; coverage exclude -srcfile driver.sv -linerange 66-69; coverage exclude -srcfile monitor.sv -linerange 66-69; coverage exclude -srcfile scoreboard.sv -linerange 57 74-76; coverage save -onexit -directive -codeAll -cvg report/phase9_testcases.ucdb; run -all; exit"
+		vsim < bin/phase9_testcases_vsim_args.txt
 
     vcover report -details report/phase9_testcases_$test.ucdb -file report/phase9_testcases_$test.rpt
     vcover report -html report/phase9_testcases_$test.ucdb -htmldir report/phase9_testcases_$test

@@ -130,9 +130,9 @@ endtask
 
 task finish();
 	if ( scb.error_count != 0 )
-		$display("%0d : ############# TEST FAILED (%0d) TIMES ###############", $time, scb.error_count);
-	else
-		$display("%0d : ############# TEST PASSED ###############", $time);
+	$display("%0d : ############# %0d PACKETS DRIVEN - TEST FAILED (%0d) TIMES ###############", $time, pkt_count, scb.error_count);
+else
+	$display("%0d : ############# %0d PACKETS DRIVEN - TEST PASSED ###############", $time, pkt_count);
 
 	$finish;
 endtask

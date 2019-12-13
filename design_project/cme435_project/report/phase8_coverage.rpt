@@ -341,9 +341,9 @@ Statement Coverage for file verification/phase8_coverage/environment.sv --
     130                                              
     131                                              task finish();
     132                                              	if ( scb.error_count != 0 )
-    133             1                    ***0***     		$display("%0d : ############# TEST FAILED (%0d) TIMES ###############", $time, scb.error_count);
-    134                                              	else
-    135             1                          1     		$display("%0d : ############# TEST PASSED ###############", $time);
+    133             1                    ***0***     	$display("%0d : ############# %0d PACKETS DRIVEN - TEST FAILED (%0d) TIMES ###############", $time, pkt_count, scb.error_count);
+    134                                              else
+    135             1                          1     	$display("%0d : ############# %0d PACKETS DRIVEN - TEST PASSED ###############", $time, pkt_count);
     136                                              
     137             1                          1     	$finish;
     138                                              endtask
@@ -364,7 +364,7 @@ Branch Coverage for file verification/phase8_coverage/environment.sv --
 ------------------------------------IF Branch------------------------------------
     132                                        1     Count coming in to IF
     132             1                    ***0***     	if ( scb.error_count != 0 )
-    134             1                          1     	else
+    134             1                          1     else
 Branch totals: 1 hit of 2 branches = 50.0%
 
 
@@ -938,7 +938,7 @@ Statement Coverage for file verification/phase8_coverage/scoreboard.sv --
 Branch Coverage:
     Enabled Coverage            Active      Hits    Misses % Covered
     ----------------            ------      ----    ------ ---------
-    Branches                         8         4         4      50.0
+    Branches                         6         3         3      50.0
 
 ================================Branch Details================================
 
@@ -964,9 +964,9 @@ Branch totals: 1 hit of 2 branches = 50.0%
 
 ------------------------------------IF Branch------------------------------------
     69                                     20000     Count coming in to IF
-    69              1                    ***0***     		if ( verbose ) begin
-                                           20000     All False Count
-Branch totals: 1 hit of 2 branches = 50.0%
+    69              1                          E     		if ( verbose ) begin
+                                           E-hit     All False Count
+Branch totals: 0 hits of 0 branches = 100.0%
 
 ------------------------------------IF Branch------------------------------------
     90                                   ***0***     Count coming in to IF

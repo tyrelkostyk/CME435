@@ -138,9 +138,9 @@
 <a name="130"/><span style="color:red">%s%%s%%s%130%s%%s%</span><br/>
 <a name="131"/><span style="color:red">%s%%s%%s%131%s%%s%</span><span class="keyword">task</span>%s%finish();<br/>
 <a name="132"/><span style="color:red">%s%%s%%s%132%s%%s%</span>%t%<span class="keyword">if</span>%s%(%s%scb.error_count%s%!=%s%0%s%)<br/>
-<a name="133"/><span style="color:red">%s%%s%%s%133%s%%s%</span>%t%%t%$display(<span class="literal">"%0d%s%:%s%#############%s%TEST%s%FAILED%s%(%0d)%s%TIMES%s%###############"</span>,%s%$<span class="keyword">time</span>,%s%scb.error_count);<br/>
-<a name="134"/><span style="color:red">%s%%s%%s%134%s%%s%</span>%t%<span class="keyword">else</span><br/>
-<a name="135"/><span style="color:red">%s%%s%%s%135%s%%s%</span>%t%%t%$display(<span class="literal">"%0d%s%:%s%#############%s%TEST%s%PASSED%s%###############"</span>,%s%$<span class="keyword">time</span>);<br/>
+<a name="133"/><span style="color:red">%s%%s%%s%133%s%%s%</span>%t%$display(<span class="literal">"%0d%s%:%s%#############%s%%0d%s%PACKETS%s%DRIVEN%s%-%s%TEST%s%FAILED%s%(%0d)%s%TIMES%s%###############"</span>,%s%$<span class="keyword">time</span>,%s%pkt_count,%s%scb.error_count);<br/>
+<a name="134"/><span style="color:red">%s%%s%%s%134%s%%s%</span><span class="keyword">else</span><br/>
+<a name="135"/><span style="color:red">%s%%s%%s%135%s%%s%</span>%t%$display(<span class="literal">"%0d%s%:%s%#############%s%%0d%s%PACKETS%s%DRIVEN%s%-%s%TEST%s%PASSED%s%###############"</span>,%s%$<span class="keyword">time</span>,%s%pkt_count);<br/>
 <a name="136"/><span style="color:red">%s%%s%%s%136%s%%s%</span><br/>
 <a name="137"/><span style="color:red">%s%%s%%s%137%s%%s%</span>%t%$finish;<br/>
 <a name="138"/><span style="color:red">%s%%s%%s%138%s%%s%</span><span class="keyword">endtask</span><br/>

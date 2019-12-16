@@ -1,5 +1,8 @@
 #!/bin/csh
 
+# TODO: upgrade version of questa? If errors occur
+source /CMC/scripts/mentor.questasim.10.3a.csh
+
 set testcase_list="sanity_check buffer_overflow"
 
 if ($#argv == 0) then
@@ -21,13 +24,13 @@ if ($#argv == 2) then
   if ("$argv[1]" == "-t") then
 		set test="$argv[2]"
 
-		# remove existing files (experimental - even needed?)
+		# remove existing files
 		if ( -e work) then
 			rm -r work
 		endif
 
-		if ( -e report/phase9_$test) then
-			rm -r report/phase9_$test
+		if ( -e report/phase9_testcases_$test) then
+			rm -r report/phase9_testcases_$test*
 		endif
 
 		if ( -e transcript) then

@@ -1,11 +1,19 @@
 #!/bin/csh
 
-# source /CMC/scripts/mentor.questa...
+# TODO: upgrade version of questa? If errors occur
+source /CMC/scripts/mentor.questasim.10.3a.csh
 
-# rm -r work transcript *.vcd *.wlf report/phase8*
+# remove existing files
+if ( -e work) then
+	rm -r work
+endif
 
-if (! -e work) then
-	vlib work
+if ( -e report/phase8_coverage) then
+	rm -r report/phase8_coverage*
+endif
+
+if ( -e transcript) then
+	rm -r transcript
 endif
 
 vlog dut/*.svp dut/*.sv

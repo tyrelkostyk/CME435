@@ -1,4 +1,5 @@
 `include "dut/dut_top.sv"
+`include "assertions.sv"
 
 module tbench_top;
 
@@ -24,5 +25,7 @@ testbench test ( i_intf );
 
 // DUT instance, interface signals are connected to the DUT ports
 dut_top dut ( i_intf.DUT );
+
+bind dut_top assertions assert_dut( i_intf );
 
 endmodule

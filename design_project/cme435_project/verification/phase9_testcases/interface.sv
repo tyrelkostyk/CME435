@@ -14,6 +14,9 @@ logic [3:0]		rcv_rdy, data_rd;
 
 // ************************ CLOCKING BLOCKS ************************* //
 
+clocking cb_default @( posedge clk );
+endclocking
+
 clocking cb_tb @( posedge clk );
 	input 	clk;
 	output 	addr_in, data_in, valid_in, data_rd;

@@ -6,73 +6,27 @@
   <link rel="StyleSheet" media="screen" href="../css/hdl2html.css"/>
 </head>
 <body id="hdl2html">
-  <tt><a name="1"/><span style="color:red">%s%%s%%s%%s%%s%1%s%%s%</span>`<span class="linked">include</span>%s%<span class="literal">"TransBase.sv"</span><br/>
-<a name="2"/><span style="color:red">%s%%s%%s%%s%%s%2%s%%s%</span><br/>
+  <tt><a name="1"/><span style="color:red">%s%%s%%s%%s%%s%1%s%%s%</span>`ifndef%s%ASSERTIONS_SV<br/>
+<a name="2"/><span style="color:red">%s%%s%%s%%s%%s%2%s%%s%</span>`<span class="keyattr">define</span>%s%ASSERTIONS_SV<br/>
 <a name="3"/><span style="color:red">%s%%s%%s%%s%%s%3%s%%s%</span><br/>
-<a name="4"/><span style="color:red">%s%%s%%s%%s%%s%4%s%%s%</span>`ifndef%s%GENERATOR_SV<br/>
-<a name="5"/><span style="color:red">%s%%s%%s%%s%%s%5%s%%s%</span>`<span class="keyattr">define</span>%s%GENERATOR_SV<br/>
-<a name="6"/><span style="color:red">%s%%s%%s%%s%%s%6%s%%s%</span><br/>
-<a name="7"/><span style="color:red">%s%%s%%s%%s%%s%7%s%%s%</span><span class="keyword">class</span>%s%generator%s%#(%s%<span class="keyword">type</span>%s%T=TransBase%s%);<br/>
-<a name="8"/><span style="color:red">%s%%s%%s%%s%%s%8%s%%s%</span><br/>
-<a name="9"/><span style="color:red">%s%%s%%s%%s%%s%9%s%%s%</span><span class="comment">//%s%*************************%s%INSTANTIATIONS%s%*************************%s%//</span><br/>
-<a name="10"/><span style="color:red">%s%%s%%s%%s%10%s%%s%</span><br/>
-<a name="11"/><span style="color:red">%s%%s%%s%%s%11%s%%s%</span><span class="comment">//%s%declaring%s%transaction%s%object</span><br/>
-<a name="12"/><span style="color:red">%s%%s%%s%%s%12%s%%s%</span><span class="keyword">rand</span>%s%T%s%trans_gen;<br/>
+<a name="4"/><span style="color:red">%s%%s%%s%%s%%s%4%s%%s%</span><span class="keyword">module</span>%s%assertions(%s%<span class="keyword">interface</span>%s%i_intf%s%);<br/>
+<a name="5"/><span style="color:red">%s%%s%%s%%s%%s%5%s%%s%</span><br/>
+<a name="6"/><span style="color:red">%s%%s%%s%%s%%s%6%s%%s%</span><span class="keyword">property</span>%s%p_valid_data_in_match_data_out(%s%port%s%);<br/>
+<a name="7"/><span style="color:red">%s%%s%%s%%s%%s%7%s%%s%</span>%s%%s%<span class="keyword">disable</span>%s%<span class="keyword">iff</span>%s%(%s%i_intf.reset%s%)<br/>
+<a name="8"/><span style="color:red">%s%%s%%s%%s%%s%8%s%%s%</span>%s%%s%@(%s%<span class="keyattr">posedge</span>%s%i_intf.clk%s%)<br/>
+<a name="9"/><span style="color:red">%s%%s%%s%%s%%s%9%s%%s%</span>%s%%s%i_intf.valid_in[port]%s%|-&gt;<br/>
+<a name="10"/><span style="color:red">%s%%s%%s%%s%10%s%%s%</span>%t%%t%(%s%(%s%i_intf.data_in[(port*8)+:8]%s%==%s%i_intf.data_out[%s%(%s%i_intf.addr_in[(port*8)+:8]%s%)*8%s%+:%s%8%s%]%s%)<br/>
+<a name="11"/><span style="color:red">%s%%s%%s%%s%11%s%%s%</span>%t%%t%&amp;&amp;%s%(%s%i_intf.valid_out[%s%i_intf.addr_in[(port*8)+:8]%s%]%s%)%s%);<br/>
+<a name="12"/><span style="color:red">%s%%s%%s%%s%12%s%%s%</span><span class="keyword">endproperty</span><br/>
 <a name="13"/><span style="color:red">%s%%s%%s%%s%13%s%%s%</span><br/>
-<a name="14"/><span style="color:red">%s%%s%%s%%s%14%s%%s%</span><span class="comment">//%s%mailbox%s%handles</span><br/>
-<a name="15"/><span style="color:red">%s%%s%%s%%s%15%s%%s%</span>mailbox%s%gen2drive[4];%t%%t%<span class="comment">//%s%to%s%generate%s%and%s%send%s%the%s%packets%s%to%s%driver</span><br/>
-<a name="16"/><span style="color:red">%s%%s%%s%%s%16%s%%s%</span><br/>
-<a name="17"/><span style="color:red">%s%%s%%s%%s%17%s%%s%</span><span class="keyword">int</span>%s%pkt_count;%t%<span class="comment">//%s%num%s%packets%s%to%s%generate.%s%Defined%s%in%s%testbench</span><br/>
-<a name="18"/><span style="color:red">%s%%s%%s%%s%18%s%%s%</span><span class="keyword">int</span>%s%verbose;<br/>
-<a name="19"/><span style="color:red">%s%%s%%s%%s%19%s%%s%</span><br/>
+<a name="14"/><span style="color:red">%s%%s%%s%%s%14%s%%s%</span>a_valid_data_in_match_data_out_PORT1:%s%<span class="keyword">assert</span>%s%<span class="keyword">property</span>%s%(%s%p_valid_data_in_match_data_out(1)%s%)<br/>
+<a name="15"/><span style="color:red">%s%%s%%s%%s%15%s%%s%</span><span class="keyword">else</span><br/>
+<a name="16"/><span style="color:red">%s%%s%%s%%s%16%s%%s%</span>%t%$display(<span class="literal">"#####%s%%0t%s%:%s%Assertion%s%Failed%s%:%s%a_valid_data_in_match_data_out_PORT1%s%#####"</span>,%s%$<span class="keyword">time</span>);<br/>
+<a name="17"/><span style="color:red">%s%%s%%s%%s%17%s%%s%</span>c_valid_data_in_match_data_out_PORT1:%s%<span class="keyword">cover</span>%s%<span class="keyword">property</span>%s%(%s%p_valid_data_in_match_data_out(1)%s%);<br/>
+<a name="18"/><span style="color:red">%s%%s%%s%%s%18%s%%s%</span><br/>
+<a name="19"/><span style="color:red">%s%%s%%s%%s%19%s%%s%</span><span class="keyword">endmodule</span><br/>
 <a name="20"/><span style="color:red">%s%%s%%s%%s%20%s%%s%</span><br/>
-<a name="21"/><span style="color:red">%s%%s%%s%%s%21%s%%s%</span><span class="comment">//%s%*******************%s%FUNCTIONS%s%AND%s%CONSTRUCTORS%s%*******************%s%//</span><br/>
-<a name="22"/><span style="color:red">%s%%s%%s%%s%22%s%%s%</span><br/>
-<a name="23"/><span style="color:red">%s%%s%%s%%s%23%s%%s%</span><span class="comment">//%s%generator%s%constructor</span><br/>
-<a name="24"/><span style="color:red">%s%%s%%s%%s%24%s%%s%</span><span class="keyword">function</span>%s%<span class="keyword">new</span>(%s%mailbox%s%gen2drive[4],%s%<span class="keyword">int</span>%s%pkt_count,%s%verbose%s%);<br/>
-<a name="25"/><span style="color:red">%s%%s%%s%%s%25%s%%s%</span>%t%<span class="comment">//%s%getting%s%the%s%mailbox%s%handles%s%from%s%env</span><br/>
-<a name="26"/><span style="color:red">%s%%s%%s%%s%26%s%%s%</span>%t%<span class="keyword">foreach</span>(%s%gen2drive[i]%s%)<br/>
-<a name="27"/><span style="color:red">%s%%s%%s%%s%27%s%%s%</span>%t%%t%<span class="keyword">this</span>.gen2drive[i]%s%=%s%gen2drive[i];<br/>
-<a name="28"/><span style="color:red">%s%%s%%s%%s%28%s%%s%</span><br/>
-<a name="29"/><span style="color:red">%s%%s%%s%%s%29%s%%s%</span>%t%<span class="keyword">this</span>.pkt_count%s%=%s%pkt_count;<br/>
-<a name="30"/><span style="color:red">%s%%s%%s%%s%30%s%%s%</span>%t%<span class="keyword">this</span>.verbose%s%=%s%verbose;<br/>
-<a name="31"/><span style="color:red">%s%%s%%s%%s%31%s%%s%</span><br/>
-<a name="32"/><span style="color:red">%s%%s%%s%%s%32%s%%s%</span><span class="keyword">endfunction</span><br/>
-<a name="33"/><span style="color:red">%s%%s%%s%%s%33%s%%s%</span><br/>
-<a name="34"/><span style="color:red">%s%%s%%s%%s%34%s%%s%</span><br/>
-<a name="35"/><span style="color:red">%s%%s%%s%%s%35%s%%s%</span><span class="comment">//%s%***********************%s%EVENTS%s%AND%s%INTEGERS%s%**********************%s%//</span><br/>
-<a name="36"/><span style="color:red">%s%%s%%s%%s%36%s%%s%</span><br/>
-<a name="37"/><span style="color:red">%s%%s%%s%%s%37%s%%s%</span><span class="keyword">int</span>%s%num_transactions_gen%s%=%s%0;%t%<span class="comment">//%s%num%s%packets%s%generated</span><br/>
-<a name="38"/><span style="color:red">%s%%s%%s%%s%38%s%%s%</span><br/>
-<a name="39"/><span style="color:red">%s%%s%%s%%s%39%s%%s%</span><span class="keyword">event</span>%s%end_gen;%t%<span class="comment">//%s%tell%s%environment%s%when%s%generation%s%has%s%stopped</span><br/>
-<a name="40"/><span style="color:red">%s%%s%%s%%s%40%s%%s%</span><br/>
-<a name="41"/><span style="color:red">%s%%s%%s%%s%41%s%%s%</span><br/>
-<a name="42"/><span style="color:red">%s%%s%%s%%s%42%s%%s%</span><span class="comment">//%s%*****************************%s%TASKS%s%*****************************%s%//</span><br/>
-<a name="43"/><span style="color:red">%s%%s%%s%%s%43%s%%s%</span><br/>
-<a name="44"/><span style="color:red">%s%%s%%s%%s%44%s%%s%</span><span class="keyword">task</span>%s%main();<br/>
-<a name="45"/><span style="color:red">%s%%s%%s%%s%45%s%%s%</span><span class="comment">//%s%generates%s%(creates%s%and%s%randomizes)%s%&lt;pkt_count&gt;%s%transaction%s%packets</span><br/>
-<a name="46"/><span style="color:red">%s%%s%%s%%s%46%s%%s%</span><br/>
-<a name="47"/><span style="color:red">%s%%s%%s%%s%47%s%%s%</span>%t%<span class="keyword">repeat</span>(%s%pkt_count%s%)%s%<span class="keyword">begin</span><br/>
-<a name="48"/><span style="color:red">%s%%s%%s%%s%48%s%%s%</span>%t%%t%trans_gen%s%=%s%<span class="keyword">new</span>();<br/>
-<a name="49"/><span style="color:red">%s%%s%%s%%s%49%s%%s%</span><br/>
-<a name="50"/><span style="color:red">%s%%s%%s%%s%50%s%%s%</span>%t%%t%<span class="keyword">if</span>(%s%!trans_gen.randomize()%s%)%s%$fatal(<span class="literal">"Gen::%s%trans_gen%s%randomization%s%failed"</span>);<br/>
-<a name="51"/><span style="color:red">%s%%s%%s%%s%51%s%%s%</span>%t%%t%num_transactions_gen++;<br/>
-<a name="52"/><span style="color:red">%s%%s%%s%%s%52%s%%s%</span><br/>
-<a name="53"/><span style="color:red">%s%%s%%s%%s%53%s%%s%</span>%t%%t%<span class="keyword">if</span>%s%(%s%verbose%s%)%s%<span class="keyword">begin</span><br/>
-<a name="54"/><span style="color:red">%s%%s%%s%%s%54%s%%s%</span>%t%%t%%t%$display(<span class="literal">"\n%0d%s%:%s%-----------%s%PACKET%s%NUMBER%s%%1d%s%|%s%GENERATOR%s%-----------"</span>,%s%$<span class="keyword">time</span>,%s%num_transactions_gen);<br/>
-<a name="55"/><span style="color:red">%s%%s%%s%%s%55%s%%s%</span>%t%%t%%t%trans_gen.display_downstream(<span class="literal">"[%s%GENERATOR%s%]"</span>);<br/>
-<a name="56"/><span style="color:red">%s%%s%%s%%s%56%s%%s%</span>%t%%t%<span class="keyword">end</span><br/>
-<a name="57"/><span style="color:red">%s%%s%%s%%s%57%s%%s%</span><br/>
-<a name="58"/><span style="color:red">%s%%s%%s%%s%58%s%%s%</span>%t%%t%<span class="comment">//%s%send%s%the%s%transaction%s%message%s%via%s%mailbox%s%to%s%the%s%driver%s%and%s%scoreboard</span><br/>
-<a name="59"/><span style="color:red">%s%%s%%s%%s%59%s%%s%</span>%t%%t%<span class="keyword">foreach</span>(%s%gen2drive[i]%s%)<br/>
-<a name="60"/><span style="color:red">%s%%s%%s%%s%60%s%%s%</span>%t%%t%%t%gen2drive[i].put(%s%trans_gen%s%);<br/>
-<a name="61"/><span style="color:red">%s%%s%%s%%s%61%s%%s%</span><br/>
-<a name="62"/><span style="color:red">%s%%s%%s%%s%62%s%%s%</span>%t%<span class="keyword">end</span><br/>
-<a name="63"/><span style="color:red">%s%%s%%s%%s%63%s%%s%</span>%t%-&gt;%s%end_gen;%t%%t%<span class="comment">//%s%trigger%s%the%s%end%s%of%s%generation</span><br/>
-<a name="64"/><span style="color:red">%s%%s%%s%%s%64%s%%s%</span><span class="keyword">endtask</span><br/>
-<a name="65"/><span style="color:red">%s%%s%%s%%s%65%s%%s%</span><br/>
-<a name="66"/><span style="color:red">%s%%s%%s%%s%66%s%%s%</span><span class="keyword">endclass</span><br/>
-<a name="67"/><span style="color:red">%s%%s%%s%%s%67%s%%s%</span>`<span class="keyattr">endif</span><br/>
+<a name="21"/><span style="color:red">%s%%s%%s%%s%21%s%%s%</span>`<span class="keyattr">endif</span><br/>
 </tt>
 <script type="text/javascript" src="../scripts/buildsrcpage.js"></script>
   

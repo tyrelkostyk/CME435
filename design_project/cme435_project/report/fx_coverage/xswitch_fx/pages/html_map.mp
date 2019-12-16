@@ -3,6 +3,7 @@ z4116956590_1413724685_0.htm = /tbench_top/i_intf
 z3004804308_3693769566_0.htm = work.tbench_top
 z0838160052_0713934614_0.htm = /tbench_top
 r0374160732_3867027737_0.htm = regression_buffer_overflow
+r2209089212_1087505540_0.htm = regression_manual_port_2_3
 r2885539528_0194595746_0.htm = regression_sanity_check
 testlist.html = NON_SCOPE
 globattrlist.html = NON_SCOPE

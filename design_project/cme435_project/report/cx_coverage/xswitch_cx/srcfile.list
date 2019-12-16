@@ -9,4 +9,5 @@ verification/regression_test/monitor.sv
 verification/regression_test/scoreboard.sv
 verification/regression_test/tbench_top.sv
 verification/regression_test/testbench_buffer_overflow.sv
+verification/regression_test/testbench_manual_port_2_3.sv
 verification/regression_test/testbench_sanity_check.sv

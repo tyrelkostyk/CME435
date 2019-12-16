@@ -2,8 +2,13 @@
 
 program testbench( intf i_intf );
 
-// ************************* INSTANTIATIONS ************************* //
+/*
+This testcase tests the scenario where every port is stuck outputing to the same
+port every cycle, and the data sizes are the max size. This tests for any possible
+buffer overflow.
+*/
 
+// ************************* INSTANTIATIONS ************************* //
 
 // declaring extended transaction classes for directed testing
 class TransBuffer extends TransBase;

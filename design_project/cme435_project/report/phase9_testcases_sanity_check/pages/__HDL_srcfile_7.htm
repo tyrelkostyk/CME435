@@ -54,13 +54,13 @@
 <a name="46"/><span style="color:red">%s%%s%%s%%s%46%s%%s%</span><span class="comment">//%s%*****************************%s%TASKS%s%*****************************%s%//</span><br/>
 <a name="47"/><span style="color:red">%s%%s%%s%%s%47%s%%s%</span><br/>
 <a name="48"/><span style="color:red">%s%%s%%s%%s%48%s%%s%</span><span class="keyword">task</span>%s%main();<br/>
-<a name="49"/><span style="color:red">%s%%s%%s%%s%49%s%%s%</span>%t%<span class="keyword">repeat</span>(%s%pkt_count%s%)%s%<span class="keyword">begin</span><br/>
-<a name="50"/><span style="color:red">%s%%s%%s%%s%50%s%%s%</span>%t%%t%<span class="comment">//%s%instantiate%s%transaction%s%object</span><br/>
-<a name="51"/><span style="color:red">%s%%s%%s%%s%51%s%%s%</span>%t%%t%T%s%trans_rx;<br/>
-<a name="52"/><span style="color:red">%s%%s%%s%%s%52%s%%s%</span>%t%%t%trans_rx%s%=%s%<span class="keyword">new</span>();<br/>
-<a name="53"/><span style="color:red">%s%%s%%s%%s%53%s%%s%</span><br/>
-<a name="54"/><span style="color:red">%s%%s%%s%%s%54%s%%s%</span>%t%%t%<span class="comment">//%s%wait(%t%vif.cb_tb.valid_out[port]%s%);</span><br/>
-<a name="55"/><span style="color:red">%s%%s%%s%%s%55%s%%s%</span>%t%%t%@(%s%<span class="keyattr">negedge</span>%s%vif.clk%s%);%s%<span class="comment">//%s%allow%s%time%s%for%s%DUT%s%to%s%produce%s%outputs%t%%t%%t%//TODO:%s%posedge</span><br/>
+<a name="49"/><span style="color:red">%s%%s%%s%%s%49%s%%s%</span>%t%@(%s%<span class="keyattr">posedge</span>%s%vif.clk%s%);%t%%t%<span class="comment">//%s%sampling%s%on%s%posedge;%s%offset%s%monitor%s%by%s%one%s%clock%s%edge</span><br/>
+<a name="50"/><span style="color:red">%s%%s%%s%%s%50%s%%s%</span>%t%<span class="keyword">repeat</span>(%s%pkt_count%s%)%s%<span class="keyword">begin</span><br/>
+<a name="51"/><span style="color:red">%s%%s%%s%%s%51%s%%s%</span>%t%%t%<span class="comment">//%s%instantiate%s%transaction%s%object</span><br/>
+<a name="52"/><span style="color:red">%s%%s%%s%%s%52%s%%s%</span>%t%%t%T%s%trans_rx;<br/>
+<a name="53"/><span style="color:red">%s%%s%%s%%s%53%s%%s%</span>%t%%t%trans_rx%s%=%s%<span class="keyword">new</span>();<br/>
+<a name="54"/><span style="color:red">%s%%s%%s%%s%54%s%%s%</span><br/>
+<a name="55"/><span style="color:red">%s%%s%%s%%s%55%s%%s%</span>%t%%t%@(%s%<span class="keyattr">posedge</span>%s%vif.clk%s%);%s%<span class="comment">//%s%allow%s%time%s%for%s%DUT%s%to%s%produce%s%outputs%s%on%s%negedge,%s%sample%s%on%s%next%s%posedge</span><br/>
 <a name="56"/><span style="color:red">%s%%s%%s%%s%56%s%%s%</span>%t%%t%%t%trans_rx.addr_out[%s%(port*8)%s%+:8%s%]%s%=%s%vif.addr_out[%s%(port*8)%s%+:8%s%];<br/>
 <a name="57"/><span style="color:red">%s%%s%%s%%s%57%s%%s%</span>%t%%t%%t%trans_rx.data_out[%s%(port*8)%s%+:8%s%]%s%=%s%vif.data_out[%s%(port*8)%s%+:8%s%];<br/>
 <a name="58"/><span style="color:red">%s%%s%%s%%s%58%s%%s%</span>%t%%t%%t%trans_rx.valid_out[port]%s%=%s%vif.valid_out[port];<br/>

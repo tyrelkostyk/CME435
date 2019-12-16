@@ -26,8 +26,8 @@ if ($#argv == 2) then
 			rm -r work
 		endif
 
-		if ( -e report/phase9*) then
-			rm -r report/phase9*
+		if ( -e report/phase9_$test) then
+			rm -r report/phase9_$test
 		endif
 
 		if ( -e transcript) then

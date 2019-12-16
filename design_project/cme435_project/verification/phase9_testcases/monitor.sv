@@ -46,13 +46,13 @@ int num_transactions_recv = 0;
 // ***************************** TASKS ***************************** //
 
 task main();
+	@( posedge vif.clk );		// sampling on posedge; offset monitor by one clock edge
 	repeat( pkt_count ) begin
 		// instantiate transaction object
 		T trans_rx;
 		trans_rx = new();
 
-		// wait(	vif.cb_tb.valid_out[port] );
-		@( negedge vif.clk ); // allow time for DUT to produce outputs			//TODO: posedge
+		@( posedge vif.clk ); // allow time for DUT to produce outputs on negedge, sample on next posedge
 			trans_rx.addr_out[ (port*8) +:8 ] = vif.addr_out[ (port*8) +:8 ];
 			trans_rx.data_out[ (port*8) +:8 ] = vif.data_out[ (port*8) +:8 ];
 			trans_rx.valid_out[port] = vif.valid_out[port];

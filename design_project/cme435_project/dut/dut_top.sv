@@ -2,7 +2,7 @@
 
 module dut_top ( interface i_intf );
 
-xswitch xswitch_i (
+xswitch dut_core (
 	.clk( i_intf.clk ),
 	.reset( i_intf.reset ),
 	.data_in( i_intf.data_in ),

@@ -706,7 +706,7 @@ Toggle Coverage      =      100.0% (188 of 188 bins)
 Statement Coverage:
     Enabled Coverage            Active      Hits    Misses % Covered
     ----------------            ------      ----    ------ ---------
-    Stmts                           15        15         0     100.0
+    Stmts                           16        16         0     100.0
 
 ================================Statement Details================================
 
@@ -760,13 +760,13 @@ Statement Coverage for file verification/phase9_testcases/monitor.sv --
     46                                               // ***************************** TASKS ***************************** //
     47                                               
     48                                               task main();
-    49              1                      20000     	repeat( pkt_count ) begin
-    50                                               		// instantiate transaction object
-    51                                               		T trans_rx;
-    52              1                      20000     		trans_rx = new();
-    53                                               
-    54                                               		// wait(	vif.cb_tb.valid_out[port] );
-    55              1                      20000     		@( negedge vif.clk ); // allow time for DUT to produce outputs			//TODO: posedge
+    49              1                          4     	@( posedge vif.clk );		// sampling on posedge; offset monitor by one clock edge
+    50              1                      20000     	repeat( pkt_count ) begin
+    51                                               		// instantiate transaction object
+    52                                               		T trans_rx;
+    53              1                      20000     		trans_rx = new();
+    54                                               
+    55              1                      20000     		@( posedge vif.clk ); // allow time for DUT to produce outputs on negedge, sample on next posedge
     56              1                      20000     			trans_rx.addr_out[ (port*8) +:8 ] = vif.addr_out[ (port*8) +:8 ];
     57              1                      20000     			trans_rx.data_out[ (port*8) +:8 ] = vif.data_out[ (port*8) +:8 ];
     58              1                      20000     			trans_rx.valid_out[port] = vif.valid_out[port];

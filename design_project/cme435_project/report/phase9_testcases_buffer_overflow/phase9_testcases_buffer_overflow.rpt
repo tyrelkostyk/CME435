@@ -1,0 +1,1290 @@
+Coverage Report by file with details
+
+=================================================================================
+=== File: dut/xswitch.svp
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            0         0         0     100.0
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         0         0         0     100.0
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              0         0         0     100.0
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    184       100        84      54.3
+
+================================Toggle Details================================
+
+Toggle Coverage for File dut/xswitch.svp --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          1                             data_in[7]           0           0        0.00 
+          1                             data_in[6]           0           0        0.00 
+          1                             data_in[5]           0           0        0.00 
+          1                             data_in[4]           0           0        0.00 
+          1                             data_in[3]           0           0        0.00 
+          1                            data_in[31]           0           0        0.00 
+          1                            data_in[30]           0           0        0.00 
+          1                            data_in[29]           0           0        0.00 
+          1                            data_in[28]           0           0        0.00 
+          1                            data_in[27]           0           0        0.00 
+          1                            data_in[23]           0           0        0.00 
+          1                            data_in[22]           0           0        0.00 
+          1                            data_in[21]           0           0        0.00 
+          1                            data_in[20]           0           0        0.00 
+          1                            data_in[19]           0           0        0.00 
+          1                            data_in[15]           0           0        0.00 
+          1                            data_in[14]           0           0        0.00 
+          1                            data_in[13]           0           0        0.00 
+          1                            data_in[12]           0           0        0.00 
+          1                            data_in[11]           0           0        0.00 
+          1                             addr_in[9]           0           0        0.00 
+          1                             addr_in[8]           0           0        0.00 
+          1                            addr_in[25]           0           0        0.00 
+          1                            addr_in[24]           0           0        0.00 
+          1                             addr_in[1]           0           0        0.00 
+          1                            addr_in[17]           0           0        0.00 
+          1                            addr_in[16]           0           0        0.00 
+          1                             addr_in[0]           0           0        0.00 
+          3                            data_out[7]           0           1       50.00 
+          3                            data_out[6]           0           1       50.00 
+          3                            data_out[5]           0           1       50.00 
+          3                            data_out[4]           0           1       50.00 
+          3                            data_out[3]           0           1       50.00 
+          3                           data_out[31]           0           1       50.00 
+          3                           data_out[30]           0           1       50.00 
+          3                           data_out[29]           0           1       50.00 
+          3                           data_out[28]           0           1       50.00 
+          3                           data_out[27]           0           1       50.00 
+          3                           data_out[23]           0           1       50.00 
+          3                           data_out[22]           0           1       50.00 
+          3                           data_out[21]           0           1       50.00 
+          3                           data_out[20]           0           1       50.00 
+          3                           data_out[19]           0           1       50.00 
+          3                           data_out[15]           0           1       50.00 
+          3                           data_out[14]           0           1       50.00 
+          3                           data_out[13]           0           1       50.00 
+          3                           data_out[12]           0           1       50.00 
+          3                           data_out[11]           0           1       50.00 
+          3                            addr_out[9]           1           0       50.00 
+          3                            addr_out[8]           0           1       50.00 
+          3                            addr_out[7]       E-hit           E      100.00 
+          3                            addr_out[6]       E-hit           E      100.00 
+          3                            addr_out[5]       E-hit           E      100.00 
+          3                            addr_out[4]       E-hit           E      100.00 
+          3                            addr_out[3]       E-hit           E      100.00 
+          3                           addr_out[31]       E-hit           E      100.00 
+          3                           addr_out[30]       E-hit           E      100.00 
+          3                            addr_out[2]       E-hit           E      100.00 
+          3                           addr_out[29]       E-hit           E      100.00 
+          3                           addr_out[28]       E-hit           E      100.00 
+          3                           addr_out[27]       E-hit           E      100.00 
+          3                           addr_out[26]       E-hit           E      100.00 
+          3                           addr_out[25]           0           1       50.00 
+          3                           addr_out[24]           0           1       50.00 
+          3                           addr_out[23]       E-hit           E      100.00 
+          3                           addr_out[22]       E-hit           E      100.00 
+          3                           addr_out[21]       E-hit           E      100.00 
+          3                           addr_out[20]       E-hit           E      100.00 
+          3                            addr_out[1]           1           0       50.00 
+          3                           addr_out[19]       E-hit           E      100.00 
+          3                           addr_out[18]       E-hit           E      100.00 
+          3                           addr_out[17]           0           1       50.00 
+          3                           addr_out[16]           1           0       50.00 
+          3                           addr_out[15]       E-hit           E      100.00 
+          3                           addr_out[14]       E-hit           E      100.00 
+          3                           addr_out[13]       E-hit           E      100.00 
+          3                           addr_out[12]       E-hit           E      100.00 
+          3                           addr_out[11]       E-hit           E      100.00 
+          3                           addr_out[10]       E-hit           E      100.00 
+          3                            addr_out[0]           1           0       50.00 
+
+Total Node Count     =         92 
+Toggled Node Count   =         36 
+Untoggled Node Count =         56 
+
+Toggle Coverage      =       54.3% (100 of 184 bins)
+
+=================================================================================
+=== File: verification/phase9_testcases/driver.sv
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           14        14         0     100.0
+
+================================Statement Details================================
+
+Statement Coverage for file verification/phase9_testcases/driver.sv --
+
+    1                                                `include "TransBase.sv"
+    2                                                
+    3                                                `ifndef DRIVER_SV
+    4                                                `define DRIVER_SV
+    5                                                
+    6                                                class driver #( type T=TransBase );
+    7                                                
+    8                                                
+    9                                                // ************************* INSTANTIATIONS ************************* //
+    10                                               
+    11                                               // create virtual interface handle
+    12                                               virtual intf.DRIVER vif;
+    13                                               
+    14                                               // create mailbox handle
+    15                                               mailbox gen2drive;
+    16                                               mailbox drive2scb;
+    17                                               
+    18                                               // create port integer
+    19                                               int port, verbose;
+    20                                               
+    21                                               // create coverage object
+    22                                               
+    23                                               
+    24                                               // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
+    25                                               
+    26                                               // driver constructor
+    27                                               function new( virtual intf.DRIVER vif, mailbox gen2drive, drive2scb, int port, verbose );
+    28                                               	// get the interface (DRIVER modport) from env
+    29              1                          4     	this.vif = vif;
+    30                                               
+    31                                               	// get the port number from env
+    32              1                          4     	this.port = port;
+    33              1                          4     	this.verbose = verbose;
+    34                                               
+    35                                               	// get the mailbox handles from env
+    36              1                          4     	this.gen2drive = gen2drive;
+    37              1                          4     	this.drive2scb = drive2scb;
+    38                                               
+    39                                               	// instantiate covergroups
+    40                                               
+    41                                               endfunction
+    42                                               
+    43                                               
+    44                                               // *********************** EVENTS AND INTEGERS ********************** //
+    45                                               
+    46                                               // keep track of the number of transactions sent
+    47              1                          4     int num_transactions_sent = 0;
+    48                                               
+    49                                               
+    50                                               // ***************************** TASKS ***************************** //
+    51                                               
+    52                                               // drive the transaction items to the interface signals
+    53                                               task main();
+    54              1                          4     	forever begin
+    55                                               		// instantiate transaction object and grab it from generator
+    56                                               		T trans_tx;
+    57              1                      20004     		gen2drive.get( trans_tx );
+    58                                               
+    59              1                      20000     		@( vif.cb_tb );
+    60              1                      20000     			vif.cb_tb.valid_in[port] <= trans_tx.valid_in[port];
+    61              1                      20000     			vif.cb_tb.addr_in[ (port*8) +:8 ] <= trans_tx.addr_in[ (port*8) +:8 ];
+    62              1                      20000     			vif.cb_tb.data_in[ (port*8) +:8 ] <= trans_tx.data_in[ (port*8) +:8 ];
+    63                                               
+    64              1                      20000     		num_transactions_sent++;
+    65                                               
+    66                                               		if ( verbose ) begin
+    67              1                          E     			$display("\n%0d : -------- PACKET NUMBER %1d | DRIVER | PORT %0d --------", $time, num_transactions_sent, port);
+    68              1                          E     			trans_tx.display_downstream("[ DRIVER ]");
+    69                                               		end
+    70                                               
+    71              1                      20000     		drive2scb.put( trans_tx );
+    72                                               
+    73                                               	end
+    74                                               endtask
+    75                                               
+    76                                               
+    77                                               endclass
+    78                                               `endif
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         0         0         0     100.0
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              0         0         0     100.0
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                      0         0         0     100.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File verification/phase9_testcases/driver.sv --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+
+Total Node Count     =          0 
+Toggled Node Count   =          0 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =      100.0% (0 of 0 bins)
+
+=================================================================================
+=== File: verification/phase9_testcases/environment.sv
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           52        51         1      98.0
+
+================================Statement Details================================
+
+Statement Coverage for file verification/phase9_testcases/environment.sv --
+
+    1                                                `include "interface.sv"
+    2                                                `include "TransBase.sv"
+    3                                                `include "generator.sv"
+    4                                                `include "driver.sv"
+    5                                                `include "monitor.sv"
+    6                                                `include "scoreboard.sv"
+    7                                                
+    8                                                `ifndef ENVIRONMENT_SV
+    9                                                `define ENVIRONMENT_SV
+    10                                               
+    11                                               class environment #( type T=TransBase );
+    12                                               
+    13                                               
+    14                                               // ************************* INSTANTIATIONS ************************* //
+    15                                               
+    16                                               // instantiate class instances
+    17                                               generator #(T) gen;
+    18                                               driver #(T) drive[4];
+    19                                               monitor #(T) mon[4];
+    20                                               scoreboard #(T) scb;
+    21                                               
+    22                                               // instantiate mailbox handles
+    23                                               mailbox gen2drive[4];	// to send the generated packets to driver
+    24                                               mailbox drive2scb[4];		// to send the generated packets to scoreboard
+    25                                               mailbox mon2scb[4];			// to share received data with the scoreboard
+    26                                               
+    27                                               // instantiate semaphore handles
+    28                                               
+    29                                               // declare packet count (defined in testbench)
+    30                                               int pkt_count, verbose;
+    31                                               
+    32                                               // instantiate virtual interfaces
+    33                                               virtual intf vif;
+    34                                               
+    35                                               
+    36                                               // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
+    37                                               
+    38                                               // environment constructor
+    39                                               function new( virtual intf vif, int pkt_count, verbose );
+    40                                                 // get the interface from test
+    41              1                          1       this.vif = vif;
+    42              1                          1     	this.pkt_count = pkt_count;
+    43              1                          1     	this.verbose = verbose;
+    44                                               
+    45                                               	// create the mailboxes (Same handle shared across objects)
+    46              1                          5     	foreach( gen2drive[i] )
+    47              1                          4     		gen2drive[i] = new();
+    48              1                          5     	foreach( drive2scb[i] )
+    49              1                          4     		drive2scb[i] = new();
+    50              1                          5     	foreach( mon2scb[i] )
+    51              1                          4     		mon2scb[i] = new();
+    52                                               
+    53                                               	// create the semaphores
+    54                                               
+    55                                               	// construct the objects
+    56              1                          1     	gen = new( gen2drive, pkt_count, verbose );
+    57              1                          5     	foreach( drive[i] ) drive[i] = new( vif, gen2drive[i], drive2scb[i], i, verbose );
+    57              2                          4     
+    58              1                          5     	foreach( mon[i] ) mon[i] = new ( vif, mon2scb[i], i, pkt_count, verbose );
+    58              2                          4     
+    59              1                          1     	scb = new( drive2scb, mon2scb, verbose );
+    60                                               
+    61                                               endfunction
+    62                                               
+    63                                               
+    64                                               // ***************************** TASKS ****************************** //
+    65                                               
+    66                                               task reset();
+    67              1                          1     	$display("%0d : [ ENVIRONMENT ] ----- Reset Started -----", $time);
+    68                                               
+    69                                               	// reset DUT signals
+    70              1                          1     	vif.cb_tb.data_in 				<= 0;
+    71              1                          1     	vif.cb_tb.addr_in					<= 0;
+    72              1                          1     	vif.cb_tb.valid_in				<= 0;
+    73              1                          1     	vif.cb_tb.data_rd					<= 0;
+    74                                               
+    75              1                          1     	$display("%0d : [ ENVIRONMENT ] ----- Reset Ended   -----", $time);
+    76                                               endtask
+    77                                               
+    78                                               
+    79                                               task pre_test();
+    80              1                          1     	$display("%0d : Environment : Start of pre_test() task", $time);
+    81              1                          1     	reset();
+    82              1                          1     	$display("%0d : Environment : End of pre_test() task", $time);
+    83                                               endtask
+    84                                               
+    85                                               
+    86                                               task test();
+    87              1                          1     	$display("%0d : Environment : Start of test() task", $time);
+    88                                               
+    89                                               	fork
+    90              1                          1     		gen.main();
+    91              1                          1     		drive[0].main();
+    92              1                          1     		drive[1].main();
+    93              1                          1     		drive[2].main();
+    94              1                          1     		drive[3].main();
+    95              1                          1     		mon[0].main();
+    96              1                          1     		mon[1].main();
+    97              1                          1     		mon[2].main();
+    98              1                          1     		mon[3].main();
+    99              1                          1     		scb.main();
+    100                                              	join_any
+    101                                              
+    102                                              	// repeat( 50 ) @( vif.cb_tb );
+    103             1                          1     	wait( gen.end_gen.triggered );
+    104             1                          5     	foreach( drive[i] )
+    105             1                          4     		wait( gen.pkt_count == drive[i].num_transactions_sent );
+    106                                              	// wait( scb.num_transactions_recv >= (gen.pkt_count*4));
+    107                                              
+    108             1                          1     	$display("%0d : Environment : End of test() task", $time);
+    109                                              endtask
+    110                                              
+    111                                              
+    112                                              task post_test();
+    113             1                          1     	$display("%0d : Environment : Start of post_test() task", $time);
+    114             1                          1     	$display("%0d : Environment : End of post_test() task", $time);
+    115                                              endtask
+    116                                              
+    117                                              
+    118                                              task run();
+    119             1                          1     	$display("%0d : Environment : Start of run() task", $time);
+    120                                              
+    121             1                          1     	pre_test();
+    122             1                          1     	test();
+    123             1                          1     	post_test();
+    124                                              
+    125             1                          1     	$display("%0d : Environment : End of run() task", $time);
+    126             1                          5     	repeat( 5 ) @( vif.cb_tb );
+    126             2                          5     
+    127             1                          1     	finish();
+    128                                              endtask
+    129                                              
+    130                                              
+    131                                              task finish();
+    132                                              	if ( scb.error_count != 0 )
+    133             1                    ***0***     		$display("%0d : ############# %0d PACKETS DRIVEN - TEST FAILED (%0d) TIMES ###############", $time, pkt_count, scb.error_count);
+    134                                              	else
+    135             1                          1     		$display("%0d : ############# %0d PACKETS DRIVEN - TEST PASSED ###############", $time, pkt_count);
+    136                                              
+    137             1                          1     	$finish;
+    138                                              endtask
+    139                                              
+    140                                              
+    141                                              endclass
+    142                                              `endif
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         2         1         1      50.0
+
+================================Branch Details================================
+
+Branch Coverage for file verification/phase9_testcases/environment.sv --
+
+------------------------------------IF Branch------------------------------------
+    132                                        1     Count coming in to IF
+    132             1                    ***0***     	if ( scb.error_count != 0 )
+    134             1                          1     	else
+Branch totals: 1 hit of 2 branches = 50.0%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              0         0         0     100.0
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                      0         0         0     100.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File verification/phase9_testcases/environment.sv --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+
+Total Node Count     =          0 
+Toggled Node Count   =          0 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =      100.0% (0 of 0 bins)
+
+=================================================================================
+=== File: verification/phase9_testcases/generator.sv
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           11        11         0     100.0
+
+================================Statement Details================================
+
+Statement Coverage for file verification/phase9_testcases/generator.sv --
+
+    1                                                `include "TransBase.sv"
+    2                                                
+    3                                                
+    4                                                `ifndef GENERATOR_SV
+    5                                                `define GENERATOR_SV
+    6                                                
+    7                                                class generator #( type T=TransBase );
+    8                                                
+    9                                                // ************************* INSTANTIATIONS ************************* //
+    10                                               
+    11                                               // declaring transaction object
+    12                                               rand T trans_gen;
+    13                                               
+    14                                               // mailbox handles
+    15                                               mailbox gen2drive[4];		// to generate and send the packets to driver
+    16                                               
+    17                                               int pkt_count;	// num packets to generate. Defined in testbench
+    18                                               int verbose;
+    19                                               
+    20                                               
+    21                                               // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
+    22                                               
+    23                                               // generator constructor
+    24                                               function new( mailbox gen2drive[4], int pkt_count, verbose );
+    25                                               	// getting the mailbox handles from env
+    26              1                          5     	foreach( gen2drive[i] )
+    27              1                          4     		this.gen2drive[i] = gen2drive[i];
+    28                                               
+    29              1                          1     	this.pkt_count = pkt_count;
+    30              1                          1     	this.verbose = verbose;
+    31                                               
+    32                                               endfunction
+    33                                               
+    34                                               
+    35                                               // *********************** EVENTS AND INTEGERS ********************** //
+    36                                               
+    37              1                          1     int num_transactions_gen = 0;	// num packets generated
+    38                                               
+    39                                               event end_gen;	// tell environment when generation has stopped
+    40                                               
+    41                                               
+    42                                               // ***************************** TASKS ***************************** //
+    43                                               
+    44                                               task main();
+    45                                               // generates (creates and randomizes) <pkt_count> transaction packets
+    46                                               
+    47              1                       5000     	repeat( pkt_count ) begin
+    48              1                       5000     		trans_gen = new();
+    49                                               
+    50              1                          E     		if( !trans_gen.randomize() ) $fatal("Gen:: trans_gen randomization failed");
+    51              1                       5000     		num_transactions_gen++;
+    52                                               
+    53                                               		if ( verbose ) begin
+    54              1                          E     			$display("\n%0d : ----------- PACKET NUMBER %1d | GENERATOR -----------", $time, num_transactions_gen);
+    55              1                          E     			trans_gen.display_downstream("[ GENERATOR ]");
+    56                                               		end
+    57                                               
+    58                                               		// send the transaction message via mailbox to the driver and scoreboard
+    59              1                      25000     		foreach( gen2drive[i] )
+    60              1                      20000     			gen2drive[i].put( trans_gen );
+    61                                               
+    62                                               	end
+    63              1                          1     	-> end_gen;		// trigger the end of generation
+    64                                               endtask
+    65                                               
+    66                                               endclass
+    67                                               `endif
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         0         0         0     100.0
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              0         0         0     100.0
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                      0         0         0     100.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File verification/phase9_testcases/generator.sv --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+
+Total Node Count     =          0 
+Toggled Node Count   =          0 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =      100.0% (0 of 0 bins)
+
+=================================================================================
+=== File: verification/phase9_testcases/interface.sv
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            4         4         0     100.0
+
+================================Statement Details================================
+
+Statement Coverage for file verification/phase9_testcases/interface.sv --
+
+    1                                                `ifndef INTERFACE_SV
+    2                                                `define	INTERFACE_SV
+    3                                                
+    4                                                interface intf( input logic clk, reset );
+    5                                                
+    6                                                
+    7                                                // ************************* INSTANTIATIONS ************************* //
+    8                                                
+    9                                                logic [31:0]	addr_in, addr_out;
+    10                                               logic [31:0]	data_in, data_out;
+    11                                               logic [3:0]		valid_in, valid_out;
+    12                                               logic [3:0]		rcv_rdy, data_rd;
+    13                                               
+    14                                               
+    15                                               // ************************ CLOCKING BLOCKS ************************* //
+    16                                               
+    17              1                          1     clocking cb_tb @( posedge clk );
+    18              1                          1     	input 	clk;
+    19                                               	output 	addr_in, data_in, valid_in, data_rd;
+    20              1                          1     	input 	addr_out, data_out, valid_out, rcv_rdy;
+    21                                               endclocking
+    22                                               
+    23                                               
+    24                                               // **************************** MODPORTS **************************** //
+    25                                               
+    26                                               modport DUT (
+    27                                               	input 	clk, reset,
+    28                                               	input 	addr_in, data_in, valid_in, data_rd,
+    29                                               	output 	addr_out, data_out, valid_out, rcv_rdy
+    30                                               );
+    31                                               
+    32                                               
+    33                                               modport DRIVER (
+    34                                               	clocking cb_tb,
+    35                                               	input clk
+    36                                               );
+    37                                               
+    38                                               
+    39                                               modport MONITOR (
+    40                                               	clocking cb_tb,
+    41                                               	input clk,
+    42                                               	input addr_out, data_out, valid_out, rcv_rdy,
+    43                                               	output addr_in, data_in, valid_in, data_rd
+    44                                               );
+    45                                               
+    46                                               
+    47                                               // **************************** COVERAGE **************************** //
+    48                                               
+    49                                               covergroup intf_cg @( posedge clk );
+    50                                                 port_0_addr : coverpoint addr_in[7:0] {
+    51                                                   bins port_0 = {0};
+    52                                                   bins port_1 = {1};
+    53                                                   bins port_2 = {2};
+    54                                                   bins port_3 = {3};
+    55                                                 }
+    56                                               
+    57                                                 port_1_addr : coverpoint addr_in[15:8] {
+    58                                                   bins port_0 = {0};
+    59                                                   bins port_1 = {1};
+    60                                                   bins port_2 = {2};
+    61                                                   bins port_3 = {3};
+    62                                                 }
+    63                                               
+    64                                                 port_2_addr : coverpoint addr_in[23:16] {
+    65                                                   bins port_0 = {0};
+    66                                                   bins port_1 = {1};
+    67                                                   bins port_2 = {2};
+    68                                                   bins port_3 = {3};
+    69                                                 }
+    70                                                 port_3_addr : coverpoint addr_in[31:24] {
+    71                                                   bins port_0 = {0};
+    72                                                   bins port_1 = {1};
+    73                                                   bins port_2 = {2};
+    74                                                   bins port_3 = {3};
+    75                                                 }
+    76                                               
+    77                                                 port_0_data : coverpoint data_in[7:0] {
+    78                                                   bins low = {[0:50]};
+    79                                                   bins med = {[51:150]};
+    80                                                   bins high = {[151:255]};
+    81                                                 }
+    82                                               
+    83                                                 port_1_data : coverpoint data_in[15:8] {
+    84                                                   bins low = {[0:50]};
+    85                                                   bins med = {[51:150]};
+    86                                                   bins high = {[151:255]};
+    87                                                 }
+    88                                               
+    89                                                 port_2_data : coverpoint data_in[23:16] {
+    90                                                   bins low = {[0:50]};
+    91                                                   bins med = {[51:150]};
+    92                                                   bins high = {[151:255]};
+    93                                                 }
+    94                                               
+    95                                                 port_3_data : coverpoint data_in[31:24] {
+    96                                                   bins low = {[0:50]};
+    97                                                   bins med = {[51:150]};
+    98                                                   bins high = {[151:255]};
+    99                                                 }
+    100                                              
+    101                                              	reset : coverpoint reset {
+    102                                              		bins low = {0};
+    103                                              		bins high = {1};
+    104                                              	}
+    105                                              
+    106                                              endgroup
+    107                                              
+    108             1                          1     intf_cg cg = new();
+    109                                              
+    110                                              endinterface
+    111                                              `endif
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         0         0         0     100.0
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              0         0         0     100.0
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    188       104        84      55.3
+
+================================Toggle Details================================
+
+Toggle Coverage for File verification/phase9_testcases/interface.sv --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          9                            addr_out[9]           1           0       50.00 
+          9                            addr_out[8]           0           1       50.00 
+          9                            addr_out[7]       E-hit           E      100.00 
+          9                            addr_out[6]       E-hit           E      100.00 
+          9                            addr_out[5]       E-hit           E      100.00 
+          9                            addr_out[4]       E-hit           E      100.00 
+          9                            addr_out[3]       E-hit           E      100.00 
+          9                           addr_out[31]       E-hit           E      100.00 
+          9                           addr_out[30]       E-hit           E      100.00 
+          9                            addr_out[2]       E-hit           E      100.00 
+          9                           addr_out[29]       E-hit           E      100.00 
+          9                           addr_out[28]       E-hit           E      100.00 
+          9                           addr_out[27]       E-hit           E      100.00 
+          9                           addr_out[26]       E-hit           E      100.00 
+          9                           addr_out[25]           0           1       50.00 
+          9                           addr_out[24]           0           1       50.00 
+          9                           addr_out[23]       E-hit           E      100.00 
+          9                           addr_out[22]       E-hit           E      100.00 
+          9                           addr_out[21]       E-hit           E      100.00 
+          9                           addr_out[20]       E-hit           E      100.00 
+          9                            addr_out[1]           1           0       50.00 
+          9                           addr_out[19]       E-hit           E      100.00 
+          9                           addr_out[18]       E-hit           E      100.00 
+          9                           addr_out[17]           0           1       50.00 
+          9                           addr_out[16]           1           0       50.00 
+          9                           addr_out[15]       E-hit           E      100.00 
+          9                           addr_out[14]       E-hit           E      100.00 
+          9                           addr_out[13]       E-hit           E      100.00 
+          9                           addr_out[12]       E-hit           E      100.00 
+          9                           addr_out[11]       E-hit           E      100.00 
+          9                           addr_out[10]       E-hit           E      100.00 
+          9                            addr_out[0]           1           0       50.00 
+          9                             addr_in[9]           0           0        0.00 
+          9                             addr_in[8]           0           0        0.00 
+          9                            addr_in[25]           0           0        0.00 
+          9                            addr_in[24]           0           0        0.00 
+          9                             addr_in[1]           0           0        0.00 
+          9                            addr_in[17]           0           0        0.00 
+          9                            addr_in[16]           0           0        0.00 
+          9                             addr_in[0]           0           0        0.00 
+         10                            data_out[7]           0           1       50.00 
+         10                            data_out[6]           0           1       50.00 
+         10                            data_out[5]           0           1       50.00 
+         10                            data_out[4]           0           1       50.00 
+         10                            data_out[3]           0           1       50.00 
+         10                           data_out[31]           0           1       50.00 
+         10                           data_out[30]           0           1       50.00 
+         10                           data_out[29]           0           1       50.00 
+         10                           data_out[28]           0           1       50.00 
+         10                           data_out[27]           0           1       50.00 
+         10                           data_out[23]           0           1       50.00 
+         10                           data_out[22]           0           1       50.00 
+         10                           data_out[21]           0           1       50.00 
+         10                           data_out[20]           0           1       50.00 
+         10                           data_out[19]           0           1       50.00 
+         10                           data_out[15]           0           1       50.00 
+         10                           data_out[14]           0           1       50.00 
+         10                           data_out[13]           0           1       50.00 
+         10                           data_out[12]           0           1       50.00 
+         10                           data_out[11]           0           1       50.00 
+         10                             data_in[7]           0           0        0.00 
+         10                             data_in[6]           0           0        0.00 
+         10                             data_in[5]           0           0        0.00 
+         10                             data_in[4]           0           0        0.00 
+         10                             data_in[3]           0           0        0.00 
+         10                            data_in[31]           0           0        0.00 
+         10                            data_in[30]           0           0        0.00 
+         10                            data_in[29]           0           0        0.00 
+         10                            data_in[28]           0           0        0.00 
+         10                            data_in[27]           0           0        0.00 
+         10                            data_in[23]           0           0        0.00 
+         10                            data_in[22]           0           0        0.00 
+         10                            data_in[21]           0           0        0.00 
+         10                            data_in[20]           0           0        0.00 
+         10                            data_in[19]           0           0        0.00 
+         10                            data_in[15]           0           0        0.00 
+         10                            data_in[14]           0           0        0.00 
+         10                            data_in[13]           0           0        0.00 
+         10                            data_in[12]           0           0        0.00 
+         10                            data_in[11]           0           0        0.00 
+
+Total Node Count     =         94 
+Toggled Node Count   =         38 
+Untoggled Node Count =         56 
+
+Toggle Coverage      =       55.3% (104 of 188 bins)
+
+=================================================================================
+=== File: verification/phase9_testcases/monitor.sv
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           16        16         0     100.0
+
+================================Statement Details================================
+
+Statement Coverage for file verification/phase9_testcases/monitor.sv --
+
+    1                                                `include "TransBase.sv"
+    2                                                
+    3                                                `ifndef MONITOR_SV
+    4                                                `define MONITOR_SV
+    5                                                
+    6                                                class monitor #( type T=TransBase );
+    7                                                
+    8                                                
+    9                                                // ************************* INSTANTIATIONS ************************* //
+    10                                               
+    11                                               // create virtual interface handle
+    12                                               virtual intf.MONITOR vif;
+    13                                               
+    14                                               // initialize port bit, packet count
+    15                                               int port, pkt_count, verbose;
+    16                                               
+    17                                               // create mailbox handle
+    18                                               mailbox mon2scb;
+    19                                               
+    20                                               // semaphore handles
+    21                                               
+    22                                               
+    23                                               // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
+    24                                               
+    25                                               function new( virtual intf.MONITOR vif, mailbox mon2scb, int port, pkt_count, verbose );
+    26                                               	// get interface, port, and packet count from env class
+    27              1                          4     	this.vif = vif;
+    28              1                          4     	this.port = port;
+    29              1                          4     	this.pkt_count = pkt_count;
+    30              1                          4     	this.verbose = verbose;
+    31                                               
+    32                                               	// get the mailbox from env
+    33              1                          4     	this.mon2scb = mon2scb;
+    34                                               
+    35                                               	// getting the semaphore handles from env
+    36                                               
+    37                                               endfunction
+    38                                               
+    39                                               
+    40                                               // *********************** EVENTS AND INTEGERS ********************** //
+    41                                               
+    42                                               // keep track of the number of transactions sent
+    43              1                          4     int num_transactions_recv = 0;
+    44                                               
+    45                                               
+    46                                               // ***************************** TASKS ***************************** //
+    47                                               
+    48                                               task main();
+    49              1                          4     	@( posedge vif.clk );		// sampling on posedge; offset monitor by one clock edge
+    50              1                      20000     	repeat( pkt_count ) begin
+    51                                               		// instantiate transaction object
+    52                                               		T trans_rx;
+    53              1                      20000     		trans_rx = new();
+    54                                               
+    55              1                      20000     		@( posedge vif.clk ); // allow time for DUT to produce outputs on negedge, sample on next posedge
+    56              1                      20000     			trans_rx.addr_out[ (port*8) +:8 ] = vif.addr_out[ (port*8) +:8 ];
+    57              1                      20000     			trans_rx.data_out[ (port*8) +:8 ] = vif.data_out[ (port*8) +:8 ];
+    58              1                      20000     			trans_rx.valid_out[port] = vif.valid_out[port];
+    59                                               
+    60              1                      20000     		num_transactions_recv++;
+    61                                               
+    62              1                      20000     		mon2scb.put( trans_rx );
+    63                                               
+    64              1                      20000     		vif.cb_tb.data_rd[port] <= vif.valid_out[port];	// enable this port to receive data
+    65                                               
+    66                                               		if ( verbose ) begin
+    67              1                          E     			$display("\n%0d : -------- PACKET NUMBER %1d | MONITOR | PORT %0d --------", $time, num_transactions_recv, port);
+    68              1                          E     			trans_rx.display_upstream("[ MONITOR ]");
+    69                                               		end
+    70                                               
+    71                                               	end
+    72                                               endtask
+    73                                               
+    74                                               endclass
+    75                                               `endif
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         0         0         0     100.0
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              0         0         0     100.0
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                      0         0         0     100.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File verification/phase9_testcases/monitor.sv --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+
+Total Node Count     =          0 
+Toggled Node Count   =          0 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =      100.0% (0 of 0 bins)
+
+=================================================================================
+=== File: verification/phase9_testcases/scoreboard.sv
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           21        16         5      76.1
+
+================================Statement Details================================
+
+Statement Coverage for file verification/phase9_testcases/scoreboard.sv --
+
+    1                                                `include "TransBase.sv"
+    2                                                
+    3                                                `ifndef SCOREBOARD_SV
+    4                                                `define SCOREBOARD_SV
+    5                                                
+    6                                                class scoreboard #( type T=TransBase );
+    7                                                
+    8                                                
+    9                                                // ************************* INSTANTIATIONS ************************* //
+    10                                               
+    11                                               // create mailbox handles
+    12                                               mailbox drive2scb[4];
+    13                                               mailbox mon2scb[4];
+    14                                               
+    15                                               int verbose;
+    16                                               
+    17                                               // ******************* FUNCTIONS AND CONSTRUCTORS ******************* //
+    18                                               
+    19                                               // monitor constructor
+    20                                               function new( mailbox drive2scb[4], mon2scb[4], int verbose );
+    21                                               	// get the mailbox handle from env
+    22              1                          5     	foreach( mon2scb[i] ) this.mon2scb[i] = mon2scb[i];
+    22              2                          4     
+    23              1                          5     	foreach( drive2scb[i] ) this.drive2scb[i] = drive2scb[i];
+    23              2                          4     
+    24                                               
+    25              1                          1     	this.verbose = verbose;
+    26                                               
+    27                                               endfunction
+    28                                               
+    29                                               
+    30                                               // *********************** EVENTS AND INTEGERS ********************** //
+    31                                               
+    32                                               // keep track of the number of transactions received
+    33              1                          1     int num_transactions_recv = 0;
+    34                                               
+    35                                               // Error checking / counting
+    36              1                          1     int error_count = 0;
+    37                                               int scb_error_override;
+    38                                               
+    39                                               // ***************************** TASKS ***************************** //
+    40                                               
+    41                                               task evaluate_port( int port );
+    42                                               	T trans_tx;		// the driven transaction
+    43                                               	T trans_rx;		// the received transaction
+    44                                               	int portSrc;	// the source port that this port's data came from (i)
+    45                                               
+    46              1                          4     	forever begin
+    47                                               		// receive driven and received transactions (blocking delay via mailboxes)
+    48              1                      20004     		drive2scb[port].get( trans_tx );
+    49              1                      20000     		mon2scb[port].get( trans_rx );
+    50                                               
+    51                                               		// determine source port to check data and dest validity
+    52              1                      20000     		portSrc = trans_rx.addr_out[ (port*8) +: 8 ];
+    53                                               
+    54                                               
+    55                                               		if ( scb_error_override != 1 ) begin
+    56                                               			if ( trans_rx.valid_out[port] && trans_tx.valid_in[portSrc] ) begin
+    57                                               				// check that received data (on this port) matches the sent data (from the source port)
+    58                                               				if ( trans_tx.data_in[ (portSrc*8) +: 8 ] != trans_rx.data_out[ (port*8) +: 8 ] ) begin
+    59              1                    ***0***     					$error("%0d : Scoreboard | Port %0d : Wrong DATA Result.\n\tExpected:  %0d  Actual:  %0d | portSrc = %0d | valid_in = %0b | valid_out = %0b", $time, port, trans_tx.data_in[ (portSrc*8) +: 8 ], trans_rx.data_out[ (port*8) +: 8 ], portSrc, trans_tx.valid_in, trans_rx.valid_out);
+    60              1                    ***0***     					record_error();
+    61                                               				end
+    62                                               
+    63                                               				// check that the address it was received on (this port) matches the desired destination address (portSrc)
+    64                                               				if ( port != trans_tx.addr_in[ (portSrc*8) +: 8 ] ) begin
+    65              1                    ***0***     					$error("%0d : Scoreboard | Port %0d : Wrong ADDR Result.\n\tExpected:  %0d  Actual:  %0d | portSrc = %0d | valid_in = %0b | valid_out = %0b", $time, port, port, trans_tx.addr_in[ (portSrc*8) +: 8 ], portSrc, trans_tx.valid_in, trans_rx.valid_out);
+    66              1                    ***0***     					record_error();
+    67                                               				end
+    68                                               			end
+    69                                               		end
+    70                                               
+    71                                               
+    72              1                      20000     		num_transactions_recv++;
+    73                                               
+    74                                               		if ( verbose ) begin
+    75              1                          E     			$display("\n%0d : ----------- PACKET NUMBER %1d | PORT %0d | SCOREBOARD FINISHED -----------", $time, (num_transactions_recv/4)+1, port);
+    76                                               		end
+    77                                               
+    78                                               	end
+    79                                               endtask : evaluate_port
+    80                                               
+    81                                               
+    82                                               task main();
+    83                                               
+    84                                               	fork
+    85              1                          1     		evaluate_port( 0 );
+    86              1                          1     		evaluate_port( 1 );
+    87              1                          1     		evaluate_port( 2 );
+    88              1                          1     		evaluate_port( 3 );
+    89                                               	join
+    90                                               
+    91                                               endtask : main
+    92                                               
+    93                                               
+    94                                               task record_error();
+    95                                               	if ( scb_error_override != 1 )
+    96              1                    ***0***     		error_count = error_count + 1;
+    97                                               endtask : record_error
+    98                                               
+    99                                               
+    100                                              endclass
+    101                                              `endif
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                        10         5         5      50.0
+
+================================Branch Details================================
+
+Branch Coverage for file verification/phase9_testcases/scoreboard.sv --
+
+------------------------------------IF Branch------------------------------------
+    55                                     20000     Count coming in to IF
+    55              1                      20000     		if ( scb_error_override != 1 ) begin
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    56                                     20000     Count coming in to IF
+    56              1                       9973     			if ( trans_rx.valid_out[port] && trans_tx.valid_in[portSrc] ) begin
+                                           10027     All False Count
+Branch totals: 2 hits of 2 branches = 100.0%
+
+------------------------------------IF Branch------------------------------------
+    58                                      9973     Count coming in to IF
+    58              1                    ***0***     				if ( trans_tx.data_in[ (portSrc*8) +: 8 ] != trans_rx.data_out[ (port*8) +: 8 ] ) begin
+                                            9973     All False Count
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    64                                      9973     Count coming in to IF
+    64              1                    ***0***     				if ( port != trans_tx.addr_in[ (portSrc*8) +: 8 ] ) begin
+                                            9973     All False Count
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    74                                     20000     Count coming in to IF
+    74              1                          E     		if ( verbose ) begin
+                                           E-hit     All False Count
+Branch totals: 0 hits of 0 branches = 100.0%
+
+------------------------------------IF Branch------------------------------------
+    95                                   ***0***     Count coming in to IF
+    95              1                    ***0***     	if ( scb_error_override != 1 )
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.0%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              0         0         0     100.0
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                      0         0         0     100.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File verification/phase9_testcases/scoreboard.sv --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+
+Total Node Count     =          0 
+Toggled Node Count   =          0 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =      100.0% (0 of 0 bins)
+
+=================================================================================
+=== File: verification/phase9_testcases/tbench_top.sv
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            7         7         0     100.0
+
+================================Statement Details================================
+
+Statement Coverage for file verification/phase9_testcases/tbench_top.sv --
+
+    1                                                `include "dut/dut_top.sv"
+    2                                                
+    3                                                module tbench_top;
+    4                                                
+    5                                                // clock and reset signal declaration
+    6                                                bit clk;
+    7                                                bit reset;
+    8                                                
+    9                                                // clock generation
+    10              1                      10010     always #5 clk = ~clk;
+    10              2                      10009     
+    11                                               
+    12                                               // reset Generation
+    13                                               initial begin
+    14              1                          1       reset = 0;
+    15              1                          1       #5 reset = 1;
+    15              2                          1     
+    16              1                          1     	#5 reset = 0;
+    16              2                          1     
+    17                                               end
+    18                                               
+    19                                               // creatinng instance of interface, in order to connect DUT and testcase
+    20                                               intf i_intf ( clk, reset );
+    21                                               
+    22                                               // Testcase instance, interface handle is passed to test as an argument
+    23                                               testbench test ( i_intf );
+    24                                               
+    25                                               // DUT instance, interface signals are connected to the DUT ports
+    26                                               dut_top dut ( i_intf.DUT );
+    27                                               
+    28                                               endmodule
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         0         0         0     100.0
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              0         0         0     100.0
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                      4         4         0     100.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File verification/phase9_testcases/tbench_top.sv --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+
+Total Node Count     =          2 
+Toggled Node Count   =          2 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =      100.0% (4 of 4 bins)
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------
+Covergroup                                             Metric      Goal/ Status                    
+                                                                At Least                           
+----------------------------------------------------------------------------------------------------
+ TYPE /tbench_top/i_intf/intf_cg                        31.4%        100 Uncovered                 
+    Coverpoint intf_cg::port_0_addr                     25.0%        100 Uncovered                 
+    Coverpoint intf_cg::port_1_addr                     25.0%        100 Uncovered                 
+    Coverpoint intf_cg::port_2_addr                     25.0%        100 Uncovered                 
+    Coverpoint intf_cg::port_3_addr                     25.0%        100 Uncovered                 
+    Coverpoint intf_cg::port_0_data                     33.3%        100 Uncovered                 
+    Coverpoint intf_cg::port_1_data                     33.3%        100 Uncovered                 
+    Coverpoint intf_cg::port_2_data                     33.3%        100 Uncovered                 
+    Coverpoint intf_cg::port_3_data                     33.3%        100 Uncovered                 
+    Coverpoint intf_cg::reset                           50.0%        100 Uncovered                 
+ Covergroup instance \/tbench_top/i_intf/cg             31.4%        100 Uncovered                 
+    Coverpoint port_0_addr                              25.0%        100 Uncovered                 
+        covered/total bins:                                 1          4                           
+        missing/total bins:                                 3          4                           
+        bin port_0                                       5004          1 Covered                   
+        bin port_1                                          0          1 ZERO                      
+        bin port_2                                          0          1 ZERO                      
+        bin port_3                                          0          1 ZERO                      
+    Coverpoint port_1_addr                              25.0%        100 Uncovered                 
+        covered/total bins:                                 1          4                           
+        missing/total bins:                                 3          4                           
+        bin port_0                                          0          1 ZERO                      
+        bin port_1                                       5004          1 Covered                   
+        bin port_2                                          0          1 ZERO                      
+        bin port_3                                          0          1 ZERO                      
+    Coverpoint port_2_addr                              25.0%        100 Uncovered                 
+        covered/total bins:                                 1          4                           
+        missing/total bins:                                 3          4                           
+        bin port_0                                          0          1 ZERO                      
+        bin port_1                                          0          1 ZERO                      
+        bin port_2                                       5004          1 Covered                   
+        bin port_3                                          0          1 ZERO                      
+    Coverpoint port_3_addr                              25.0%        100 Uncovered                 
+        covered/total bins:                                 1          4                           
+        missing/total bins:                                 3          4                           
+        bin port_0                                          0          1 ZERO                      
+        bin port_1                                          0          1 ZERO                      
+        bin port_2                                          0          1 ZERO                      
+        bin port_3                                       5004          1 Covered                   
+    Coverpoint port_0_data                              33.3%        100 Uncovered                 
+        covered/total bins:                                 1          3                           
+        missing/total bins:                                 2          3                           
+        bin low                                             0          1 ZERO                      
+        bin med                                             0          1 ZERO                      
+        bin high                                         5004          1 Covered                   
+    Coverpoint port_1_data                              33.3%        100 Uncovered                 
+        covered/total bins:                                 1          3                           
+        missing/total bins:                                 2          3                           
+        bin low                                             0          1 ZERO                      
+        bin med                                             0          1 ZERO                      
+        bin high                                         5004          1 Covered                   
+    Coverpoint port_2_data                              33.3%        100 Uncovered                 
+        covered/total bins:                                 1          3                           
+        missing/total bins:                                 2          3                           
+        bin low                                             0          1 ZERO                      
+        bin med                                             0          1 ZERO                      
+        bin high                                         5004          1 Covered                   
+    Coverpoint port_3_data                              33.3%        100 Uncovered                 
+        covered/total bins:                                 1          3                           
+        missing/total bins:                                 2          3                           
+        bin low                                             0          1 ZERO                      
+        bin med                                             0          1 ZERO                      
+        bin high                                         5004          1 Covered                   
+    Coverpoint reset                                    50.0%        100 Uncovered                 
+        covered/total bins:                                 1          2                           
+        missing/total bins:                                 1          2                           
+        bin low                                          5005          1 Covered                   
+        bin high                                            0          1 ZERO                      
+
+TOTAL COVERGROUP COVERAGE: 31.4%  COVERGROUP TYPES: 1
+
+Total Coverage By File (code coverage only, filtered view): 66.8%
+

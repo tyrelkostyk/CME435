@@ -1,5 +1,5 @@
-# vsim "+acc" -coverage -do "coverage exclude -srcfile TransBase.sv; coverage exclude -du work.intf -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -du work.testbench {pkt_count[31:0]} {verbose[31:0]}; coverage exclude -du work.xswitch -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -srcfile generator.sv -linerange 50 53-56; coverage exclude -srcfile driver.sv -linerange 66-69; coverage exclude -srcfile monitor.sv -linerange 66-69; coverage exclude -srcfile scoreboard.sv -linerange 57 69 74-76; coverage save -onexit -directive -codeAll -cvg report/phase9_testcases_sanity_check.ucdb; run -all; exit" -c tbench_top
-# Start time: 09:40:14 on Dec 16,2019
+# vsim "+acc" -coverage -do "coverage exclude -srcfile TransBase.sv; coverage exclude -du work.intf -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -du work.testbench {pkt_count[31:0]} {verbose[31:0]}; coverage exclude -du work.xswitch -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -srcfile generator.sv -linerange 50 53-56; coverage exclude -srcfile driver.sv -linerange 66-69; coverage exclude -srcfile monitor.sv -linerange 66-69; coverage exclude -srcfile scoreboard.sv -linerange 57 69 74-76; coverage save -onexit -directive -codeAll -cvg report/phase8_coverage/phase8_coverage.ucdb; run -all; exit" -c tbench_top
+# Start time: 11:10:59 on Dec 16,2019
 # ** Warning: (vsim-8689) Ignoring plusarg '+acc'.  Did you mean '-voptargs=+acc'?
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: dut/xswitch.svp(17): in protected region
@@ -32,7 +32,7 @@
 #  coverage exclude -srcfile driver.sv -linerange 66-69
 #  coverage exclude -srcfile monitor.sv -linerange 66-69
 #  coverage exclude -srcfile scoreboard.sv -linerange 57 69 74-76
-#  coverage save -onexit -directive -codeAll -cvg report/phase9_testcases_sanity_check.ucdb
+#  coverage save -onexit -directive -codeAll -cvg report/phase8_coverage/phase8_coverage.ucdb
 #  run -all
 # *************** Start of testbench ***************
 # 0 : Environment : Start of run() task
@@ -46,8 +46,8 @@
 # 49995 : Environment : End of post_test() task
 # 49995 : Environment : End of run() task
 # 50045 : ############# 5000 PACKETS DRIVEN - TEST PASSED ###############
-# ** Note: $finish    : verification/phase9_testcases/environment.sv(137)
+# ** Note: $finish    : verification/phase8_coverage/environment.sv(137)
 #    Time: 50045 ns  Iteration: 1  Instance: /tbench_top/test
-# End time: 09:40:16 on Dec 16,2019, Elapsed time: 0: 0: 2
+# End time: 11:11:02 on Dec 16,2019, Elapsed time: 0: 0: 3
 # Errors: 0, Warnings: 2
 # *************** End of testbench ***************

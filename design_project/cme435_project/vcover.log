@@ -1,0 +1,11 @@
+Start time: 11:40:51 on Dec 16,2019
+vcover merge report/fx_coverage/xswitch_fx.ucdb report/fx_coverage/regression_buffer_overflow.ucdb report/fx_coverage/regression_sanity_check.ucdb 
+Merging file report/fx_coverage/regression_buffer_overflow.ucdb
+Merging file report/fx_coverage/regression_sanity_check.ucdb
+** Warning: (vcover-6820) Source code mismatch detected while merging ucdb file report/fx_coverage/regression_sanity_check.ucdb, skipping code coverage merge for design unit work.testbench defined in file verification/regression_test/testbench_sanity_check.sv, line 3
+** Warning: (vcover-6820) Source code mismatch detected while merging ucdb file report/fx_coverage/regression_sanity_check.ucdb, skipping code coverage merge for instance /tbench_top/test defined in file verification/regression_test/tbench_top.sv, line 23
+Writing merged result to report/fx_coverage/xswitch_fx.ucdb
+
+End time: 11:40:51 on Dec 16,2019
+, Elapsed time: 0: 0: 0
+Errors: 0, Warnings: 0

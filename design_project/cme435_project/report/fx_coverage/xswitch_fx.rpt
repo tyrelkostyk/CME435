@@ -1,0 +1,75 @@
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------
+Covergroup                                             Metric      Goal/ Status                    
+                                                                At Least                           
+----------------------------------------------------------------------------------------------------
+ TYPE /tbench_top/i_intf/intf_cg                        94.4%        100 Uncovered                 
+    Coverpoint intf_cg::port_0_addr                    100.0%        100 Covered                   
+    Coverpoint intf_cg::port_1_addr                    100.0%        100 Covered                   
+    Coverpoint intf_cg::port_2_addr                    100.0%        100 Covered                   
+    Coverpoint intf_cg::port_3_addr                    100.0%        100 Covered                   
+    Coverpoint intf_cg::port_0_data                    100.0%        100 Covered                   
+    Coverpoint intf_cg::port_1_data                    100.0%        100 Covered                   
+    Coverpoint intf_cg::port_2_data                    100.0%        100 Covered                   
+    Coverpoint intf_cg::port_3_data                    100.0%        100 Covered                   
+    Coverpoint intf_cg::reset                           50.0%        100 Uncovered                 
+ Covergroup instance \/tbench_top/i_intf/cg             94.4%        100 Uncovered                 
+    Coverpoint port_0_addr                             100.0%        100 Covered                   
+        covered/total bins:                                 4          4                           
+        missing/total bins:                                 0          4                           
+        bin port_0                                       6273          1 Covered                   
+        bin port_1                                       1233          1 Covered                   
+        bin port_2                                       1248          1 Covered                   
+        bin port_3                                       1254          1 Covered                   
+    Coverpoint port_1_addr                             100.0%        100 Covered                   
+        covered/total bins:                                 4          4                           
+        missing/total bins:                                 0          4                           
+        bin port_0                                       1257          1 Covered                   
+        bin port_1                                       6226          1 Covered                   
+        bin port_2                                       1286          1 Covered                   
+        bin port_3                                       1239          1 Covered                   
+    Coverpoint port_2_addr                             100.0%        100 Covered                   
+        covered/total bins:                                 4          4                           
+        missing/total bins:                                 0          4                           
+        bin port_0                                       1239          1 Covered                   
+        bin port_1                                       1263          1 Covered                   
+        bin port_2                                       6215          1 Covered                   
+        bin port_3                                       1291          1 Covered                   
+    Coverpoint port_3_addr                             100.0%        100 Covered                   
+        covered/total bins:                                 4          4                           
+        missing/total bins:                                 0          4                           
+        bin port_0                                       1239          1 Covered                   
+        bin port_1                                       1286          1 Covered                   
+        bin port_2                                       1259          1 Covered                   
+        bin port_3                                       6224          1 Covered                   
+    Coverpoint port_0_data                             100.0%        100 Covered                   
+        covered/total bins:                                 3          3                           
+        missing/total bins:                                 0          3                           
+        bin low                                           986          1 Covered                   
+        bin med                                          1974          1 Covered                   
+        bin high                                         7048          1 Covered                   
+    Coverpoint port_1_data                             100.0%        100 Covered                   
+        covered/total bins:                                 3          3                           
+        missing/total bins:                                 0          3                           
+        bin low                                           975          1 Covered                   
+        bin med                                          2004          1 Covered                   
+        bin high                                         7029          1 Covered                   
+    Coverpoint port_2_data                             100.0%        100 Covered                   
+        covered/total bins:                                 3          3                           
+        missing/total bins:                                 0          3                           
+        bin low                                          1001          1 Covered                   
+        bin med                                          1979          1 Covered                   
+        bin high                                         7028          1 Covered                   
+    Coverpoint port_3_data                             100.0%        100 Covered                   
+        covered/total bins:                                 3          3                           
+        missing/total bins:                                 0          3                           
+        bin low                                           965          1 Covered                   
+        bin med                                          2015          1 Covered                   
+        bin high                                         7028          1 Covered                   
+    Coverpoint reset                                    50.0%        100 Uncovered                 
+        covered/total bins:                                 1          2                           
+        missing/total bins:                                 1          2                           
+        bin low                                         10010          1 Covered                   
+        bin high                                            0          1 ZERO                      
+
+TOTAL COVERGROUP COVERAGE: 94.4%  COVERGROUP TYPES: 1

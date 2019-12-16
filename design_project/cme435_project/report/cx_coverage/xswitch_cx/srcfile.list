@@ -1,0 +1,12 @@
+dut/dut_top.sv
+dut/xswitch.svp
+verification/regression_test/TransBase.sv
+verification/regression_test/driver.sv
+verification/regression_test/environment.sv
+verification/regression_test/generator.sv
+verification/regression_test/interface.sv
+verification/regression_test/monitor.sv
+verification/regression_test/scoreboard.sv
+verification/regression_test/tbench_top.sv
+verification/regression_test/testbench_buffer_overflow.sv
+verification/regression_test/testbench_sanity_check.sv

@@ -1,0 +1,41 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <link rel="StyleSheet" media="screen" href="../css/hdl2html.css"/>
+</head>
+<body id="hdl2html">
+  <tt><a name="1"/><span style="color:red">%s%%s%%s%%s%%s%1%s%%s%</span>`<span class="linked">include</span>%s%<span class="literal">"dut/dut_top.sv"</span><br/>
+<a name="2"/><span style="color:red">%s%%s%%s%%s%%s%2%s%%s%</span><br/>
+<a name="3"/><span style="color:red">%s%%s%%s%%s%%s%3%s%%s%</span><span class="keyword">module</span>%s%tbench_top;<br/>
+<a name="4"/><span style="color:red">%s%%s%%s%%s%%s%4%s%%s%</span><br/>
+<a name="5"/><span style="color:red">%s%%s%%s%%s%%s%5%s%%s%</span><span class="comment">//%s%clock%s%and%s%reset%s%signal%s%declaration</span><br/>
+<a name="6"/><span style="color:red">%s%%s%%s%%s%%s%6%s%%s%</span><span class="keyword">bit</span>%s%clk;<br/>
+<a name="7"/><span style="color:red">%s%%s%%s%%s%%s%7%s%%s%</span><span class="keyword">bit</span>%s%reset;<br/>
+<a name="8"/><span style="color:red">%s%%s%%s%%s%%s%8%s%%s%</span><br/>
+<a name="9"/><span style="color:red">%s%%s%%s%%s%%s%9%s%%s%</span><span class="comment">//%s%clock%s%generation</span><br/>
+<a name="10"/><span style="color:red">%s%%s%%s%%s%10%s%%s%</span><span class="keyword">always</span>%s%#5%s%clk%s%=%s%~clk;<br/>
+<a name="11"/><span style="color:red">%s%%s%%s%%s%11%s%%s%</span><br/>
+<a name="12"/><span style="color:red">%s%%s%%s%%s%12%s%%s%</span><span class="comment">//%s%reset%s%Generation</span><br/>
+<a name="13"/><span style="color:red">%s%%s%%s%%s%13%s%%s%</span><span class="keyword">initial</span>%s%<span class="keyword">begin</span><br/>
+<a name="14"/><span style="color:red">%s%%s%%s%%s%14%s%%s%</span>%s%%s%reset%s%=%s%0;<br/>
+<a name="15"/><span style="color:red">%s%%s%%s%%s%15%s%%s%</span>%s%%s%#5%s%reset%s%=%s%1;<br/>
+<a name="16"/><span style="color:red">%s%%s%%s%%s%16%s%%s%</span>%t%#5%s%reset%s%=%s%0;<br/>
+<a name="17"/><span style="color:red">%s%%s%%s%%s%17%s%%s%</span><span class="keyword">end</span><br/>
+<a name="18"/><span style="color:red">%s%%s%%s%%s%18%s%%s%</span><br/>
+<a name="19"/><span style="color:red">%s%%s%%s%%s%19%s%%s%</span><span class="comment">//%s%creatinng%s%instance%s%of%s%interface,%s%in%s%order%s%to%s%connect%s%DUT%s%and%s%testcase</span><br/>
+<a name="20"/><span style="color:red">%s%%s%%s%%s%20%s%%s%</span>intf%s%i_intf%s%(%s%clk,%s%reset%s%);<br/>
+<a name="21"/><span style="color:red">%s%%s%%s%%s%21%s%%s%</span><br/>
+<a name="22"/><span style="color:red">%s%%s%%s%%s%22%s%%s%</span><span class="comment">//%s%Testcase%s%instance,%s%interface%s%handle%s%is%s%passed%s%to%s%test%s%as%s%an%s%argument</span><br/>
+<a name="23"/><span style="color:red">%s%%s%%s%%s%23%s%%s%</span>testbench%s%test%s%(%s%i_intf%s%);<br/>
+<a name="24"/><span style="color:red">%s%%s%%s%%s%24%s%%s%</span><br/>
+<a name="25"/><span style="color:red">%s%%s%%s%%s%25%s%%s%</span><span class="comment">//%s%DUT%s%instance,%s%interface%s%signals%s%are%s%connected%s%to%s%the%s%DUT%s%ports</span><br/>
+<a name="26"/><span style="color:red">%s%%s%%s%%s%26%s%%s%</span>dut_top%s%dut%s%(%s%i_intf.DUT%s%);<br/>
+<a name="27"/><span style="color:red">%s%%s%%s%%s%27%s%%s%</span><br/>
+<a name="28"/><span style="color:red">%s%%s%%s%%s%28%s%%s%</span><span class="keyword">endmodule</span><br/>
+</tt>
+<script type="text/javascript" src="../scripts/buildsrcpage.js"></script>
+  
+</body>
+</html>

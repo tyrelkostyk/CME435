@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <!-- original name: _work.xswitchContentFrame4.htm -->
+  <link rel="StyleSheet" media="print"  href="../css/ucdb2htmlP.css"/>
+  <link rel="StyleSheet" media="screen" href="../css/ucdb2html.css"/>
+  <link rel="StyleSheet" media="screen" href="../css/ucdb2html_newlook.css"/>
+  <script type="text/javascript" src="../scripts/jquery.js"></script>
+  <script type="text/javascript" src="../scripts/showhide.js"></script>
+  
+</head>
+<body id="ucdb2html_detail" onload="showLast()">
+  <h1><span class="strip">Questa</span> Condition Coverage Report</h1>
+  <h3>Scope: /<a href="z4257158088_3695529894_0.htm">work.xswitch</a></h3>
+  <!-- use script block so buttons vanish when JavaScript is disabled -->
+  <script type="text/javascript">
+  <!--
+  document.write(
+    '<table class="buttons" cellspacing="2" cellpadding="2"><tr>' +
+       '<td id="showAll" width="100" onclick="showAll()" class="button_on" ' +
+           'title="Display all coverage scopes and bins.">Show All</td>' +
+       '<td id="showCov" width="100" onclick="showCov()" class="button_off" ' +
+           'title="Display only covered scopes and bins.">Show Covered</td>' +
+       '<td id="showMis" width="100" onclick="showMis()" class="button_off" ' +
+           'title="Display only uncovered scopes and bins.">Show Missing</td>' +
+    '</tr></table>');
+  //-->
+  </script>
+  <div class="excluded"><a name="cvg720"/><hr/><table>
+  <tr s="3" x="FC" lnk="__HDL_srcfile_3.htm#17" z="(reset && ~reset_bug)" c="e" d="0" F="1"/>
+  <tr/>
+  <tr z="reset" c="e"/>
+  <tr z="reset_bug" c="e"/>
+  <tr/>
+  <tr n="1" z="reset_0" h1="E-Miss" t="c" c1="-"/>
+  <tr n="2" z="reset_1" h1="E-Miss" t="c" c1="~reset_bug"/>
+  <tr n="3" z="reset_bug_0" h1="E-Miss" t="c" c1="reset"/>
+  <tr n="4" z="reset_bug_1" h1="E-Miss" t="c" c1="reset"/>
+  </table>
+</div><div class="excluded"><a name="cvg722"/><hr/><table>
+  <tr s="3" x="FC" lnk="__HDL_srcfile_3.htm#17" z="(pending_inputs_bug && (pending_active_inputs > pending_inputs_bug_th))" c="e" d="0" F="1"/>
+  <tr/>
+  <tr z="pending_inputs_bug" c="e"/>
+  <tr z="(pending_active_inputs > pending_inputs_bug_th)" c="e"/>
+  <tr/>
+  <tr n="1" z="pending_inputs_bug_0" h1="E-Miss" t="c" c1="-"/>
+  <tr n="2" z="pending_inputs_bug_1" h1="E-Miss" t="c" c1="(pending_active_inputs > pending_inputs_bug_th)"/>
+  <tr n="3" z="(pending_active_inputs > pending_inputs_bug_th)_0" h1="E-Miss" t="c" c1="pending_inputs_bug"/>
+  <tr n="4" z="(pending_active_inputs > pending_inputs_bug_th)_1" h1="E-Miss" t="c" c1="pending_inputs_bug"/>
+  </table>
+</div><div class="excluded"><a name="cvg724"/><hr/><table>
+  <tr s="3" x="FC" lnk="__HDL_srcfile_3.htm#17" z="((inpa_bug && (clock_cycles > io_bug_wait)) && (i == io_bug_port))" c="e" d="0" F="1"/>
+  <tr/>
+  <tr z="inpa_bug" c="e"/>
+  <tr z="(clock_cycles > io_bug_wait)" c="e"/>
+  <tr z="(i == io_bug_port)" c="e"/>
+  <tr/>
+  <tr n="1" z="inpa_bug_0" h1="E-Miss" t="c" c1="-"/>
+  <tr n="2" z="inpa_bug_1" h1="E-Miss" t="c" c1="((i == io_bug_port) && (clock_cycles > io_bug_wait))"/>
+  <tr n="3" z="(clock_cycles > io_bug_wait)_0" h1="E-Miss" t="c" c1="inpa_bug"/>
+  <tr n="4" z="(clock_cycles > io_bug_wait)_1" h1="E-Miss" t="c" c1="((i == io_bug_port) && inpa_bug)"/>
+  <tr n="5" z="(i == io_bug_port)_0" h1="E-Miss" t="c" c1="(inpa_bug && (clock_cycles > io_bug_wait))"/>
+  <tr n="6" z="(i == io_bug_port)_1" h1="E-Miss" t="c" c1="(inpa_bug && (clock_cycles > io_bug_wait))"/>
+  </table>
+</div><div class="excluded"><a name="cvg726"/><hr/><table>
+  <tr s="3" x="FC" lnk="__HDL_srcfile_3.htm#17" z="(((data_missing_bug && (clock_cycles > routing_bug_wait)) && (i == routing_bug_src)) && (dest_addr == routing_bug_dst))" c="e" d="0" F="1"/>
+  <tr/>
+  <tr z="data_missing_bug" c="e"/>
+  <tr z="(clock_cycles > routing_bug_wait)" c="e"/>
+  <tr z="(i == routing_bug_src)" c="e"/>
+  <tr z="(dest_addr == routing_bug_dst)" c="e"/>
+  <tr/>
+  <tr n="1" z="data_missing_bug_0" h1="E-Miss" t="c" c1="-"/>
+  <tr n="2" z="data_missing_bug_1" h1="E-Miss" t="c" c1="((dest_addr == routing_bug_dst) && (i == routing_bug_src) && (clock_cycles > routing_bug_wait))"/>
+  <tr n="3" z="(clock_cycles > routing_bug_wait)_0" h1="E-Miss" t="c" c1="data_missing_bug"/>
+  <tr n="4" z="(clock_cycles > routing_bug_wait)_1" h1="E-Miss" t="c" c1="((dest_addr == routing_bug_dst) && (i == routing_bug_src) && data_missing_bug)"/>
+  <tr n="5" z="(i == routing_bug_src)_0" h1="E-Miss" t="c" c1="(data_missing_bug && (clock_cycles > routing_bug_wait))"/>
+  <tr n="6" z="(i == routing_bug_src)_1" h1="E-Miss" t="c" c1="((dest_addr == routing_bug_dst) && (data_missing_bug && (clock_cycles > routing_bug_wait)))"/>
+  <tr n="7" z="(dest_addr == routing_bug_dst)_0" h1="E-Miss" t="c" c1="((data_missing_bug && (clock_cycles > routing_bug_wait)) && (i == routing_bug_src))"/>
+  <tr n="8" z="(dest_addr == routing_bug_dst)_1" h1="E-Miss" t="c" c1="((data_missing_bug && (clock_cycles > routing_bug_wait)) && (i == routing_bug_src))"/>
+  </table>
+</div><div class="excluded"><a name="cvg728"/><hr/><table>
+  <tr s="3" x="FC" lnk="__HDL_srcfile_3.htm#17" z="((clock_cycles > io_bug_wait) && (i == io_bug_port))" c="e" d="0" F="1"/>
+  <tr/>
+  <tr z="(clock_cycles > io_bug_wait)" c="e"/>
+  <tr z="(i == io_bug_port)" c="e"/>
+  <tr/>
+  <tr n="1" z="(clock_cycles > io_bug_wait)_0" h1="E-Miss" t="c" c1="-"/>
+  <tr n="2" z="(clock_cycles > io_bug_wait)_1" h1="E-Miss" t="c" c1="(i == io_bug_port)"/>
+  <tr n="3" z="(i == io_bug_port)_0" h1="E-Miss" t="c" c1="(clock_cycles > io_bug_wait)"/>
+  <tr n="4" z="(i == io_bug_port)_1" h1="E-Miss" t="c" c1="(clock_cycles > io_bug_wait)"/>
+  </table>
+</div><div class="excluded"><a name="cvg730"/><hr/><table>
+  <tr s="3" x="FC" lnk="__HDL_srcfile_3.htm#17" z="(((addr_corrupt_bug && (clock_cycles > routing_bug_wait)) && (i == routing_bug_src)) && (dest_addr == routing_bug_dst))" c="e" d="0" F="1"/>
+  <tr/>
+  <tr z="addr_corrupt_bug" c="e"/>
+  <tr z="(clock_cycles > routing_bug_wait)" c="e"/>
+  <tr z="(i == routing_bug_src)" c="e"/>
+  <tr z="(dest_addr == routing_bug_dst)" c="e"/>
+  <tr/>
+  <tr n="1" z="addr_corrupt_bug_0" h1="E-Miss" t="c" c1="-"/>
+  <tr n="2" z="addr_corrupt_bug_1" h1="E-Miss" t="c" c1="((dest_addr == routing_bug_dst) && (i == routing_bug_src) && (clock_cycles > routing_bug_wait))"/>
+  <tr n="3" z="(clock_cycles > routing_bug_wait)_0" h1="E-Miss" t="c" c1="addr_corrupt_bug"/>
+  <tr n="4" z="(clock_cycles > routing_bug_wait)_1" h1="E-Miss" t="c" c1="((dest_addr == routing_bug_dst) && (i == routing_bug_src) && addr_corrupt_bug)"/>
+  <tr n="5" z="(i == routing_bug_src)_0" h1="E-Miss" t="c" c1="(addr_corrupt_bug && (clock_cycles > routing_bug_wait))"/>
+  <tr n="6" z="(i == routing_bug_src)_1" h1="E-Miss" t="c" c1="((dest_addr == routing_bug_dst) && (addr_corrupt_bug && (clock_cycles > routing_bug_wait)))"/>
+  <tr n="7" z="(dest_addr == routing_bug_dst)_0" h1="E-Miss" t="c" c1="((addr_corrupt_bug && (clock_cycles > routing_bug_wait)) && (i == routing_bug_src))"/>
+  <tr n="8" z="(dest_addr == routing_bug_dst)_1" h1="E-Miss" t="c" c1="((addr_corrupt_bug && (clock_cycles > routing_bug_wait)) && (i == routing_bug_src))"/>
+  </table>
+</div><div class="excluded"><a name="cvg732"/><hr/><table>
+  <tr s="3" x="FC" lnk="__HDL_srcfile_3.htm#17" z="(((data_corrupt_bug && (clock_cycles > routing_bug_wait)) && (i == routing_bug_src)) && (dest_addr == routing_bug_dst))" c="e" d="0" F="1"/>
+  <tr/>
+  <tr z="data_corrupt_bug" c="e"/>
+  <tr z="(clock_cycles > routing_bug_wait)" c="e"/>
+  <tr z="(i == routing_bug_src)" c="e"/>
+  <tr z="(dest_addr == routing_bug_dst)" c="e"/>
+  <tr/>
+  <tr n="1" z="data_corrupt_bug_0" h1="E-Miss" t="c" c1="-"/>
+  <tr n="2" z="data_corrupt_bug_1" h1="E-Miss" t="c" c1="((dest_addr == routing_bug_dst) && (i == routing_bug_src) && (clock_cycles > routing_bug_wait))"/>
+  <tr n="3" z="(clock_cycles > routing_bug_wait)_0" h1="E-Miss" t="c" c1="data_corrupt_bug"/>
+  <tr n="4" z="(clock_cycles > routing_bug_wait)_1" h1="E-Miss" t="c" c1="((dest_addr == routing_bug_dst) && (i == routing_bug_src) && data_corrupt_bug)"/>
+  <tr n="5" z="(i == routing_bug_src)_0" h1="E-Miss" t="c" c1="(data_corrupt_bug && (clock_cycles > routing_bug_wait))"/>
+  <tr n="6" z="(i == routing_bug_src)_1" h1="E-Miss" t="c" c1="((dest_addr == routing_bug_dst) && (data_corrupt_bug && (clock_cycles > routing_bug_wait)))"/>
+  <tr n="7" z="(dest_addr == routing_bug_dst)_0" h1="E-Miss" t="c" c1="((data_corrupt_bug && (clock_cycles > routing_bug_wait)) && (i == routing_bug_src))"/>
+  <tr n="8" z="(dest_addr == routing_bug_dst)_1" h1="E-Miss" t="c" c1="((data_corrupt_bug && (clock_cycles > routing_bug_wait)) && (i == routing_bug_src))"/>
+  </table>
+</div><script type="text/javascript" src="../scripts/buildecpage.js"></script>
+  <!-- make sure jumps to last few line nos work -->
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  
+</body>
+</html>

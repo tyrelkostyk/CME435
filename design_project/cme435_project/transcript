@@ -1,12 +1,53 @@
- -coverage +acc tbench_top -c -do "coverage exclude -srcfile TransBase.sv;
- coverage exclude -du work.intf -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]};
- coverage exclude -du work.testbench {pkt_count[31:0]} {verbose[31:0]};
- coverage exclude -du work.xswitch -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]};
- coverage exclude -srcfile generator.sv -linerange 50 53-56;
- coverage exclude -srcfile driver.sv -linerange 66-69;
- coverage exclude -srcfile monitor.sv -linerange 66-69;
- coverage exclude -srcfile scoreboard.sv -linerange 57 69 74-76;
- coverage save -onexit -directive -codeAll -cvg report/phase9_testcases.ucdb; run -all; exit"
-# invalid command name "7:2"
+# vsim "+acc" -coverage -do "coverage exclude -srcfile TransBase.sv; coverage exclude -du work.intf -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -du work.testbench {pkt_count[31:0]} {verbose[31:0]}; coverage exclude -du work.xswitch -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -srcfile generator.sv -linerange 50 53-56; coverage exclude -srcfile driver.sv -linerange 66-69; coverage exclude -srcfile monitor.sv -linerange 66-69; coverage exclude -srcfile scoreboard.sv -linerange 57 69 74-76; coverage save -onexit -directive -codeAll -cvg report/phase9_testcases_sanity_check.ucdb; run -all; exit" -c tbench_top
+# Start time: 09:03:39 on Dec 16,2019
+# ** Warning: (vsim-8689) Ignoring plusarg '+acc'.  Did you mean '-voptargs=+acc'?
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: dut/xswitch.svp(17): in protected region
+# //  Questa Sim
+# //  Version 10.3a linux Apr 13 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.tbench_top(fast)
+# Loading work.intf(fast__1)
+# Loading work.testbench_sanity_check_sv_unit(fast)
+# Loading work.testbench(fast)
+# Loading work.dut_top(fast)
+# Loading work.xswitch(fast)
+# Loading work.intf(fast)
+# coverage exclude -srcfile TransBase.sv
+#  coverage exclude -du work.intf -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}
+#  coverage exclude -du work.testbench {pkt_count[31:0]} {verbose[31:0]}
+# ** Warning: (vsim-4053) Design unit 'pkt_count[31:0]' was not found or has null coverage data.
+# ** Warning: (vsim-4053) Design unit 'verbose[31:0]' was not found or has null coverage data.
 # 
-# <EOF>
+#  coverage exclude -du work.xswitch -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}
+#  coverage exclude -srcfile generator.sv -linerange 50 53-56
+#  coverage exclude -srcfile driver.sv -linerange 66-69
+#  coverage exclude -srcfile monitor.sv -linerange 66-69
+#  coverage exclude -srcfile scoreboard.sv -linerange 57 69 74-76
+#  coverage save -onexit -directive -codeAll -cvg report/phase9_testcases_sanity_check.ucdb
+#  run -all
+# *************** Start of testbench ***************
+# 0 : Environment : Start of run() task
+# 0 : Environment : Start of pre_test() task
+# 0 : [ ENVIRONMENT ] ----- Reset Started -----
+# 0 : [ ENVIRONMENT ] ----- Reset Ended   -----
+# 0 : Environment : End of pre_test() task
+# 0 : Environment : Start of test() task
+# 49995 : Environment : End of test() task
+# 49995 : Environment : Start of post_test() task
+# 49995 : Environment : End of post_test() task
+# 49995 : Environment : End of run() task
+# 50045 : ############# 5000 PACKETS DRIVEN - TEST PASSED ###############
+# ** Note: $finish    : verification/phase9_testcases/environment.sv(137)
+#    Time: 50045 ns  Iteration: 1  Instance: /tbench_top/test
+# End time: 09:03:42 on Dec 16,2019, Elapsed time: 0: 0: 3
+# Errors: 0, Warnings: 2
+# *************** End of testbench ***************

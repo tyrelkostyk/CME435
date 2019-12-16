@@ -3,7 +3,7 @@
 # TODO: upgrade version of questa? If errors occur
 source /CMC/scripts/mentor.questasim.10.3a.csh
 
-set testcase_list="sanity_check buffer_overflow"
+set testcase_list="sanity_check buffer_overflow reset manual_port_1"
 
 if ($#argv == 0) then
 	echo "No testcase specified: running testbench_sanity_check"

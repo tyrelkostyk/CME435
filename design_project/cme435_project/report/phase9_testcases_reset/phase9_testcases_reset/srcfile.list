@@ -1,0 +1,12 @@
+dut/dut_top.sv
+dut/xswitch.svp
+verification/phase9_testcases/TransBase.sv
+verification/phase9_testcases/assertions.sv
+verification/phase9_testcases/driver.sv
+verification/phase9_testcases/environment.sv
+verification/phase9_testcases/generator.sv
+verification/phase9_testcases/interface.sv
+verification/phase9_testcases/monitor.sv
+verification/phase9_testcases/scoreboard.sv
+verification/phase9_testcases/tbench_top.sv
+verification/phase9_testcases/testbench_reset.sv

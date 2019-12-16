@@ -578,7 +578,7 @@ Toggle Coverage      =      100.0% (0 of 0 bins)
 Statement Coverage:
     Enabled Coverage            Active      Hits    Misses % Covered
     ----------------            ------      ----    ------ ---------
-    Stmts                            4         4         0     100.0
+    Stmts                            5         5         0     100.0
 
 ================================Statement Details================================
 
@@ -600,101 +600,104 @@ Statement Coverage for file verification/phase9_testcases/interface.sv --
     14                                               
     15                                               // ************************ CLOCKING BLOCKS ************************* //
     16                                               
-    17              1                          1     clocking cb_tb @( posedge clk );
-    18              1                          1     	input 	clk;
-    19                                               	output 	addr_in, data_in, valid_in, data_rd;
-    20              1                          1     	input 	addr_out, data_out, valid_out, rcv_rdy;
-    21                                               endclocking
-    22                                               
-    23                                               
-    24                                               // **************************** MODPORTS **************************** //
+    17              1                          1     clocking cb_default @( posedge clk );
+    18                                               endclocking
+    19                                               
+    20              1                          1     clocking cb_tb @( posedge clk );
+    21              1                          1     	input 	clk;
+    22                                               	output 	addr_in, data_in, valid_in, data_rd;
+    23              1                          1     	input 	addr_out, data_out, valid_out, rcv_rdy;
+    24                                               endclocking
     25                                               
-    26                                               modport DUT (
-    27                                               	input 	clk, reset,
-    28                                               	input 	addr_in, data_in, valid_in, data_rd,
-    29                                               	output 	addr_out, data_out, valid_out, rcv_rdy
-    30                                               );
-    31                                               
-    32                                               
-    33                                               modport DRIVER (
-    34                                               	clocking cb_tb,
-    35                                               	input clk
-    36                                               );
-    37                                               
-    38                                               
-    39                                               modport MONITOR (
-    40                                               	clocking cb_tb,
-    41                                               	input clk,
-    42                                               	input addr_out, data_out, valid_out, rcv_rdy,
-    43                                               	output addr_in, data_in, valid_in, data_rd
-    44                                               );
-    45                                               
-    46                                               
-    47                                               // **************************** COVERAGE **************************** //
+    26                                               
+    27                                               // **************************** MODPORTS **************************** //
+    28                                               
+    29                                               modport DUT (
+    30                                               	input 	clk, reset,
+    31                                               	input 	addr_in, data_in, valid_in, data_rd,
+    32                                               	output 	addr_out, data_out, valid_out, rcv_rdy
+    33                                               );
+    34                                               
+    35                                               
+    36                                               modport DRIVER (
+    37                                               	clocking cb_tb,
+    38                                               	input clk
+    39                                               );
+    40                                               
+    41                                               
+    42                                               modport MONITOR (
+    43                                               	clocking cb_tb,
+    44                                               	input clk,
+    45                                               	input addr_out, data_out, valid_out, rcv_rdy,
+    46                                               	output addr_in, data_in, valid_in, data_rd
+    47                                               );
     48                                               
-    49                                               covergroup intf_cg @( posedge clk );
-    50                                                 port_0_addr : coverpoint addr_in[7:0] {
-    51                                                   bins port_0 = {0};
-    52                                                   bins port_1 = {1};
-    53                                                   bins port_2 = {2};
-    54                                                   bins port_3 = {3};
-    55                                                 }
-    56                                               
-    57                                                 port_1_addr : coverpoint addr_in[15:8] {
-    58                                                   bins port_0 = {0};
-    59                                                   bins port_1 = {1};
-    60                                                   bins port_2 = {2};
-    61                                                   bins port_3 = {3};
-    62                                                 }
-    63                                               
-    64                                                 port_2_addr : coverpoint addr_in[23:16] {
-    65                                                   bins port_0 = {0};
-    66                                                   bins port_1 = {1};
-    67                                                   bins port_2 = {2};
-    68                                                   bins port_3 = {3};
-    69                                                 }
-    70                                                 port_3_addr : coverpoint addr_in[31:24] {
-    71                                                   bins port_0 = {0};
-    72                                                   bins port_1 = {1};
-    73                                                   bins port_2 = {2};
-    74                                                   bins port_3 = {3};
-    75                                                 }
-    76                                               
-    77                                                 port_0_data : coverpoint data_in[7:0] {
-    78                                                   bins low = {[0:50]};
-    79                                                   bins med = {[51:150]};
-    80                                                   bins high = {[151:255]};
-    81                                                 }
-    82                                               
-    83                                                 port_1_data : coverpoint data_in[15:8] {
-    84                                                   bins low = {[0:50]};
-    85                                                   bins med = {[51:150]};
-    86                                                   bins high = {[151:255]};
-    87                                                 }
-    88                                               
-    89                                                 port_2_data : coverpoint data_in[23:16] {
-    90                                                   bins low = {[0:50]};
-    91                                                   bins med = {[51:150]};
-    92                                                   bins high = {[151:255]};
-    93                                                 }
-    94                                               
-    95                                                 port_3_data : coverpoint data_in[31:24] {
-    96                                                   bins low = {[0:50]};
-    97                                                   bins med = {[51:150]};
-    98                                                   bins high = {[151:255]};
-    99                                                 }
-    100                                              
-    101                                              	reset : coverpoint reset {
-    102                                              		bins low = {0};
-    103                                              		bins high = {1};
-    104                                              	}
-    105                                              
-    106                                              endgroup
-    107                                              
-    108             1                          1     intf_cg cg = new();
-    109                                              
-    110                                              endinterface
-    111                                              `endif
+    49                                               
+    50                                               // **************************** COVERAGE **************************** //
+    51                                               
+    52                                               covergroup intf_cg @( posedge clk );
+    53                                                 port_0_addr : coverpoint addr_in[7:0] {
+    54                                                   bins port_0 = {0};
+    55                                                   bins port_1 = {1};
+    56                                                   bins port_2 = {2};
+    57                                                   bins port_3 = {3};
+    58                                                 }
+    59                                               
+    60                                                 port_1_addr : coverpoint addr_in[15:8] {
+    61                                                   bins port_0 = {0};
+    62                                                   bins port_1 = {1};
+    63                                                   bins port_2 = {2};
+    64                                                   bins port_3 = {3};
+    65                                                 }
+    66                                               
+    67                                                 port_2_addr : coverpoint addr_in[23:16] {
+    68                                                   bins port_0 = {0};
+    69                                                   bins port_1 = {1};
+    70                                                   bins port_2 = {2};
+    71                                                   bins port_3 = {3};
+    72                                                 }
+    73                                                 port_3_addr : coverpoint addr_in[31:24] {
+    74                                                   bins port_0 = {0};
+    75                                                   bins port_1 = {1};
+    76                                                   bins port_2 = {2};
+    77                                                   bins port_3 = {3};
+    78                                                 }
+    79                                               
+    80                                                 port_0_data : coverpoint data_in[7:0] {
+    81                                                   bins low = {[0:50]};
+    82                                                   bins med = {[51:150]};
+    83                                                   bins high = {[151:255]};
+    84                                                 }
+    85                                               
+    86                                                 port_1_data : coverpoint data_in[15:8] {
+    87                                                   bins low = {[0:50]};
+    88                                                   bins med = {[51:150]};
+    89                                                   bins high = {[151:255]};
+    90                                                 }
+    91                                               
+    92                                                 port_2_data : coverpoint data_in[23:16] {
+    93                                                   bins low = {[0:50]};
+    94                                                   bins med = {[51:150]};
+    95                                                   bins high = {[151:255]};
+    96                                                 }
+    97                                               
+    98                                                 port_3_data : coverpoint data_in[31:24] {
+    99                                                   bins low = {[0:50]};
+    100                                                  bins med = {[51:150]};
+    101                                                  bins high = {[151:255]};
+    102                                                }
+    103                                              
+    104                                              	reset : coverpoint reset {
+    105                                              		bins low = {0};
+    106                                              		bins high = {1};
+    107                                              	}
+    108                                              
+    109                                              endgroup
+    110                                              
+    111             1                          1     intf_cg cg = new();
+    112                                              
+    113                                              endinterface
+    114                                              `endif
 
 Branch Coverage:
     Enabled Coverage            Active      Hits    Misses % Covered
@@ -1143,36 +1146,39 @@ Statement Coverage:
 Statement Coverage for file verification/phase9_testcases/tbench_top.sv --
 
     1                                                `include "dut/dut_top.sv"
-    2                                                
-    3                                                module tbench_top;
-    4                                                
-    5                                                // clock and reset signal declaration
-    6                                                bit clk;
-    7                                                bit reset;
-    8                                                
-    9                                                // clock generation
-    10              1                      10010     always #5 clk = ~clk;
-    10              2                      10009     
-    11                                               
-    12                                               // reset Generation
-    13                                               initial begin
-    14              1                          1       reset = 0;
-    15              1                          1       #5 reset = 1;
-    15              2                          1     
-    16              1                          1     	#5 reset = 0;
+    2                                                `include "assertions.sv"
+    3                                                
+    4                                                module tbench_top;
+    5                                                
+    6                                                // clock and reset signal declaration
+    7                                                bit clk;
+    8                                                bit reset;
+    9                                                
+    10                                               // clock generation
+    11              1                      10010     always #5 clk = ~clk;
+    11              2                      10009     
+    12                                               
+    13                                               // reset Generation
+    14                                               initial begin
+    15              1                          1       reset = 0;
+    16              1                          1       #5 reset = 1;
     16              2                          1     
-    17                                               end
-    18                                               
-    19                                               // creatinng instance of interface, in order to connect DUT and testcase
-    20                                               intf i_intf ( clk, reset );
-    21                                               
-    22                                               // Testcase instance, interface handle is passed to test as an argument
-    23                                               testbench test ( i_intf );
-    24                                               
-    25                                               // DUT instance, interface signals are connected to the DUT ports
-    26                                               dut_top dut ( i_intf.DUT );
-    27                                               
-    28                                               endmodule
+    17              1                          1     	#5 reset = 0;
+    17              2                          1     
+    18                                               end
+    19                                               
+    20                                               // creatinng instance of interface, in order to connect DUT and testcase
+    21                                               intf i_intf ( clk, reset );
+    22                                               
+    23                                               // Testcase instance, interface handle is passed to test as an argument
+    24                                               testbench test ( i_intf );
+    25                                               
+    26                                               // DUT instance, interface signals are connected to the DUT ports
+    27                                               dut_top dut ( i_intf.DUT );
+    28                                               
+    29                                               bind dut_top assertions assert_dut( i_intf );
+    30                                               
+    31                                               endmodule
 
 Branch Coverage:
     Enabled Coverage            Active      Hits    Misses % Covered
@@ -1285,6 +1291,47 @@ Covergroup                                             Metric      Goal/ Status
         bin high                                            0          1 ZERO                      
 
 TOTAL COVERGROUP COVERAGE: 31.4%  COVERGROUP TYPES: 1
+
+DIRECTIVE COVERAGE:
+---------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Count Status    
+                                         Unit   UnitType                                      
+---------------------------------------------------------------------------------------------
+/tbench_top/dut/assert_dut/c_valid_data_in_match_data_out_PORT1 
+                                         assertions Verilog  SVA  verification/phase9_testcases/assertions.sv(21)
+                                                                               2464 Covered   
+/tbench_top/dut/assert_dut/c_valid_data_in_match_data_out_PORT2 
+                                         assertions Verilog  SVA  verification/phase9_testcases/assertions.sv(27)
+                                                                               2495 Covered   
+/tbench_top/dut/assert_dut/c_valid_data_in_match_data_out_PORT3 
+                                         assertions Verilog  SVA  verification/phase9_testcases/assertions.sv(33)
+                                                                               2469 Covered   
+/tbench_top/dut/assert_dut/c_valid_data_in_match_data_out_PORT5 
+                                         assertions Verilog  SVA  verification/phase9_testcases/assertions.sv(39)
+                                                                                  0 ZERO      
+/tbench_top/dut/assert_dut/c_valid_in_match_valid_out_PORT1 
+                                         assertions Verilog  SVA  verification/phase9_testcases/assertions.sv(56)
+                                                                               2464 Covered   
+/tbench_top/dut/assert_dut/c_valid_in_match_valid_out_PORT2 
+                                         assertions Verilog  SVA  verification/phase9_testcases/assertions.sv(62)
+                                                                               2495 Covered   
+/tbench_top/dut/assert_dut/c_valid_in_match_valid_out_PORT3 
+                                         assertions Verilog  SVA  verification/phase9_testcases/assertions.sv(68)
+                                                                               2469 Covered   
+/tbench_top/dut/assert_dut/c_valid_in_match_valid_out_PORT4 
+                                         assertions Verilog  SVA  verification/phase9_testcases/assertions.sv(74)
+                                                                                  0 ZERO      
+/tbench_top/dut/assert_dut/c_reset_data_out_high_imp 
+                                         assertions Verilog  SVA  verification/phase9_testcases/assertions.sv(106)
+                                                                                  0 ZERO      
+/tbench_top/dut/assert_dut/c_reset_addr_out_high_imp 
+                                         assertions Verilog  SVA  verification/phase9_testcases/assertions.sv(111)
+                                                                                  0 ZERO      
+/tbench_top/dut/assert_dut/c_reset_valid_out_zero 
+                                         assertions Verilog  SVA  verification/phase9_testcases/assertions.sv(116)
+                                                                                  0 ZERO      
+
+TOTAL DIRECTIVE COVERAGE: 54.5%  COVERS: 11
 
 Total Coverage By File (code coverage only, filtered view): 66.8%
 

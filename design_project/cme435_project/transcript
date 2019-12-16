@@ -1,8 +1,6 @@
-# vsim "+acc" -coverage -do "coverage exclude -srcfile TransBase.sv; coverage exclude -du work.intf -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -du work.testbench {pkt_count[31:0]} {verbose[31:0]}; coverage exclude -du work.xswitch -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -srcfile generator.sv -linerange 50 53-56; coverage exclude -srcfile driver.sv -linerange 66-69; coverage exclude -srcfile monitor.sv -linerange 66-69; coverage exclude -srcfile scoreboard.sv -linerange 57 69 74-76; coverage save -onexit -directive -codeAll -cvg report/phase9_testcases_sanity_check/phase9_testcases_sanity_check.ucdb; run -all; exit" -c tbench_top
-# Start time: 15:50:22 on Dec 16,2019
-# ** Warning: (vsim-8689) Ignoring plusarg '+acc'.  Did you mean '-voptargs=+acc'?
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: dut/xswitch.svp(17): in protected region
+# vsim -coverage -do "coverage exclude -srcfile TransBase.sv; coverage exclude -du work.intf -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -du work.testbench {pkt_count[31:0]} {verbose[31:0]}; coverage exclude -du work.xswitch -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -srcfile generator.sv -linerange 50 53-56; coverage exclude -srcfile driver.sv -linerange 66-69; coverage exclude -srcfile monitor.sv -linerange 66-69; coverage exclude -srcfile scoreboard.sv -linerange 57 69 74-76; coverage save -onexit -directive -codeAll report/cx_coverage/regression_reset.ucdb; run -all; exit" -c tbench_top
+# Start time: 17:41:01 on Dec 16,2019
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Sim
 # //  Version 10.3a linux Apr 13 2014
 # //
@@ -16,13 +14,17 @@
 # Loading sv_std.std
 # Loading work.tbench_top(fast)
 # Loading work.intf(fast__1)
-# Loading work.testbench_sanity_check_sv_unit(fast)
+# Loading work.testbench_reset_sv_unit(fast)
 # Loading work.testbench(fast)
 # Loading work.dut_top(fast)
 # Loading work.xswitch(fast)
 # Loading work.assertions(fast)
 # Loading work.intf(fast)
 # coverage exclude -srcfile TransBase.sv
+# ** Warning: (vsim-4053) File 'TransBase.sv' was not found or has null coverage data.
+# ** Note: (vsim-4036) The 'coverage exclude' command had no effect because
+# no matching coverage data was found.
+# 
 #  coverage exclude -du work.intf -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}
 #  coverage exclude -du work.testbench {pkt_count[31:0]} {verbose[31:0]}
 # ** Warning: (vsim-4053) Design unit 'pkt_count[31:0]' was not found or has null coverage data.
@@ -30,10 +32,26 @@
 # 
 #  coverage exclude -du work.xswitch -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}
 #  coverage exclude -srcfile generator.sv -linerange 50 53-56
+# ** Warning: (vsim-4053) File 'generator.sv' was not found or has null coverage data.
+# ** Note: (vsim-4036) The 'coverage exclude' command had no effect because
+# no matching coverage data was found.
+# 
 #  coverage exclude -srcfile driver.sv -linerange 66-69
+# ** Warning: (vsim-4053) File 'driver.sv' was not found or has null coverage data.
+# ** Note: (vsim-4036) The 'coverage exclude' command had no effect because
+# no matching coverage data was found.
+# 
 #  coverage exclude -srcfile monitor.sv -linerange 66-69
+# ** Warning: (vsim-4053) File 'monitor.sv' was not found or has null coverage data.
+# ** Note: (vsim-4036) The 'coverage exclude' command had no effect because
+# no matching coverage data was found.
+# 
 #  coverage exclude -srcfile scoreboard.sv -linerange 57 69 74-76
-#  coverage save -onexit -directive -codeAll -cvg report/phase9_testcases_sanity_check/phase9_testcases_sanity_check.ucdb
+# ** Warning: (vsim-4053) File 'scoreboard.sv' was not found or has null coverage data.
+# ** Note: (vsim-4036) The 'coverage exclude' command had no effect because
+# no matching coverage data was found.
+# 
+#  coverage save -onexit -directive -codeAll report/cx_coverage/regression_reset.ucdb
 #  run -all
 # *************** Start of testbench ***************
 # 0 : Environment : Start of run() task
@@ -42,13 +60,13 @@
 # 0 : [ ENVIRONMENT ] ----- Reset Ended   -----
 # 0 : Environment : End of pre_test() task
 # 0 : Environment : Start of test() task
-# 495 : Environment : End of test() task
-# 495 : Environment : Start of post_test() task
-# 495 : Environment : End of post_test() task
-# 495 : Environment : End of run() task
-# 545 : ############# 50 PACKETS DRIVEN - TEST PASSED ###############
-# ** Note: $finish    : verification/phase9_testcases/environment.sv(137)
-#    Time: 545 ns  Iteration: 1  Instance: /tbench_top/test
-# End time: 15:50:25 on Dec 16,2019, Elapsed time: 0: 0: 3
-# Errors: 0, Warnings: 2
+# 49995 : Environment : End of test() task
+# 49995 : Environment : Start of post_test() task
+# 49995 : Environment : End of post_test() task
+# 49995 : Environment : End of run() task
+# 50045 : ############# 5000 PACKETS DRIVEN - TEST PASSED ###############
+# ** Note: $finish    : verification/regression_test/environment.sv(137)
+#    Time: 50045 ns  Iteration: 1  Instance: /tbench_top/test
+# End time: 17:41:14 on Dec 16,2019, Elapsed time: 0: 0:13
+# Errors: 0, Warnings: 0
 # *************** End of testbench ***************

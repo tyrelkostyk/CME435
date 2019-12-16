@@ -16,13 +16,13 @@
   <tr><th align="left" class="odd">Attribute</th><th align="left" class="even">Value</th></tr>
   <tr><td class="odd">Test Name</td><td class="even">regression_sanity_check</td></tr>
   <tr><td class="odd">File Name</td><td class="even">report/cx_coverage/regression_sanity_check.ucdb</td></tr>
-  <tr><td class="odd">Date</td><td class="even"><span class="strip">16 Dec 2019 12:06.18</span></td></tr>
+  <tr><td class="odd">Date</td><td class="even"><span class="strip">16 Dec 2019 17:40.49</span></td></tr>
   <tr><td class="odd">User ID</td><td class="even"><span class="strip">tck290</span></td></tr>
-  <tr><td class="odd">CPU Time</td><td class="even"><span class="strip">00:00:00.50</span></td></tr>
-  <tr><td class="odd">SIM Time</td><td class="even">50045.000 ns</td></tr>
+  <tr><td class="odd">CPU Time</td><td class="even"><span class="strip">00:00:00.01</span></td></tr>
+  <tr><td class="odd">SIM Time</td><td class="even">545.000 ns</td></tr>
   <tr><td class="odd">Test Status</td><td class="bgGreen">OK</td>
   <tr><td class="odd">Seed</td><td class="even">0</td></tr>
-  <tr><td class="odd">VSIM Args</td><td class="even">+acc -coverage -do 'coverage exclude -srcfile TransBase.sv; coverage exclude -du work.intf -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -du work.testbench {pkt_count[31:0]} {verbose[31:0]}; coverage exclude -du work.xswitch -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -srcfile generator.sv -linerange 50 53-56; coverage exclude -srcfile driver.sv -linerange 66-69; coverage exclude -srcfile monitor.sv -linerange 66-69; coverage exclude -srcfile scoreboard.sv -linerange 57 69 74-76; coverage save -onexit -directive -codeAll report/cx_coverage/regression_sanity_check.ucdb; run -all; exit' -c tbench_top </td></tr>
+  <tr><td class="odd">VSIM Args</td><td class="even">-coverage -do 'coverage exclude -srcfile TransBase.sv; coverage exclude -du work.intf -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -du work.testbench {pkt_count[31:0]} {verbose[31:0]}; coverage exclude -du work.xswitch -togglenode {addr_in[7:2]} {addr_in[15:10]} {addr_in[23:18]} {addr_in[31:26]} {addr_out[7:2]} {addr_out[15:10]} {addr_out[23:18]} {addr_out[31:26]} {rcv_rdy[3:0]}; coverage exclude -srcfile generator.sv -linerange 50 53-56; coverage exclude -srcfile driver.sv -linerange 66-69; coverage exclude -srcfile monitor.sv -linerange 66-69; coverage exclude -srcfile scoreboard.sv -linerange 57 69 74-76; coverage save -onexit -directive -codeAll report/cx_coverage/regression_sanity_check.ucdb; run -all; exit' -c tbench_top </td></tr>
   <tr><td class="odd">Test Args</td><td class="even">(None)</td></tr>
   <tr><td class="odd">Comment</td><td class="even">(None)</td></tr>
   <tr><td class="odd">Compulsory</td><td class="even">No</td></tr>
